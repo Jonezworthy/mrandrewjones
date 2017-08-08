@@ -1,0 +1,74 @@
+<div layout-margin-gt-md>
+    <md-content ng-controller="controllerContact as contact" >
+        <md-toolbar class="md-accent md-hue-1" >
+            <div class="md-toolbar-tools">
+                <h2 flex="auto" class="md-flex">Contact</h2>
+            </div>
+        </md-toolbar>
+        <md-toolbar class="md-warn md-hue-1" >
+            <div class="md-toolbar-tools">
+                <h2 flex="auto" class="md-flex">Recruiters</h2>
+            </div>
+        </md-toolbar>
+        <div layout-padding>
+            <h2>FAQ:</h2>
+            <div>
+                <p>
+                    <strong>Where am I willing to travel?</strong> - Within 20 minutes of the Redditch area (excluding Birmingham City Centre) (e.g Bromsgrove, Alcester, Warwick, Leamington Spa, Stratford Upon Avon)
+                </p>
+                <p>
+                    <strong>What am I looking for?</strong> - A technologically minded company that has big plans for the future
+                </p>
+            </div>
+            <h2>Other info</h2>
+            <p>Please email me and arrange a phone call with me, unsolicited phone calls usually get ignored because I am busy!</p>
+        </div>
+
+        <md-toolbar class="md-primary md-hue-1" >
+            <div class="md-toolbar-tools">
+                <h2 flex="auto" class="md-flex">My CV</h2>
+            </div>
+        </md-toolbar>
+        <div layout-padding>
+            <h2>Download my CV</h2>
+            <p>This web site will always be more up to date than my CV, but you can download it here:</p>
+            <p><strong>Latest update: </strong>15/07/2017-17:53 (version 12)</p>
+            <div>
+                <md-button class="md-raised md-primary" target="_blank" href="/Andrew-Jones.pdf" download="AndrewJones.pdf">Version 12 .pdf</md-button>
+            </div>
+        </div>
+        <md-toolbar class="md-primary md-hue-1" >
+            <div class="md-toolbar-tools">
+                <h2 flex="auto" class="md-flex">My contact details</h2>
+            </div>
+        </md-toolbar>
+        <div ng-hide="contact.human === true" layout-padding>
+            <h2 class="md-title">Please drag the slider across the screen to prove you are human or <a class="md-primary" ng-click="contact.showContactDetails();">click here</a></h2>
+            <md-slider-container layout-margin>
+
+                <md-slider class="md-primary" flex="100" min="0" max="100" ng-change="contact.change()" ng-model="contact.slider" aria-label="slider">
+                </md-slider>
+                <md-input-container ng-hide="true">
+                    <input ng-hide="true" flex type="number" ng-model="contact.slider" aria-label="red" aria-controls="">
+                </md-input-container>
+            </md-slider-container>
+        </div>
+        <div ng-show="contact.human">
+            <div layout-padding>
+                <h3 class="md-title">Please be aware I do work 9:00AM -> 5:30PM Mon-Fri</h3>
+                <h3 class="md-title">Please email me for my phone number - thank you</h3>
+            </div>
+            <div ng-repeat="(contactHeader, oContacts) in contact.info">
+                <md-toolbar class="md-primary md-hue-1" >
+                    <div class="md-toolbar-tools">
+                        <h2 flex="auto" class="md-flex"> {{contactHeader}}</h2>
+                    </div>
+                </md-toolbar>
+                <div ng-repeat="(contactLabel, oContact) in oContacts" layout-padding> 
+                    <span class="md-title">{{contactLabel}}:</span>
+                    <a class="md-primary" target="_blank" href="{{oContact.link}}">{{oContact.display ? oContact.display : oContact.link}}</a>
+                </div>
+            </div>
+        </div>
+    </md-content>
+</div>
