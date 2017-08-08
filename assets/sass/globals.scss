@@ -1,0 +1,90 @@
+/* 
+    Created on : 28-Dec-2016, 11:52:55
+    Author     : AndrewJ
+*/
+
+html{
+    font-family: $defaultFont;
+    font-weight: 300;
+    color:#FFFFFF;
+    background-color: transparent;
+}
+
+body {
+    background: linear-gradient(169deg, #3a405a, #000000, #2a2f45) #2a2f45;
+    background-repeat: no-repeat;
+    background-size: 1000%;
+
+    color:#FFFFFF;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+a {
+    letter-spacing: 1px;
+}
+p {
+    margin: .25em;
+}
+h1 {
+    text-align: center;
+    margin: .5em 0;
+    color: #ffffff;
+}
+.left-text{
+    text-align: left;
+}
+.center-text{
+    text-align: center;
+}
+.right-text{
+    text-align: right;
+}
+
+md-content {
+    color: #FFFFFF;
+    background:none;
+}
+md-content.bg-coloured {
+    background: #fff;
+}
+.clr {
+    clear: both;
+}
+.clr:after
+,.clr:before{
+    content:" ";
+    clear: both;
+}
+img {
+    max-width: 100%;
+}
+.menu-icon {
+    font-size: 70px;
+    line-height: 50px;
+    height: 50px;
+}
+.menu-icon-button{
+    max-height:100px;
+}
+.psuedo-list {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.link-no-decoration {
+    text-decoration: none;
+    color: inherit;
+}
+.height-auto{
+    height: auto !important;
+    max-height: 100% !important;
+}
+.emphasise {
+    color: #009926;
+}
+/* Over-ride */
+md-tabs.md-hue-1.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]){
+    color:rgb(55, 61, 86);
+}
