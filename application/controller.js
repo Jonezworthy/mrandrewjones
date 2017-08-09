@@ -22,7 +22,7 @@ function applicationController(db) {
             }
 
         };
-//console.log('hello');   
+console.log('hello');   
         res.send(JSON.stringify(contactDetails));
     };
 }
