@@ -22,5 +22,17 @@ describe("SAMPLE unit test",function(){
       done();
     });
   });
+  it("should fail this test",function(done){
+    // calling home page
+    server
+    .get("/abc")
+    .expect("Content-type",/text/)
+    .expect(200) // THis is HTTP response
+    .end(function(err,res){
+      // HTTP status should be 200
+      res.status.should.equal(200);
+      done();
+    });
+  });
 
 });
