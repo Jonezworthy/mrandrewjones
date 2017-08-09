@@ -27,7 +27,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
             'Design Patterns': ['MVC/MVP/SoC', 'Programming Design Patterns', 'RESTful APIs', 'Mobile first']
             , 'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN']
             , 'Testing': ['Test-driven Development', 'Unit/Automated/Acceptence Testing', 'Regression Testing' , 'Jasmine', 'Karma', 'Mocha']
-            , 'Workflow': ['Scrum', 'Agile Development', 'Jenkins', 'Task Management (Gulp)']
+            , 'Workflow': ['Scrum', 'Agile Development', 'Jenkins (Continuous integration)', 'Task Management (Gulp)']
             , 'Security': ['XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
         }
         , 'Network': {
