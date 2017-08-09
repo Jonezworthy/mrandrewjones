@@ -8,7 +8,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
     tech.oTechnologies = {
         /* ************************************** */
         'Server Side': {
-            'Server Languages': ['Node (with Express)', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
+            'Server Languages': ['JavaScript (NodeJS)', 'NodeJS with Express', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
             , 'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL']
             , 'Operating Systems': ['Windows', 'Linux (Ubuntu/Gentoo/CentOS)', 'Android']
             , 'Apache': ['Virtual Hosts', 'Rewrite Rules', 'Reverse Proxy']
@@ -27,7 +27,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
             'Design Patterns': ['MVC/MVP/SoC', 'Programming Design Patterns', 'RESTful APIs', 'Mobile first']
             , 'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN']
             , 'Testing': ['Test-driven Development', 'Unit/Automated/Acceptence Testing', 'Regression Testing' , 'Jasmine', 'Karma', 'Mocha']
-            , 'Workflow': ['Scrum', 'Agile Development', 'Jenkins (Continuous integration)', 'Task Management (Gulp)']
+            , 'Workflow': ['Scrum', 'Agile Development', 'Jenkins (Continuous integration)', 'Gulp (Task Management)']
             , 'Security': ['XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
         }
         , 'Network': {
@@ -41,7 +41,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
             , 'Scripting': ['PowerShell', 'Bash', 'Batch']
             , 'CDN': ['Akamai CDN', 'Akamai Fast DNS']
             , 'Status': ['Hosttracker', 'Uptime Monitor']
-            , 'Windows': ['Active Directory', 'Microsoft Exchange', 'VPN']
+            , 'Windows': ['Active Directory', 'Domain Controller', 'Microsoft Exchange', 'VPN']
         }
         , 'Third Party': {
             'APIs': ['Exchange Web Services', 'Google Maps', 'Google Graphs', 'Facebook, Twitter, YouTube, Google Plus', 'Wikipedia', 'OpenWeather', 'Text messaging (textlocal.com & fastsms.co.uk)', 'PayPal & PayPal APN', 'and more...']
