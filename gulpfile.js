@@ -23,4 +23,6 @@ gulp.task('compileJs', function(cb){
         .pipe(gulp.dest('assets/js/'));
 });
 
+
 gulp.task('default', ['watchSass', 'watchJs', 'compileSass', 'compileJs']);
+gulp.task('build', ['compileSass', 'compileJs']);

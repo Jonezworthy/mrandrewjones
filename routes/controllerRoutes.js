@@ -5,6 +5,14 @@ module.exports = function (app, db) {
     var contentController = new contentHandler(applicationController);
 
     app.get('/', contentController.displayHomepage);
+    //
+    app.get('/technologies', contentController.displayHomepage);
+    app.get('/portfolio', contentController.displayHomepage);
+    app.get('/work', contentController.displayHomepage);
+    app.get('/education', contentController.displayHomepage);
+    app.get('/me', contentController.displayHomepage);
+    app.get('/contact', contentController.displayHomepage);
+    //
     
     app.get('/robots.txt', contentController.displayRobots);
     app.get('/api/contactdetails/', applicationController.getContactDetails);
@@ -14,5 +22,8 @@ module.exports = function (app, db) {
     //Assets
     app.get('/assets*', contentController.displayAsset);
     //
-    app.get('*', contentController.displayHomepage);
+    
+    app.get('*', function(req, res){
+        res.send('Ooops, this page does not exist', 404);
+    });
 };
