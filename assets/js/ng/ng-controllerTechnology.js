@@ -9,7 +9,8 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
         /* ************************************** */
         'Server Side': {
             'Server Languages': ['JavaScript (NodeJS)', 'NodeJS with Express', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
-            , 'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL']
+            , 'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL', 'CosmosDB']
+            , 'Hosting' :['Microsoft Azure', 'AWS', 'UK Fast CloudFlex']
             , 'Operating Systems': ['Windows', 'Linux (Ubuntu/Gentoo/CentOS)', 'Android']
             , 'Apache': ['Virtual Hosts', 'Rewrite Rules', 'Reverse Proxy']
             , 'NginX': ['Server Definition', 'Reverse Proxy']
@@ -36,7 +37,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
             , 'Communication Protocols': ['FTP', 'SFTP', 'SSH', 'SSL']
         }
         , 'Administration': {
-            'Work Management': ['JIRA', 'FreshDesk', 'Trello']
+            'Work Management': ['JIRA', 'FreshDesk', 'Trello', 'Visual Studio Online']
             , 'Version Control': ['SVN (CLI + Tortoise)', 'Git']
             , 'Scripting': ['PowerShell', 'Bash', 'Batch']
             , 'CDN': ['Akamai CDN', 'Akamai Fast DNS']
