@@ -29,7 +29,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
             , 'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN']
             , 'Testing': ['Test-driven Development', 'Unit/Automated/Acceptence Testing', 'Regression Testing' , 'Jasmine', 'Karma', 'Mocha']
             , 'Workflow': ['Scrum', 'Agile Development', 'Jenkins (Continuous integration)', 'Gulp (Task Management)']
-            , 'Security': ['XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
+            , 'Security': ['OWASP', 'XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
         }
         , 'Network': {
             'Email Configuration': ['SPF', 'DMARC', 'DKIM', 'Microsoft Exchange']
