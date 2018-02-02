@@ -89,48 +89,6 @@ angular.module('MrAndrewJones').controller('controllerEducation', function ($sco
                 , description: 'The best introduction to Node book I found, walks you through the common practices of MEAN development'
             }
         ]
-        , 'Education': {
-            'New College Redditch': {
-                to: '2007'
-                , from: '2006'
-                , type: 'AS Level'
-                , qualifications: [
-                    {
-                        title: 'Interactive Media (iMedia)'
-                        , grade: 'C'
-                    }
-                    , {
-                        title: 'Advanced Computing'
-                        , grade: 'D'
-                    }
-                ]
-            }
-            , 'Trinity High School Redditch': {
-                to: '2006'
-                , from: '2003'
-                , type: 'GCSEs'
-                , qualifications: [
-                    {
-                        title: 'Maths'
-                        , grade: 'C'
-                    }
-                    , {
-                        title: 'English'
-                        , grade: 'C'
-                    }
-                    , {
-                        title: 'Business Studies'
-                        , grade: 'C'
-                    }
-
-                    , {
-                        title: 'ICT (Double Award)'
-                        , grade: 'C'
-                    }
-
-                ]
-            }
-        }
     };
 
 });

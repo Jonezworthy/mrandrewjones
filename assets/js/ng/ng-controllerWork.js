@@ -3,8 +3,33 @@ angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $
     work.oExperiences = {
         'Employment': [
             {
-                from: 'July 2013'
+                from: 'August 2017'
                 , to: 'Current'
+                , companyName: 'The NEC Group/The Ticket Factory'
+                , companyDescription: 'Huge exhibition company'
+                , title: 'Lead Software Engineer'
+                , details: {
+                    'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, CSS3 and HTML5. </strong> \n\
+                        <br />Planning/Developing the future of the systems which are hosted in Microsoft Azure\'s cloud platform'
+                    , 'Notable Achievements': '\
+                        <ul>\n\
+                            <li>Introduced continuous integration</li>\n\
+                            <li>Introduced automated testing</li>\n\
+                        </ul>'
+                    , 'Other Duties': '\
+                        <ul>\n\
+                            <li>Making decisions on server infrastructure</li>\n\
+                            <li>Code reviews</li>\n\
+                            <li>Managing and scheduling projects</li>\n\
+                            <li>Mentoring junior developers</li>\n\
+                        </ul>'
+                    , 'General Info': 'I have 2 other developers in my team, we look after the Expoware services. '
+
+                }
+            },
+            {
+                from: 'July 2013'
+                , to: 'August 2017'
                 , companyName: 'Cruise.co/Cruise.co.uk'
                 , companyDescription: 'International travel agent for Cruises/holidays'
                 , title: 'Senior Software Engineer'
