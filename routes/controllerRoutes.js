@@ -24,6 +24,6 @@ module.exports = function (app, db) {
     //
     
     app.get('*', function(req, res){
-        res.send('Ooops, this page does not exist', 404);
+        res.status(404).send('Ooops, this page does not exist');
     });
 };
