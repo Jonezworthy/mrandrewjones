@@ -8,7 +8,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
     tech.oTechnologies = {
         /* ************************************** */
         'Server Side': {
-            'Server Languages': ['JavaScript (NodeJS)', 'NodeJS with Express', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
+            'Server Languages': ['JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
             , 'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL', 'CosmosDB']
             , 'Hosting' :['Microsoft Azure', 'AWS', 'UK Fast CloudFlex']
             , 'Operating Systems': ['Windows', 'Linux (Ubuntu/Gentoo/CentOS)', 'Android']
