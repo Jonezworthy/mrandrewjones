@@ -19,7 +19,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
         }
         , 'Client Side': {
             'Client Languages': ['JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', 'HTML & HTML5', 'CSS & CSS3 & SASS', 'TypeScript']
-            , 'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'AngularJS 4.3', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI']
+            , 'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'AngularJS 4.3', 'Ionic 3+', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI']
             , 'Caching': ['Local Storage API', 'Session Storage API', 'ETag', 'Expires headers']
             , 'Compatibilities': ['normalize.css', 'modernizr.js', 'polyfills']
             , 'CSS Libraries or Frameworks': ['Angular Materials', 'Bootstrap', 'Font Awesome']
