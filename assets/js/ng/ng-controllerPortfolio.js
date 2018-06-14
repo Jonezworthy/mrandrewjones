@@ -73,12 +73,12 @@ angular.module('MrAndrewJones').controller('controllerPortfolio', function ($sco
         , 'Android Apps': {
             experiences: [
                 {
-                    title: 'Stand Up! (for scrum)'
-                    , url: 'https://play.google.com/store/apps/details?id=uk.co.mrandrewjones.standup&hl=en'
+                    title: 'Utta Bliss'
+                    , url: 'https://play.google.com/store/apps/details?id=com.uttabliss.app'
                     , urlTitle: 'View on Google\'s Play Store'
-                    , stack: 'Java'
-                    , preview: '/assets/img/portfolio/standup.jpg'
-                    , details: 'Stand Up! Is an app I made to give me some space on my phone where I can take note of the impediments, and other tasks that I work through during the day, so I have a more productive stand up the next day.'
+                    , stack: 'Ionic'
+                    , preview: '/assets/img/portfolio/uttabliss.png'
+                    , details: 'Utta Bliss, the totally free dating app'
                 }
                 ,{
                     title: 'Cruise.co.uk Official App'
@@ -87,6 +87,14 @@ angular.module('MrAndrewJones').controller('controllerPortfolio', function ($sco
                     , stack: 'Java'
                     , preview: '/assets/img/portfolio/cruise.jpg'
                     , details: 'I am the sole author for the official Cruise.co.uk app. The main functionality of the app is it a web view of the mobile site, but with a pull notification service.'
+                }
+                ,{
+                    title: 'Stand Up! (for scrum)'
+                    , url: 'https://play.google.com/store/apps/details?id=uk.co.mrandrewjones.standup&hl=en'
+                    , urlTitle: 'View on Google\'s Play Store'
+                    , stack: 'Java'
+                    , preview: '/assets/img/portfolio/standup.jpg'
+                    , details: 'Stand Up! Is an app I made to give me some space on my phone where I can take note of the impediments, and other tasks that I work through during the day, so I have a more productive stand up the next day.'
                 }
             ]
         }

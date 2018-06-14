@@ -226,48 +226,6 @@ angular.module('MrAndrewJones').controller('controllerEducation', function ($sco
                 , description: 'The best introduction to Node book I found, walks you through the common practices of MEAN development'
             }
         ]
-        , 'Education': {
-            'New College Redditch': {
-                to: '2007'
-                , from: '2006'
-                , type: 'AS Level'
-                , qualifications: [
-                    {
-                        title: 'Interactive Media (iMedia)'
-                        , grade: 'C'
-                    }
-                    , {
-                        title: 'Advanced Computing'
-                        , grade: 'D'
-                    }
-                ]
-            }
-            , 'Trinity High School Redditch': {
-                to: '2006'
-                , from: '2003'
-                , type: 'GCSEs'
-                , qualifications: [
-                    {
-                        title: 'Maths'
-                        , grade: 'C'
-                    }
-                    , {
-                        title: 'English'
-                        , grade: 'C'
-                    }
-                    , {
-                        title: 'Business Studies'
-                        , grade: 'C'
-                    }
-
-                    , {
-                        title: 'ICT (Double Award)'
-                        , grade: 'C'
-                    }
-
-                ]
-            }
-        }
     };
 
 });
@@ -362,12 +320,12 @@ angular.module('MrAndrewJones').controller('controllerPortfolio', function ($sco
         , 'Android Apps': {
             experiences: [
                 {
-                    title: 'Stand Up! (for scrum)'
-                    , url: 'https://play.google.com/store/apps/details?id=uk.co.mrandrewjones.standup&hl=en'
+                    title: 'Utta Bliss'
+                    , url: 'https://play.google.com/store/apps/details?id=com.uttabliss.app'
                     , urlTitle: 'View on Google\'s Play Store'
-                    , stack: 'Java'
-                    , preview: '/assets/img/portfolio/standup.jpg'
-                    , details: 'Stand Up! Is an app I made to give me some space on my phone where I can take note of the impediments, and other tasks that I work through during the day, so I have a more productive stand up the next day.'
+                    , stack: 'Ionic'
+                    , preview: '/assets/img/portfolio/uttabliss.png'
+                    , details: 'Utta Bliss, the totally free dating app'
                 }
                 ,{
                     title: 'Cruise.co.uk Official App'
@@ -376,6 +334,14 @@ angular.module('MrAndrewJones').controller('controllerPortfolio', function ($sco
                     , stack: 'Java'
                     , preview: '/assets/img/portfolio/cruise.jpg'
                     , details: 'I am the sole author for the official Cruise.co.uk app. The main functionality of the app is it a web view of the mobile site, but with a pull notification service.'
+                }
+                ,{
+                    title: 'Stand Up! (for scrum)'
+                    , url: 'https://play.google.com/store/apps/details?id=uk.co.mrandrewjones.standup&hl=en'
+                    , urlTitle: 'View on Google\'s Play Store'
+                    , stack: 'Java'
+                    , preview: '/assets/img/portfolio/standup.jpg'
+                    , details: 'Stand Up! Is an app I made to give me some space on my phone where I can take note of the impediments, and other tasks that I work through during the day, so I have a more productive stand up the next day.'
                 }
             ]
         }
@@ -410,8 +376,9 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
     tech.oTechnologies = {
         /* ************************************** */
         'Server Side': {
-            'Server Languages': ['JavaScript (NodeJS)', 'NodeJS with Express', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
-            , 'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL']
+            'Server Languages': ['JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
+            , 'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL', 'CosmosDB']
+            , 'Hosting' :['Microsoft Azure', 'AWS', 'UK Fast CloudFlex']
             , 'Operating Systems': ['Windows', 'Linux (Ubuntu/Gentoo/CentOS)', 'Android']
             , 'Apache': ['Virtual Hosts', 'Rewrite Rules', 'Reverse Proxy']
             , 'NginX': ['Server Definition', 'Reverse Proxy']
@@ -420,7 +387,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
         }
         , 'Client Side': {
             'Client Languages': ['JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', 'HTML & HTML5', 'CSS & CSS3 & SASS', 'TypeScript']
-            , 'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'AngularJS 4.3', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI']
+            , 'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'AngularJS 4.3', 'Ionic 3+', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI']
             , 'Caching': ['Local Storage API', 'Session Storage API', 'ETag', 'Expires headers']
             , 'Compatibilities': ['normalize.css', 'modernizr.js', 'polyfills']
             , 'CSS Libraries or Frameworks': ['Angular Materials', 'Bootstrap', 'Font Awesome']
@@ -430,7 +397,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
             , 'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN']
             , 'Testing': ['Test-driven Development', 'Unit/Automated/Acceptence Testing', 'Regression Testing' , 'Jasmine', 'Karma', 'Mocha']
             , 'Workflow': ['Scrum', 'Agile Development', 'Jenkins (Continuous integration)', 'Gulp (Task Management)']
-            , 'Security': ['XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
+            , 'Security': ['OWASP', 'XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
         }
         , 'Network': {
             'Email Configuration': ['SPF', 'DMARC', 'DKIM', 'Microsoft Exchange']
@@ -438,7 +405,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
             , 'Communication Protocols': ['FTP', 'SFTP', 'SSH', 'SSL']
         }
         , 'Administration': {
-            'Work Management': ['JIRA', 'FreshDesk', 'Trello']
+            'Work Management': ['JIRA', 'FreshDesk', 'Trello', 'Visual Studio Online']
             , 'Version Control': ['SVN (CLI + Tortoise)', 'Git']
             , 'Scripting': ['PowerShell', 'Bash', 'Batch']
             , 'CDN': ['Akamai CDN', 'Akamai Fast DNS']
@@ -580,8 +547,33 @@ angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $
     work.oExperiences = {
         'Employment': [
             {
-                from: 'July 2013'
+                from: 'August 2017'
                 , to: 'Current'
+                , companyName: 'The NEC Group/The Ticket Factory'
+                , companyDescription: 'Huge exhibition company'
+                , title: 'Lead Software Engineer'
+                , details: {
+                    'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, CSS3 and HTML5. </strong> \n\
+                        <br />Planning/Developing the future of the systems which are hosted in Microsoft Azure\'s cloud platform'
+                    , 'Notable Achievements': '\
+                        <ul>\n\
+                            <li>Introduced continuous integration</li>\n\
+                            <li>Introduced automated testing</li>\n\
+                        </ul>'
+                    , 'Other Duties': '\
+                        <ul>\n\
+                            <li>Making decisions on server infrastructure</li>\n\
+                            <li>Code reviews</li>\n\
+                            <li>Managing and scheduling projects</li>\n\
+                            <li>Mentoring junior developers</li>\n\
+                        </ul>'
+                    , 'General Info': 'I have 2 other developers in my team, we look after the Expoware services. '
+
+                }
+            },
+            {
+                from: 'July 2013'
+                , to: 'August 2017'
                 , companyName: 'Cruise.co/Cruise.co.uk'
                 , companyDescription: 'International travel agent for Cruises/holidays'
                 , title: 'Senior Software Engineer'

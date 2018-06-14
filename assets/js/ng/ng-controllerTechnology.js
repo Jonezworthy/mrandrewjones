@@ -8,7 +8,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
     tech.oTechnologies = {
         /* ************************************** */
         'Server Side': {
-            'Server Languages': ['JavaScript (NodeJS)', 'NodeJS with Express', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
+            'Server Languages': ['JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
             , 'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL', 'CosmosDB']
             , 'Hosting' :['Microsoft Azure', 'AWS', 'UK Fast CloudFlex']
             , 'Operating Systems': ['Windows', 'Linux (Ubuntu/Gentoo/CentOS)', 'Android']
@@ -19,7 +19,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
         }
         , 'Client Side': {
             'Client Languages': ['JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', 'HTML & HTML5', 'CSS & CSS3 & SASS', 'TypeScript']
-            , 'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'AngularJS 4.3', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI']
+            , 'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'AngularJS 4.3', 'Ionic 3+', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI']
             , 'Caching': ['Local Storage API', 'Session Storage API', 'ETag', 'Expires headers']
             , 'Compatibilities': ['normalize.css', 'modernizr.js', 'polyfills']
             , 'CSS Libraries or Frameworks': ['Angular Materials', 'Bootstrap', 'Font Awesome']
