@@ -22,7 +22,6 @@ function applicationController(db) {
             }
 
         };
-console.log('hello');   
         res.send(JSON.stringify(contactDetails));
     };
 }
