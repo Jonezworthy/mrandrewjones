@@ -4,8 +4,8 @@ angular.module('MrAndrewJones').controller('controllerEducation', function ($sco
 
         'Qualifications': [
             {
-                title: 'M201 MongoDB Security',
-                issuer: 'MongoDB University',
+                title: 'M201 MongoDB Performance',
+                issuer: 'MongoDB Performance',
                 date: 'October 2018',
                 grade: '100% (Pass)',
                 certificateUrl: 'http://university.mongodb.com/course_completion/095f0ed9-9292-494c-9b0d-e3932d98'
