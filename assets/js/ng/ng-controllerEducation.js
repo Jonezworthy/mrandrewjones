@@ -4,13 +4,13 @@ angular.module('MrAndrewJones').controller('controllerEducation', function ($sco
 
         'Qualifications': [
             {
-                title: 'M201 MongoDB Performance',
+                title: '(M201) MongoDB Performance',
                 issuer: 'MongoDB Performance',
                 date: 'October 2018',
                 grade: '100% (Pass)',
                 certificateUrl: 'http://university.mongodb.com/course_completion/095f0ed9-9292-494c-9b0d-e3932d98'
             }, {
-                title: 'M301 MongoDB Security',
+                title: '(M301) MongoDB Security',
                 issuer: 'MongoDB University',
                 date: 'October 2018',
                 grade: '97% (Pass)',
@@ -33,13 +33,13 @@ angular.module('MrAndrewJones').controller('controllerEducation', function ($sco
                 grade: '83% (Pass)',
                 certificateUrl: false
             }, {
-                title: 'MongoDB for Node.js Developers',
+                title: '(M101JS) MongoDB for Node.js Developers',
                 issuer: 'MongoDB University',
                 date: 'December 2016',
                 grade: '92% (Pass)',
                 certificateUrl: 'http://university.mongodb.com/course_completion/41fb9adfd648415d87c33be96a9db3be'
             }, {
-                title: 'Introduction to MongoDB using the MEAN stack',
+                title: '(M101X) Introduction to MongoDB using the MEAN stack',
                 issuer: 'MongoDB University',
                 date: 'November 2016',
                 grade: '89% (Pass)',
