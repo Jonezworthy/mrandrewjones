@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 //Server
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
+app.locals.pretty = true;
 app.use(bodyParser.json());
 //    app.use(device.capture());
 routes(app);

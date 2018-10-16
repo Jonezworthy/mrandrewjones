@@ -3,6 +3,18 @@ angular.module('MrAndrewJones').controller('controllerEducation', function($scop
     education.oExperiences = {
 
         'Qualifications': [{
+            title: 'M201 MongoDB Performance',
+            issuer: 'MongoDB University',
+            date: 'October 2018',
+            grade: '100% (Pass)',
+            certificateUrl: 'http://university.mongodb.com/course_completion/095f0ed9-9292-494c-9b0d-e3932d98'
+        }, {
+            title: 'M301 MongoDB Security',
+            issuer: 'MongoDB University',
+            date: 'October 2018',
+            grade: '97% (Pass)',
+            certificateUrl: 'http://university.mongodb.com/course_completion/0fcdd3f7-832c-4044-843f-1d85d25d'
+        }, {
             title: 'HTML5 Coding Essentials and Best Practices',
             issuer: 'W3Cx',
             date: 'April 2017',
@@ -24,7 +36,7 @@ angular.module('MrAndrewJones').controller('controllerEducation', function($scop
             issuer: 'MongoDB University',
             date: 'December 2016',
             grade: '92% (Pass)',
-            certificateUrl: '/assets/other/mongodb-certificate.pdf'
+            certificateUrl: 'http://university.mongodb.com/course_completion/41fb9adfd648415d87c33be96a9db3be'
         }, {
             title: 'Introduction to MongoDB using the MEAN stack',
             issuer: 'MongoDB University',
