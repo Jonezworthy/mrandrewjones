@@ -14,8 +14,8 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
             'Operating Systems': ['Windows', 'Linux (Ubuntu/Gentoo/CentOS)', 'Android'],
             'Apache': ['Virtual Hosts', 'Rewrite Rules', 'Reverse Proxy'],
             'NginX': ['Server Definition', 'Reverse Proxy'],
-            'Templating': ['Smarty', 'Jade', 'EJS'],
-            'Other': ['PHP5-FPM']
+            'Templating': ['Smarty', 'Jade/Pug', 'EJS', 'Handlebars'],
+            'Other': ['PHP5-FPM', 'Mongoose']
         },
         'Client Side': {
             'Client Languages': ['JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', 'HTML & HTML5', 'CSS & CSS3 & SASS', 'TypeScript'],
@@ -27,7 +27,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
         'Principles': {
             'Design Patterns': ['MVC/MVP/SoC', 'Programming Design Patterns', 'RESTful APIs', 'Mobile first'],
             'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN'],
-            'Testing': ['Test-driven Development', 'Unit/Automated/Acceptance Testing', 'Regression Testing', 'Jasmine', 'Karma', 'Mocha'],
+            'Testing': ['Test-driven Development', 'Unit/Automated/Acceptance Testing', 'Regression Testing', 'JasmineJS', 'KarmaJS', 'MochaJS + ShouldJS'],
             'Continuous Integration': ['Jenkins', 'Gulp (Task Management)', 'Visual Studio Pipelines'],
             'Security': ['OWASP', 'XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
         },
