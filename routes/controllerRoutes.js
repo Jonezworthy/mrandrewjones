@@ -12,6 +12,10 @@ module.exports = function (app, db) {
     app.get('/education', contentController.displayHomepage);
     app.get('/me', contentController.displayHomepage);
     app.get('/contact', contentController.displayHomepage);
+    app.post('/alexa', (req, res)=>{
+        console.log(req);
+        res.send('Received');
+    });
     //
     
     app.get('/robots.txt', contentController.displayRobots);
