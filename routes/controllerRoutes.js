@@ -1,8 +1,9 @@
 var contentHandler = require('../content/controllerContent'); 
 var applicationHandler = require('../application/controller');
 var alexa = require('../application/alexa');
-module.exports = function (app, db) {
-    var applicationController = new applicationHandler(db);
+
+module.exports = function (app) {
+    var applicationController = new applicationHandler();
     var contentController = new contentHandler(applicationController);
 
     app.get('/', contentController.displayHomepage);
@@ -13,8 +14,9 @@ module.exports = function (app, db) {
     app.get('/education', contentController.displayHomepage);
     app.get('/me', contentController.displayHomepage);
     app.get('/contact', contentController.displayHomepage);
+
+    console.log('Set alexa');
     app.post('/alexa', alexa);
-    //
     
     app.get('/robots.txt', contentController.displayRobots);
     app.get('/api/contactdetails/', applicationController.getContactDetails);
