@@ -21,6 +21,7 @@ module.exports = function (app) {
     app.get('/robots.txt', contentController.displayRobots);
     app.get('/api/contactdetails/', applicationController.getContactDetails);
     app.get('/Andrew-Jones.pdf', contentController.displayCVPdf);
+    app.get('/.well-known/acme-challenge/lMgFk7wI84w8bfQsenmSW2gmPde2jXheN3VhnFjpg94', contentController.displayVerification);
 //    app.get('/Andrew-Jones.docx', contentController.displayCVDocx);
     
     //Assets

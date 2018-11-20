@@ -3,6 +3,8 @@ var app = express();
 var MongoClient = require('mongodb').MongoClient;
 var routes = require('./routes/controllerRoutes');
 var bodyParser = require('body-parser');
+var verifier = require('alexa-verifier-middleware');
+var alexaRouter = express.Router();
 
 //Server
 app.set('views', __dirname + '/views');
@@ -10,6 +12,8 @@ app.set('view engine', 'jade');
 app.locals.pretty = true;
 //    app.use(device.capture());
 
+// app.use('/alexa', alexaRouter)
+// alexaRouter.use(verifier);
 
 app.use(bodyParser.json());
 

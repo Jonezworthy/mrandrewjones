@@ -44,6 +44,10 @@ function contentController(app) {
         req['url'] = '/assets/other/Andrew-Jones-v12.docx';
         contentController.displayAsset(req, res);
     };
+    this.displayVerification = function(req, res){
+        req['url'] = '/assets/other/verify.txt';
+        contentController.displayAsset(req, res);
+    }
 }
 
 module.exports = contentController;

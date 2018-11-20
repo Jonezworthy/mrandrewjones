@@ -40,7 +40,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
             'Work Management': ['Scrum', 'Agile Development', 'JIRA', 'FreshDesk', 'Trello', 'Visual Studio Online'],
             'Version Control': ['SVN (CLI + Tortoise)', 'Git'],
             'Scripting': ['PowerShell', 'Bash', 'Batch'],
-            'CDN': ['Akamai CDN', 'Akamai Fast DNS'],
+            'CDN': ['Akamai CDN', 'Akamai Fast DNS', 'Cloudflare', 'Azure Blob Storage'],
             'Status': ['Hosttracker', 'Uptime Monitor'],
             'Windows': ['Active Directory', 'Domain Controller', 'Microsoft Exchange', 'VPN']
         },
