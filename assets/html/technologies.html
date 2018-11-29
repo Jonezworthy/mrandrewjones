@@ -1,22 +1,5 @@
 <div layout-margin-gt-md>
     <md-content ng-controller="controllerTechnology as tech">
-        <md-toolbar class="md-accent md-hue-1" >
-            <div class="md-toolbar-tools">
-                <h2 flex="auto" class="md-flex">Proficiencies </h2>
-            </div>
-        </md-toolbar>
-        <div id="technologiesChart" style="width:100%">
-
-        </div>
-        <md-toolbar class="md-accent md-hue-1" >
-            <div class="md-toolbar-tools">
-                <h2 flex="auto" class="md-flex">Technologies List</h2>
-                <md-button ng-class="{'md-accent': controller.displayMode === 'text'}" ng-show="!controller.isMobile" ng-click="controller.toggleDisplayMode('text')" class="md-raised md-primary" aria-label="">Text</md-button>
-                <md-button ng-class="{'md-accent': controller.displayMode === 'XML'}" ng-show="!controller.isMobile" ng-click="controller.toggleDisplayMode('XML')" class="md-raised md-primary" aria-label="">XML</md-button>
-                <md-button ng-class="{'md-accent': controller.displayMode === 'JSON'}" ng-show="!controller.isMobile"  ng-click="controller.toggleDisplayMode('JSON')" class="md-raised md-primary" aria-label="">JSON</md-button>
-            </div>
-        </md-toolbar>
-
         <form name="techSearch" layout-margin ng-show="controller.displayMode === 'text' && !controller.isMobile" layout="row">
             <label>Looking for something specific?: </label>
             <input layout-padding type="text" name="search" placeholder="Enter a value to search" value="" ng-model="tech.searchTerm" ng-change="tech.searchChange()" />

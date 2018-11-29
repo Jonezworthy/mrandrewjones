@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alexa-message-builder": "^1.2.0",
+    "alexa-verifier-middleware": "^1.0.1",
     "body-parser": "^1.15.1",
     "brotli": "^1.1.0",
     "consolidate": "^0.14.1",

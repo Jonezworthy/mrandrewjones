@@ -3,15 +3,20 @@ var app = express();
 var MongoClient = require('mongodb').MongoClient;
 var routes = require('./routes/controllerRoutes');
 var bodyParser = require('body-parser');
-
-
+var verifier = require('alexa-verifier-middleware');
+var alexaRouter = express.Router();
 
 //Server
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.locals.pretty = true;
-app.use(bodyParser.json());
 //    app.use(device.capture());
-routes(app);
-app.listen(4000);
-console.log('Live Server Running on 4000 PID:' + process.pid);
+
+// app.use('/alexa', alexaRouter)
+// alexaRouter.use(verifier);
+
+app.use(bodyParser.json());
+
+routes(app, express);
+app.listen(4200);
+console.log('Live Server Running on 4200 PID:' + process.pid);
