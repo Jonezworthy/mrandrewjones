@@ -33,7 +33,6 @@
     "gulp-watch": "^4.3.8",
     "mocha": "^3.5.0",
     "should": "^11.2.1",
-    "supertest": "^3.4.2",
-    "windows-build-tools": "^5.1.0"
+    "supertest": "^3.4.2"
   }
 }
