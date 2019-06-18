@@ -135,97 +135,64 @@ angular.module('MrAndrewJones').controller('controllerContact', function ($scope
         contact.showVerification = true;
     }
 });
-angular.module('MrAndrewJones').controller('controllerEducation', function ($scope, $http, $mdDialog, $mdMedia, $window) {
+angular.module('MrAndrewJones').controller('controllerEducation', function($scope, $http, $mdDialog, $mdMedia, $window) {
     var education = this;
     education.oExperiences = {
 
-        'Qualifications': [
-            {
-                title: 'HTML5 Coding Essentials and Best Practices'
-                , issuer: 'W3Cx'
-                , date: 'April 2017'
-                , grade: '79% (Pass)'
-            }
-            ,{
-                title: 'Introduction to jQuery'
-                , issuer: 'Microsoft'
-                , date: 'April 2017'
-                , grade: '79% (Pass)'
-                , certificateUrl: false
-            }
-            ,{
-                title: 'Windows PowerShell basics'
-                , issuer: 'Microsoft'
-                , date: 'April 2017'
-                , grade: '83% (Pass)'
-                , certificateUrl: false
-            }
-            ,{
-                title: 'MongoDB for Node.js Developers'
-                , issuer: 'MongoDB University'
-                , date: 'December 2016'
-                , grade: '92% (Pass)'
-                , certificateUrl: '/assets/other/mongodb-certificate.pdf'
-            }
-            , {
-                title: 'Introduction to MongoDB using the MEAN stack'
-                , issuer: 'MongoDB University'
-                , date: 'November 2016'
-                , grade: '89% (Pass)'
-                , certificateUrl: 'https://courses.edx.org/certificates/e2ddeb18ae3a4eb8abe3a10ddfbc036e'
-            }
-            , {
-                title: 'Querying with Transact-SQL'
-                , issuer: 'Microsoft'
-                , date: 'November 2016'
-                , grade: '74% (Pass)'
-                , certificateUrl: 'https://courses.edx.org/certificates/c0c99a6e14c2444b8a36c43988825266'
-            }
-            , {
-                title: 'Information Systems and Computer Applications'
-                , issuer: 'University of Valencia'
-                , date: 'November 2016'
-                , grade: '96% (Pass)'
-                , certificateUrl: 'https://courses.edx.org/certificates/b2db5090136440708718ebeab1c20455'
-            }
-        ]
-        , 'Books': [
-            {
-                title: 'JavaScript the definitive guide'
-                , author: 'David Flanagan'
-                , description: 'It contains a huge overview of the whole of JavaScript, from its humble beginnings all the way to the future.'
-            }
-            , {
-                title: 'Advanced PHP Programming '
-                , author: 'George Schlossnagle'
-                , description: 'It is more than a PHP book, George writes a lot about coding standards and scalability that is relevent to any language. Fantastic.'
-            }
-            , {
-                title: 'Learning JavaScript Design Patterns'
-                , author: 'Addy Osmani'
-                , description: 'Great book on learning how to achieve design patterns in JavaScript.'
-            }
-            , {
-                title: 'Node: Up and Running'
-                , author: 'Tom Hughes-Croucher & Mike Wilson'
-                , description: 'Fantastic overview on how Node works and to create functionality that exists in other languages'
-            }
-            , {
-                title: 'Web Development with Node and Express '
-                , author: 'Ethan Brown'
-                , description: 'A detailed book on how to use Express with Node. '
-            }
-            , {
-                title: 'Programming PHP'
-                , author: 'Rasmus Lerdorf, Kevin Tatroe & Peter MacIntyre'
-                , description: 'A true encyclopedia of PHP, gives great insights in to the inner workings of PHP'
-            }
-            , {
-                title: 'Write Modern Web Apps with the MEAN stack '
-                , author: 'Jeff Dickey'
-                , description: 'The best introduction to Node book I found, walks you through the common practices of MEAN development'
-            }
-        ]
+        'Qualifications': [{
+            title: 'M201 MongoDB Performance',
+            issuer: 'MongoDB University',
+            date: 'October 2018',
+            grade: '100% (Pass)',
+            certificateUrl: 'http://university.mongodb.com/course_completion/095f0ed9-9292-494c-9b0d-e3932d98'
+        }, {
+            title: 'M301 MongoDB Security',
+            issuer: 'MongoDB University',
+            date: 'October 2018',
+            grade: '97% (Pass)',
+            certificateUrl: 'http://university.mongodb.com/course_completion/0fcdd3f7-832c-4044-843f-1d85d25d'
+        }, {
+            title: 'HTML5 Coding Essentials and Best Practices',
+            issuer: 'W3Cx',
+            date: 'April 2017',
+            grade: '79% (Pass)'
+        }, {
+            title: 'Introduction to jQuery',
+            issuer: 'Microsoft',
+            date: 'April 2017',
+            grade: '79% (Pass)',
+            certificateUrl: false
+        }, {
+            title: 'Windows PowerShell basics',
+            issuer: 'Microsoft',
+            date: 'April 2017',
+            grade: '83% (Pass)',
+            certificateUrl: false
+        }, {
+            title: 'MongoDB for Node.js Developers',
+            issuer: 'MongoDB University',
+            date: 'December 2016',
+            grade: '92% (Pass)',
+            certificateUrl: 'http://university.mongodb.com/course_completion/41fb9adfd648415d87c33be96a9db3be'
+        }, {
+            title: 'Introduction to MongoDB using the MEAN stack',
+            issuer: 'MongoDB University',
+            date: 'November 2016',
+            grade: '89% (Pass)',
+            certificateUrl: 'https://courses.edx.org/certificates/e2ddeb18ae3a4eb8abe3a10ddfbc036e'
+        }, {
+            title: 'Querying with Transact-SQL',
+            issuer: 'Microsoft',
+            date: 'November 2016',
+            grade: '74% (Pass)',
+            certificateUrl: 'https://courses.edx.org/certificates/c0c99a6e14c2444b8a36c43988825266'
+        }, {
+            title: 'Information Systems and Computer Applications',
+            issuer: 'University of Valencia',
+            date: 'November 2016',
+            grade: '96% (Pass)',
+            certificateUrl: 'https://courses.edx.org/certificates/b2db5090136440708718ebeab1c20455'
+        }]
     };
 
 });
@@ -233,7 +200,8 @@ angular.module('MrAndrewJones').controller('controllerNavigation', function ($sc
     var navigation = this;
 
     navigation.menuOptions = [
-        {symbol: 'code', title: 'Technologies', url: '/technologies/'}
+        {symbol: 'home', title: 'Home', url: '/'}
+        , {symbol: 'code', title: 'Technologies', url: '/technologies/'}
         , {symbol: 'description', title: 'Portfolio', url: '/portfolio/'}
         , {symbol: 'work', title: 'Work', url: '/work/'}
         , {symbol: 'assignment', title: 'Education', url: '/education/'}
@@ -376,46 +344,46 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
     tech.oTechnologies = {
         /* ************************************** */
         'Server Side': {
-            'Server Languages': ['JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 5.7 (Procedural, OOP, MVC)', 'Java']
-            , 'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL', 'CosmosDB']
-            , 'Hosting' :['Microsoft Azure', 'AWS', 'UK Fast CloudFlex']
-            , 'Operating Systems': ['Windows', 'Linux (Ubuntu/Gentoo/CentOS)', 'Android']
-            , 'Apache': ['Virtual Hosts', 'Rewrite Rules', 'Reverse Proxy']
-            , 'NginX': ['Server Definition', 'Reverse Proxy']
-            , 'Templating': ['Smarty', 'Jade', 'EJS']
-            , 'Other': ['PHP5-FPM']
-        }
-        , 'Client Side': {
-            'Client Languages': ['JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', 'HTML & HTML5', 'CSS & CSS3 & SASS', 'TypeScript']
-            , 'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'AngularJS 4.3', 'Ionic 3+', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI']
-            , 'Caching': ['Local Storage API', 'Session Storage API', 'ETag', 'Expires headers']
-            , 'Compatibilities': ['normalize.css', 'modernizr.js', 'polyfills']
-            , 'CSS Libraries or Frameworks': ['Angular Materials', 'Bootstrap', 'Font Awesome']
-        }
-        , 'Principles': {
-            'Design Patterns': ['MVC/MVP/SoC', 'Programming Design Patterns', 'RESTful APIs', 'Mobile first']
-            , 'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN']
-            , 'Testing': ['Test-driven Development', 'Unit/Automated/Acceptence Testing', 'Regression Testing' , 'Jasmine', 'Karma', 'Mocha']
-            , 'Workflow': ['Scrum', 'Agile Development', 'Jenkins (Continuous integration)', 'Gulp (Task Management)']
-            , 'Security': ['OWASP', 'XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
-        }
-        , 'Network': {
-            'Email Configuration': ['SPF', 'DMARC', 'DKIM', 'Microsoft Exchange']
-            , 'DNS and Dynamic DNS': ['A/CNAME/MX', 'Load balancing', 'Domain Registrar']
-            , 'Communication Protocols': ['FTP', 'SFTP', 'SSH', 'SSL']
-        }
-        , 'Administration': {
-            'Work Management': ['JIRA', 'FreshDesk', 'Trello', 'Visual Studio Online']
-            , 'Version Control': ['SVN (CLI + Tortoise)', 'Git']
-            , 'Scripting': ['PowerShell', 'Bash', 'Batch']
-            , 'CDN': ['Akamai CDN', 'Akamai Fast DNS']
-            , 'Status': ['Hosttracker', 'Uptime Monitor']
-            , 'Windows': ['Active Directory', 'Domain Controller', 'Microsoft Exchange', 'VPN']
-        }
-        , 'Third Party': {
-            'APIs': ['Exchange Web Services', 'Google Maps', 'Google Graphs', 'Facebook, Twitter, YouTube, Google Plus', 'Wikipedia', 'OpenWeather', 'Text messaging (textlocal.com & fastsms.co.uk)', 'PayPal & PayPal APN', 'and more...']
-            , 'Analytical': ['Google Analytics', 'Google Webmasters']
-            , 'Other': ['WordPress', 'vBulletin', 'Eysys recommendation engine', 'Tintup Social']
+            'Server Languages': ['JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 7 (Procedural, OOP, MVC)', 'Java'],
+            'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL', 'CosmosDB'],
+            'Hosting': ['Microsoft Azure', 'AWS', 'UK Fast CloudFlex'],
+            'Operating Systems': ['Windows', 'Linux (Ubuntu/Gentoo/CentOS)', 'Android'],
+            'Apache': ['Virtual Hosts', 'Rewrite Rules', 'Reverse Proxy'],
+            'NginX': ['Server Definition', 'Reverse Proxy'],
+            'Templating': ['Smarty', 'Jade/Pug', 'EJS', 'Handlebars'],
+            'Other': ['PHP5-FPM', 'Mongoose']
+        },
+        'Client Side': {
+            'Client Languages': ['JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', 'HTML & HTML5', 'CSS & CSS3 & SASS', 'TypeScript'],
+            'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'Angular2 (4+)', 'Ionic 3+', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI'],
+            'Caching': ['Local Storage API', 'Session Storage API', 'ETag', 'Expires headers'],
+            'Compatibilities': ['normalize.css', 'modernizr.js', 'polyfills'],
+            'CSS Libraries or Frameworks': ['Angular Materials', 'Bootstrap', 'Font Awesome']
+        },
+        'Principles': {
+            'Design Patterns': ['MVC/MVP/SoC', 'Programming Design Patterns', 'RESTful APIs', 'Mobile first'],
+            'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN'],
+            'Testing': ['Test-driven Development', 'Unit/Automated/Acceptance Testing', 'Regression Testing', 'JasmineJS', 'KarmaJS', 'MochaJS + ShouldJS'],
+            'Continuous Integration': ['Jenkins', 'Gulp (Task Management)', 'Visual Studio Pipelines'],
+            'Security': ['OWASP', 'XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
+        },
+        'Network': {
+            'Email Configuration': ['SPF', 'DMARC', 'DKIM', 'Microsoft Exchange'],
+            'DNS and Dynamic DNS': ['A/CNAME/MX', 'Load balancing', 'Domain Registrar'],
+            'Communication Protocols': ['FTP', 'SFTP', 'SSH', 'SSL']
+        },
+        'Administration': {
+            'Work Management': ['Scrum', 'Agile Development', 'JIRA', 'FreshDesk', 'Trello', 'Visual Studio Online'],
+            'Version Control': ['SVN (CLI + Tortoise)', 'Git', 'GitHub'],
+            'Scripting': ['PowerShell', 'Bash', 'Batch'],
+            'CDN': ['Akamai CDN', 'Akamai Fast DNS', 'Cloudflare', 'Azure Blob Storage'],
+            'Status': ['HostTracker', 'Uptime Monitor'],
+            'Windows': ['Active Directory', 'Domain Controller', 'Microsoft Exchange', 'VPN']
+        },
+        'Third Party': {
+            'APIs': ['Exchange Web Services', 'Google Maps', 'Google Graphs', 'Facebook, Twitter, YouTube, Google Plus', 'Wikipedia', 'OpenWeather', 'Text messaging (textlocal.com & fastsms.co.uk)', 'PayPal & PayPal APN', 'and more...'],
+            'Analytical': ['Google Analytics', 'Google Webmasters'],
+            'Other': ['Amazon Alexa', 'WordPress', 'vBulletin', 'Eysys recommendation engine', 'Tintup Social', 'Voice recognition']
         }
     };
 
@@ -423,79 +391,79 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
     tech.oTechnologiesCopy = JSON.parse(JSON.stringify(tech.oTechnologies));
 
     tech.runChart = function () {
-        if (!google || !('charts' in google)) {
-            return null;
-        }
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', {'packages': ['corechart']});
+        // if (!google || !('charts' in google)) {
+        //     return null;
+        // }
+        // // Load the Visualization API and the corechart package.
+        // google.charts.load('current', { 'packages': ['corechart'] });
 
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
+        // // Set a callback to run when the Google Visualization API is loaded.
+        // google.charts.setOnLoadCallback(drawChart);
 
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
-            var mdWarnH1 = '#e57373';
-//            
-            var serverSide = '#ff9800';
-            var databases = '#536dfe';
-            var frontend = '#f44336';
-            var css = '#ffb74d';
-            var html = '#8c9eff';
+        // // Callback that creates and populates a data table,
+        // // instantiates the pie chart, passes in the data and
+        // // draws it.
+        // function drawChart() {
+        //     var mdWarnH1 = '#e57373';
+        //     //            
+        //     var serverSide = '#ff9800';
+        //     var databases = '#536dfe';
+        //     var frontend = '#f44336';
+        //     var css = '#ffb74d';
+        //     var html = '#8c9eff';
 
-            var groupWidth = ($mdMedia('xs') || $mdMedia('sm') ? '50%' : '85%');
-            var margin = ($mdMedia('xs') || $mdMedia('sm') ? 10 : 50);
+        //     var groupWidth = ($mdMedia('xs') || $mdMedia('sm') ? '50%' : '85%');
+        //     var margin = ($mdMedia('xs') || $mdMedia('sm') ? 10 : 50);
 
-            var data = google.visualization.arrayToDataTable([
-                ['Technlogoy', 'Skill Level %', {role: 'style'}],
-                ['PHP (5.6+)', 90, serverSide],
-                ['NodeJS', 70, serverSide],
-                ['Express', 60, serverSide],
+        //     var data = google.visualization.arrayToDataTable([
+        //         ['Technlogoy', 'Skill Level %', { role: 'style' }],
+        //         ['PHP (5.6+)', 90, serverSide],
+        //         ['NodeJS', 70, serverSide],
+        //         ['Express', 60, serverSide],
 
-                ['MySQL', 60, databases],
-                ['MSSQL', 65, databases],
-                ['MongoDB', 75, databases],
+        //         ['MySQL', 60, databases],
+        //         ['MSSQL', 65, databases],
+        //         ['MongoDB', 75, databases],
 
-                ['JavaScript', 100, frontend],
-                ['jQuery', 90, frontend],
-                ['AngularJS', 35, frontend],
+        //         ['JavaScript', 100, frontend],
+        //         ['jQuery', 90, frontend],
+        //         ['AngularJS', 35, frontend],
 
-                ['CSS/SASS', 95, css],
-                ['HTML', 100, html]
-            ]);
+        //         ['CSS/SASS', 95, css],
+        //         ['HTML', 100, html]
+        //     ]);
 
-            // Set chart options
-            var options = {
-                'width': '100%',
-                'height': '300',
-                'bar': {groupWidth: groupWidth},
-                'chartArea': {
-                    left: margin,
-                    top: margin,
-                    bottom: margin + 50,
-                    right: margin
-                },
-                'legend': {position: 'none'},
-                'hAxis': {
-                    'textStyle': {color: '#FFF'}
-                },
-                'vAxis': {
-                    'textPosition': 'none',
-                    'gridlines': {
-                        color: 'transparent'
-                    }
+        //     // Set chart options
+        //     var options = {
+        //         'width': '100%',
+        //         'height': '300',
+        //         'bar': { groupWidth: groupWidth },
+        //         'chartArea': {
+        //             left: margin,
+        //             top: margin,
+        //             bottom: margin + 50,
+        //             right: margin
+        //         },
+        //         'legend': { position: 'none' },
+        //         'hAxis': {
+        //             'textStyle': { color: '#FFF' }
+        //         },
+        //         'vAxis': {
+        //             'textPosition': 'none',
+        //             'gridlines': {
+        //                 color: 'transparent'
+        //             }
 
-                },
-                backgroundColor: {fill: 'transparent'},
-                color: '#ffffff'
+        //         },
+        //         backgroundColor: { fill: 'transparent' },
+        //         color: '#ffffff'
 
-            };
+        //     };
 
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.ColumnChart(document.getElementById('technologiesChart'));
-            chart.draw(data, options);
-        }
+        //     // Instantiate and draw our chart, passing in some options.
+        //     var chart = new google.visualization.ColumnChart(document.getElementById('technologiesChart'));
+        //     chart.draw(data, options);
+        // }
     };
     setTimeout(function () {
         tech.runChart();
@@ -505,7 +473,8 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
         tech.oTechnologies = JSON.parse(JSON.stringify(tech.oTechnologiesCopy));
         console.log(tech.oTechnologies);
 
-        var searchTerm = tech.searchTerm.toString(), setAll;
+        var searchTerm = tech.searchTerm.toString(),
+            setAll;
         tech.searchValues = {};
         tech.searchKeys = {};
         tech.searchCategories = {};
@@ -541,7 +510,6 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
 
     };
 });
-
 angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $http, $mdDialog, $mdMedia, $window) {
     var work = this;
     work.oExperiences = {

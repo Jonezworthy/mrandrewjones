@@ -2,7 +2,8 @@ angular.module('MrAndrewJones').controller('controllerNavigation', function ($sc
     var navigation = this;
 
     navigation.menuOptions = [
-        {symbol: 'code', title: 'Technologies', url: '/technologies/'}
+        {symbol: 'home', title: 'Home', url: '/'}
+        , {symbol: 'code', title: 'Technologies', url: '/technologies/'}
         , {symbol: 'description', title: 'Portfolio', url: '/portfolio/'}
         , {symbol: 'work', title: 'Work', url: '/work/'}
         , {symbol: 'assignment', title: 'Education', url: '/education/'}
