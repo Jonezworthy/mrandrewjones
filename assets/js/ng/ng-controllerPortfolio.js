@@ -4,15 +4,6 @@ angular.module('MrAndrewJones').controller('controllerPortfolio', function ($sco
         'Personal Projects': {
             experiences: [
                 {
-                    title: 'FatReminder'
-                    , url: 'http://www.fatreminder.com'
-                    , stack: 'MEAN'
-                    , preview: '/assets/img/portfolio/fatreminder.jpg'
-                    , details: 'Fat Reminder is a service born of the idea that I could lose a few pounds! \n\
-                    <br /> I always struggled to keep motivation throughout the day and end up straying from my diet. \n\
-                    <br /> The whole site is powered by the MEAN stack (MongoDB, Express, Angular and Node) + SASS'
-                }
-                , {
                     title: 'Inter Webz'
                     , url: 'http://www.inter-webz.com'
                     , stack: 'LAMP'
@@ -35,24 +26,33 @@ angular.module('MrAndrewJones').controller('controllerPortfolio', function ($sco
                     , preview: '/assets/img/portfolio/redditchweb.jpg'
                     , details: 'RedditchWeb.co.uk is the web site I had for my web design/development company \n\
                     <br /> I have now migrated it to a WordPress installation for ease-of-use'
+                },
+                {
+                    title: 'FatReminder'
+                    , url: 'http://www.fatreminder.com'
+                    , stack: 'MEAN'
+                    , preview: '/assets/img/portfolio/fatreminder.jpg'
+                    , details: 'Fat Reminder is a service born of the idea that I could lose a few pounds! \n\
+                    <br /> I always struggled to keep motivation throughout the day and end up straying from my diet. \n\
+                    <br /> The whole site is powered by the MEAN stack (MongoDB, Express, Angular and Node) + SASS'
                 }
             ]
         }
         , 'Freelance Websites': {
             experiences: [
                 {
+                    title: 'Midland Wire Rope'
+                    , url: 'https://sawmaster.co.uk'
+                    , stack: 'MEAN'
+                    , preview: '/assets/img/portfolio/sawmaster.jpg'
+                    , details: 'A custom built e-commerce web site for a local band saw blade company'
+                },
+                {
                     title: 'JordanSaws.co.uk'
                     , url: 'http://www.jordan-saws.co.uk'
                     , stack: 'LAMP'
                     , preview: '/assets/img/portfolio/jordan.jpg'
                     , details: 'A custom built e-commerce web site I made for a local company called Economy Saw Services LTD.'
-                }
-                , {
-                    title: 'Midland Wire Rope'
-                    , url: 'http://www.midlandwirerope.com/'
-                    , stack: 'LAMP'
-                    , preview: '/assets/img/portfolio/midland.jpg'
-                    , details: 'A content managed web site'
                 }
                 , {
                     title: 'Midlands Lubricants'
@@ -80,7 +80,7 @@ angular.module('MrAndrewJones').controller('controllerPortfolio', function ($sco
                     , preview: '/assets/img/portfolio/uttabliss.png'
                     , details: 'Utta Bliss, the totally free dating app'
                 }
-                ,{
+                , {
                     title: 'Cruise.co.uk Official App'
                     , url: ''
                     , urlTitle: 'In alpha testing'
@@ -88,7 +88,7 @@ angular.module('MrAndrewJones').controller('controllerPortfolio', function ($sco
                     , preview: '/assets/img/portfolio/cruise.jpg'
                     , details: 'I am the sole author for the official Cruise.co.uk app. The main functionality of the app is it a web view of the mobile site, but with a pull notification service.'
                 }
-                ,{
+                , {
                     title: 'Stand Up! (for scrum)'
                     , url: 'https://play.google.com/store/apps/details?id=uk.co.mrandrewjones.standup&hl=en'
                     , urlTitle: 'View on Google\'s Play Store'

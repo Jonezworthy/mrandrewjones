@@ -4,7 +4,7 @@ angular.module('MrAndrewJones').controller('controllerNavigation', function ($sc
     navigation.menuOptions = [
         {symbol: 'home', title: 'Home', url: '/'}
         , {symbol: 'code', title: 'Technologies', url: '/technologies/'}
-        , {symbol: 'description', title: 'Portfolio', url: '/portfolio/'}
+        , {symbol: 'description', title: 'Personal Portfolio', url: '/portfolio/'}
         , {symbol: 'work', title: 'Work', url: '/work/'}
         , {symbol: 'assignment', title: 'Education', url: '/education/'}
         , {symbol: 'account_box', title: 'More about me', url: '/me/'}
