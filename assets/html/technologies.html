@@ -1,35 +1,77 @@
 <div layout-margin-gt-md>
-    <md-content ng-controller="controllerTechnology as tech">
-        <form name="techSearch" layout-margin ng-show="controller.displayMode === 'text' && !controller.isMobile" layout="row">
-            <label>Looking for something specific?: </label>
-            <input layout-padding type="text" name="search" placeholder="Enter a value to search" value="" ng-model="tech.searchTerm" ng-change="tech.searchChange()" />
-            <md-switch ng-model="tech.filterResults" aria-label="Filter Results" class="md-warn">
-                Filter Results?
-            </md-switch>
-        </form>
+    <md-tabs class="md-primary" md-center-tabs md-dynamic-height md-selected="selectedIndex">
+        <md-tab label="basic">
+            <md-content class="md-padding">
+                <ul>
+                    <li>
+                        <h3>App Development</h3>
+                        <ul>
+                            <li>Android &amp; IOS using the Ionic framework</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li>MEAN stack (MongoDB, Express, Angular ( 1 & 2 +), NodeJS)</li>
+                            <li>LAMP stack (Linux, Apache, MySQL, PHP)</li>
+                            <li>LASP stack (Linux, Apache, SQL Server, PHP)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Build Tools</h3>
+                        <ul>
+                            <li>Azure Pipelines</li>
+                            <li>Jenkins</li>
+                            <li>Gulp</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Testing</h3>
+                        <ul>
+                            <li>Mocha</li>
+                            <li>ShouldJS</li>
+                            <li>Supertest</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br />
+                <md-button layout="center center" ng-click="selectedIndex = 1;" class="md-raised md-primary">View More</md-button>
+            </md-content>
+        </md-tab>
+        <md-tab label="advanced">
+            <md-content class="md-padding md-body-1" ng-controller="controllerTechnology as tech">
+                <form name="techSearch" layout-margin ng-show="controller.displayMode === 'text' && !controller.isMobile" layout="row">
+                    <label>Looking for something specific?: </label>
+                    <input layout-padding type="text" name="search" placeholder="Enter a value to search" value="" ng-model="tech.searchTerm" ng-change="tech.searchChange()" />
+                    <md-switch ng-model="tech.filterResults" aria-label="Filter Results" class="md-warn">
+                        Filter Results?
+                    </md-switch>
+                </form>
 
-        <ul ng-show="controller.displayMode === 'text'" class="psuedo-list" layout="row" layout-padding layout-wrap>
-            <li flex="100" flex-gt-sm="50" flex-gt-md="33" ng-repeat="(categoryName, oCategory)  in tech.oTechnologies" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchCategories['show' + categoryName] === true">
-                <div layout-margin>
-                    <h3 class="md-headline">{{categoryName}}</h3>
-                    <ul>
-                        <li ng-repeat="(subcategoryName, oSubcategory) in oCategory" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchKeys['show' + subcategoryName] === true">
-                            <h4 class="md-subhead" ng-class="{'emphasise': tech.searchKeys['show' + subcategoryName] === true}">{{subcategoryName}}</h4>
+                <ul ng-show="controller.displayMode === 'text'" class="psuedo-list" layout="row" layout-padding layout-wrap>
+                    <li flex="100" flex-gt-sm="50" flex-gt-md="33" ng-repeat="(categoryName, oCategory)  in tech.oTechnologies" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchCategories['show' + categoryName] === true">
+                        <div layout-margin>
+                            <h3 class="md-headline">{{categoryName}}</h3>
                             <ul>
-                                <li ng-repeat="techName in oSubcategory" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchValues['show' + techName] === true">
-                                    <h5 class="md-body-1"  ng-class="{'emphasise': tech.searchValues['show' + techName] === true}">{{techName}}</h5>
+                                <li ng-repeat="(subcategoryName, oSubcategory) in oCategory" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchKeys['show' + subcategoryName] === true">
+                                    <h4 class="md-subhead" ng-class="{'emphasise': tech.searchKeys['show' + subcategoryName] === true}">{{subcategoryName}}</h4>
+                                    <ul>
+                                        <li ng-repeat="techName in oSubcategory" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchValues['show' + techName] === true">
+                                            <h5 class="md-body-1" ng-class="{'emphasise': tech.searchValues['show' + techName] === true}">{{techName}}</h5>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div ng-show="controller.displayMode === 'JSON'">
+                    <pre><code ng-bind-html="controller.convertToJSON(tech.oTechnologies)"></code></pre>
                 </div>
-            </li>
-        </ul>
-        <div ng-show="controller.displayMode === 'JSON'">
-            <pre><code ng-bind-html="controller.convertToJSON(tech.oTechnologies)"></code></pre>
-        </div>
-        <div ng-show="controller.displayMode === 'XML'">
-            <pre><code ng-bind-html="controller.convertToXML(tech.oTechnologies)"></code></pre>
-        </div>
-    </md-content>
+                <div ng-show="controller.displayMode === 'XML'">
+                    <pre><code ng-bind-html="controller.convertToXML(tech.oTechnologies)"></code></pre>
+                </div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 </div>

@@ -70,7 +70,7 @@ angular.module('MrAndrewJones').controller('controllerPortfolio', function ($sco
                 }
             ]
         }
-        , 'Android Apps': {
+        , 'Mobile Apps': {
             experiences: [
                 {
                     title: 'Utta Bliss'

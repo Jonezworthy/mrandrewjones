@@ -4,6 +4,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
     this.searchKeys = {};
     this.searchCategories = {};
     this.filterResults = true;
+    this.selectedIndex = 0;
 
     tech.oTechnologies = {
         /* ************************************** */

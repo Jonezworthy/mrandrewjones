@@ -1,6 +1,6 @@
 <div layout-margin-gt-md>
-    <md-content ng-controller="controllerWork as work" >
-        <md-toolbar class="md-accent md-hue-1" >
+    <md-content ng-controller="controllerWork as work">
+        <md-toolbar class="md-accent md-hue-1">
             <div class="md-toolbar-tools">
                 <h2 flex="auto" class="md-flex">Employment</h2>
             </div>
@@ -11,19 +11,23 @@
                 <md-toolbar class="md-primary md-hue-1">
                     <div class="md-toolbar-tools height-auto" layout="row" layout-wrap>
                         <div flex="100" layout="row" layout-wrap>
-                            <h2 class="md-headline" flex="auto" >{{oJob.title}}</h2>
+                            <h2 class="md-headline" flex="auto">{{oJob.title}}</h2>
                             <h3 class="md-headline" flex="nogrow">{{oJob.companyName}}</h3>
                         </div>
                         <div flex="100" layout="row" layout-wrap>
-                            <p class="md-subhead" flex="auto" >{{oJob.from}} - {{oJob.to}}</p>
+                            <p class="md-subhead" flex="auto">{{oJob.from}} - {{oJob.to}}</p>
                             <p class="md-subhead" flex="nogrow">{{oJob.companyDescription}}</p>
                         </div>
                     </div>
 
                 </md-toolbar>
-                <div layout-margin layout="row" layout-wrap>
-                    <div layout-padding flex="auto" class="psuedo-list" ng-repeat="(detailHeading, detailText) in oJob.details">
-                        <div>
+                <div layout-margin>
+                    <div layout-padding flex="auto" class="psuedo-list" ng-repeat="(detailHeading, detailText) in oJob.details"  layout="row" layout-wrap>
+                        <div ng-if="$index === 0">
+                            <h4 flex="100">{{detailHeading}}</h4>
+                            <p ng-bind-html="detailText"></p>
+                        </div>
+                        <div ng-if="$index">
                             <h4>{{detailHeading}}</h4>
                             <p flex="nogrow" ng-bind-html="detailText"></p>
                         </div>

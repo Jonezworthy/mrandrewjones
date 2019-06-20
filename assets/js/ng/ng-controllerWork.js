@@ -7,20 +7,27 @@ angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $
                 , to: 'Current'
                 , companyName: 'The NEC Group/The Ticket Factory'
                 , companyDescription: 'Huge exhibition company'
-                , title: 'Lead Software Engineer'
+                , title: 'Lead Software/Web Developer'
                 , details: {
-                    'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, CSS3 and HTML5. </strong> \n\
-                        <br />Planning/Developing the future of the systems which are hosted in Microsoft Azure\'s cloud platform'
+                    'Stack': 'MEAN'
+                    , 'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, CSS3 and HTML5. </strong> Utilising Microsoft Azure\'s cloud platform'
                     , 'Notable Achievements': '\
                         <ul>\n\
                             <li>Introduced continuous integration</li>\n\
                             <li>Introduced automated testing</li>\n\
+                            <li>Managing product life cycles in software development, app development and web development</li>\n\
                         </ul>'
                     , 'Other Duties': '\
                         <ul>\n\
                             <li>Making decisions on server infrastructure</li>\n\
                             <li>Code reviews</li>\n\
                             <li>Managing and scheduling projects</li>\n\
+                        </ul>'
+                    , 'Line Manager Duties': '\
+                        <ul>\n\
+                            <li>Managing and leading my own team</li>\n\
+                            <li>Approving and managing annual leave</li>\n\
+                            <li>Conducting performance reviews</li>\n\
                             <li>Mentoring junior developers</li>\n\
                         </ul>'
                     , 'General Info': 'I have 2 other developers in my team, we look after the Expoware services. '
@@ -34,7 +41,8 @@ angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $
                 , companyDescription: 'International travel agent for Cruises/holidays'
                 , title: 'Senior Software Engineer'
                 , details: {
-                    'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, PHP, MSSQL, JQuery, CSS3 and HTML5. </strong> \n\
+                    'Stack': 'LASP'
+                    , 'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, PHP, MSSQL, JQuery, CSS3 and HTML5. </strong> \n\
                         <br />Daily use of Ubuntu, running and creating shell scripts, apache configuration and virtual hosts, Akamai configuration, load balancing within an Agile development structure'
                     , 'Notable Achievements': '\
                         <ul>\n\
@@ -71,7 +79,8 @@ angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $
                 , companyDescription: 'A recruitment agency'
                 , title: 'IT Consultant/Developer'
                 , details: {
-                    'Technologies': 'Development technologies regularly used: <strong>PHP, MySQL, JavaScript, JQuery, CSS and HTML</strong>. I created an intricate back end system which powered the website. '
+                    'Stack': 'LAMP'
+                    , 'Technologies': 'Development technologies regularly used: <strong>PHP, MySQL, JavaScript, JQuery, CSS and HTML</strong>. I created an intricate back end system which powered the website. '
                     , 'Notable Achievements': 'The CRM which is still partially demo-able (on request – it takes some set up), was an impressively large task I had to undertake single handedly '
                     , 'Reason for leaving': 'Was made redundant when the company folded '
                 }
@@ -83,7 +92,8 @@ angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $
                 , companyDescription: 'My web design/development company'
                 , title: 'Lead Designer/Developer '
                 , details: {
-                    'Technologies': 'I was selling website design, hosting and support services. Skills used in development: <strong>HTML, PHP with MySQL, JavaScript and CSS. </strong>'
+                    'Stack': 'LAMP'
+                    , 'Technologies': 'I was selling website design, hosting and support services. Skills used in development: <strong>HTML, PHP with MySQL, JavaScript and CSS. </strong>'
                     , 'Notable Achievements': 'Creating a custom a bespoke online shop for <a class="md-primary" href="http://www.jordan-saws.co.uk/" target="_blank">http://www.jordan-saws.co.uk </a>\n\
                         <br /> Due to their products being so unique in requirements, it was best to create a sequential, step by step process for choosing your specific product.'
                     , 'Reason for leaving': 'I closed the company after I found permanent, stable employment '

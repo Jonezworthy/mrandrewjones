@@ -88,3 +88,7 @@ img {
 md-tabs.md-hue-1.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]){
     color:rgb(55, 61, 86);
 }
+
+md-tabs.md-primary > md-tabs-wrapper {
+    border-radius: 3px;
+}

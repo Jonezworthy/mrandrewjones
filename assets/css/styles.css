@@ -89,6 +89,9 @@ img {
 md-tabs.md-hue-1.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
   color: #373d56; }
 
+md-tabs.md-primary > md-tabs-wrapper {
+  border-radius: 3px; }
+
 code .string {
   color: #ffffff; }
 
