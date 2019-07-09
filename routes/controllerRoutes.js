@@ -23,13 +23,31 @@ module.exports = function (app) {
 
     console.log('Set alexa');
     app.post('/alexa', alexa);
+
     app.get('/coffee-on', (req, res) => {
-        sendSlack(slackChannel, slackBot, 'Coffee has been put on!');
+        var min = new Date().getMinutes() < 10 ? '0' + new Date().getMinutes() : new Date().getMinutes();
+        var hours = new Date().getHours();
+        var time = hours + ':' + min;
+        sendSlack(slackChannel, slackBot, 'Coffee has been put on! (' + time + ')');
         res.send('Put on');
     });
     app.get('/coffee-ready', (req, res) => {
-        sendSlack(slackChannel, slackBot, 'Coffee is available!');
+        var min = new Date().getMinutes() < 10 ? '0' + new Date().getMinutes() : new Date().getMinutes();
+        var hours = new Date().getHours();
+        var time = hours + ':' + min;
+        sendSlack(slackChannel, slackBot, 'Coffee is available! (' + time + ')');
+        setTimeout(() => {
+            sendSlack(slackChannel, slackBot, 'Coffee is should be available!');
+        }, 480000);
+
         res.send('Available');
+    });
+    app.get('/coffee-empty', (req, res) => {
+        var min = new Date().getMinutes() < 10 ? '0' + new Date().getMinutes() : new Date().getMinutes();
+        var hours = new Date().getHours();
+        var time = hours + ':' + min;
+        sendSlack(slackChannel, slackBot, 'Coffee is empty! (' + time + ')');
+        res.send('Empty');
     });
 
     app.get('/robots.txt', contentController.displayRobots);
