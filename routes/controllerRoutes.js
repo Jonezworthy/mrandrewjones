@@ -29,6 +29,9 @@ module.exports = function (app) {
         var hours = new Date().getHours();
         var time = hours + ':' + min;
         sendSlack(slackChannel, slackBot, 'Coffee has been put on! (' + time + ')');
+            setTimeout(() => {
+                sendSlack(slackChannel, slackBot, 'Coffee is should be available!');
+            }, 480000);
         res.send('Put on');
     });
     app.get('/coffee-ready', (req, res) => {
@@ -36,9 +39,6 @@ module.exports = function (app) {
         var hours = new Date().getHours();
         var time = hours + ':' + min;
         sendSlack(slackChannel, slackBot, 'Coffee is available! (' + time + ')');
-        setTimeout(() => {
-            sendSlack(slackChannel, slackBot, 'Coffee is should be available!');
-        }, 480000);
 
         res.send('Available');
     });
