@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const sendSlack = require('/var/www/severnvine/sendSlack');
 const sendText = require('/var/www/severnvine/sendText');
-const slackChannel = '#random';
+const slackChannel = '#team_it_only';
 const slackBot = 'AJ Coffee Bot';
 
 module.exports = function (app) {
