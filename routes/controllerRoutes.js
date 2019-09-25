@@ -30,7 +30,7 @@ module.exports = function (app) {
         var time = hours + ':' + min;
         sendSlack(slackChannel, slackBot, 'Coffee has been put on! (' + time + ')');
             setTimeout(() => {
-                sendSlack(slackChannel, slackBot, 'Coffee should be available!');
+                sendSlack(slackChannel, slackBot, 'Coffee should be available!'); 
             }, 480000);
         res.send('Put on');
     });
