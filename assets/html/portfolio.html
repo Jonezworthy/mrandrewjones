@@ -1,6 +1,6 @@
 <div layout-margin-gt-md>
     <md-content ng-controller="controllerPortfolio as portfolio" flex>
-        <md-toolbar class="md-accent md-hue-1" >
+        <md-toolbar class="md-accent md-hue-1">
             <div class="md-toolbar-tools">
                 <h2 flex="auto" class="md-flex">Portfolio</h2>
             </div>
@@ -14,10 +14,11 @@
                     <ul layout="row" class="psuedo-list" layout-wrap>
                         <li flex="100" flex-gt-sm="50" layout-padding ng-repeat="oExperience in oCategory.experiences" class="" layout-align="center center">
                             <h4 class="md-headline left-text">{{oExperience.title}} <span ng-if="oExperience.stack" class="md-body-1">({{oExperience.stack}})</span></h4>
-                            <a class="md-primary left-text" target="_blank" ng-show="oExperience.url" href="{{oExperience.url}}">{{oExperience.urlTitle ? oExperience.urlTitle : oExperience.url}}</a>
+                            <p ng-if="oExperience.expired" class="link-like md-primary left-text">{{oExperience.urlTitle ? oExperience.urlTitle : oExperience.url}} <small>(dead)</small></p>
+                            <a ng-if="!oExperience.expired" class="md-primary left-text" target="_blank" ng-show="oExperience.url" href="{{oExperience.url}}">{{oExperience.urlTitle ? oExperience.urlTitle : oExperience.url}}</a>
                             <p class="left-text" ng-bind-html="oExperience.details"></p>
                             <div ng-if="oExperience.preview">
-                                <img src="{{oExperience.preview}}" alt="{{oExperience.title}}" flex="100"/>
+                                <img src="{{oExperience.preview}}" alt="{{oExperience.title}}" flex="100" />
                             </div>
                         </li>
                     </ul>

@@ -20,11 +20,21 @@ body {
   background-size: 1000%;
   color: #FFFFFF; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0; }
 
 a {
   letter-spacing: 1px; }
+
+.link-like {
+  color: #f57c00;
+  margin: initial;
+  display: inline; }
 
 p {
   margin: .25em; }
@@ -53,8 +63,8 @@ md-content.bg-coloured {
 .clr {
   clear: both; }
 
-.clr:after
-, .clr:before {
+.clr:after,
+.clr:before {
   content: " ";
   clear: both; }
 
@@ -91,6 +101,35 @@ md-tabs.md-hue-1.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-w
 
 md-tabs.md-primary > md-tabs-wrapper {
   border-radius: 3px; }
+
+/* Tech */
+.basic-boxes {
+  padding: 0; }
+  .basic-boxes > ul {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    .basic-boxes > ul > li:nth-of-type(3n+1) {
+      margin: 15px 15px 15px 0; }
+    .basic-boxes > ul > li:nth-of-type(3n+3) {
+      margin: 15px 0 15px 15px; }
+    .basic-boxes > ul > li {
+      display: block;
+      box-sizing: border-box;
+      width: calc(33.3% - 20px);
+      float: left;
+      background: #ff9800;
+      color: #000;
+      margin: 15px 15px 0 15px;
+      padding: 15px;
+      text-align: center; }
+      .basic-boxes > ul > li ul {
+        list-style: inside;
+        margin: 0;
+        padding: 0; }
+    .basic-boxes > ul > li:nth-of-type(4) {
+      clear: both; }
 
 code .string {
   color: #ffffff; }

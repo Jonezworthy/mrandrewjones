@@ -3,12 +3,13 @@ var applicationHandler = require('../application/controller');
 var alexa = require('../application/alexa');
 const fs = require('fs');
 const path = require('path');
-const sendSlack = require('/var/www/severnvine/sendSlack');
-const sendText = require('/var/www/severnvine/sendText');
+// const sendSlack = require('/var/www/severnvine/sendSlack');
+// const sendText = require('/var/www/severnvine/sendText');
+const sendSlack = () => {};
 const slackChannel = '#team_it_only';
 const slackBot = 'AJ Coffee Bot';
 
-module.exports = function (app) {
+module.exports = function(app) {
     var applicationController = new applicationHandler();
     var contentController = new contentHandler(applicationController);
 
@@ -29,9 +30,9 @@ module.exports = function (app) {
         var hours = new Date().getHours();
         var time = hours + ':' + min;
         sendSlack(slackChannel, slackBot, 'Coffee has been put on! (' + time + ')');
-            setTimeout(() => {
-                sendSlack(slackChannel, slackBot, 'Coffee should be available!'); 
-            }, 480000);
+        setTimeout(() => {
+            sendSlack(slackChannel, slackBot, 'Coffee should be available!');
+        }, 480000);
         res.send('Put on');
     });
     app.get('/coffee-ready', (req, res) => {
@@ -60,7 +61,7 @@ module.exports = function (app) {
     app.get('/assets*', contentController.displayAsset);
     //
 
-    app.get('*', function (req, res) {
+    app.get('*', function(req, res) {
         res.status(404).send('Ooops, this page does not exist');
     });
 };

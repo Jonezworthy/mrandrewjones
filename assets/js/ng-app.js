@@ -213,128 +213,123 @@ angular.module('MrAndrewJones').controller('controllerNavigation', function ($sc
         navigation.showNavigation = !navigation.showNavigation;
     };
 });
-angular.module('MrAndrewJones').controller('controllerPortfolio', function ($scope, $http, $mdDialog, $mdMedia, $window) {
+angular.module('MrAndrewJones').controller('controllerPortfolio', function($scope, $http, $mdDialog, $mdMedia, $window) {
     var portfolio = this;
     portfolio.oExperiences = {
         'Personal Projects': {
-            experiences: [
-                {
-                    title: 'Inter Webz'
-                    , url: 'http://www.inter-webz.com'
-                    , stack: 'LAMP'
-                    , preview: '/assets/img/portfolio/interwebz.jpg'
-                    , details: 'Inter-Webz is a compilation of the most brilliant content from best social feeds around. \n\
+            experiences: [{
+                    title: 'Inter Webz',
+                    url: 'http://www.inter-webz.com',
+                    stack: 'LAMP',
+                    expired: true,
+                    preview: '/assets/img/portfolio/interwebz.jpg',
+                    details: 'Inter-Webz is a compilation of the most brilliant content from best social feeds around. \n\
                     <br /> The entire website’s contents is powered from Anisos’s API The best of Inter-Webz is posted automatically on to the <a class="md-primary" href="https://www.facebook.com/InterWebzDotCom">Inter-Webz’ facebook page</a> Inter-Webz is very new, and very much still a work in progress '
-                }
-                , {
-                    title: 'Anisos'
-                    , url: 'http://www.anisos.com'
-                    , stack: 'LAMP'
-                    , preview: '/assets/img/portfolio/anisos.jpg'
-                    , details: 'Anisos is a social media API which gathers posts/videos/images from social networks. \n\
+                }, {
+                    title: 'Anisos',
+                    url: 'http://www.anisos.com',
+                    stack: 'LAMP',
+                    expired: false,
+                    preview: '/assets/img/portfolio/anisos.jpg',
+                    details: 'Anisos is a social media API which gathers posts/videos/images from social networks. \n\
                     <br /> Anisos has a very basic non restful API which you can use to access the information you have gathered from your social networks. '
-                }
-                , {
-                    title: 'RedditchWeb'
-                    , url: 'http://www.redditchweb.co.uk'
-                    , stack: 'LAMP'
-                    , preview: '/assets/img/portfolio/redditchweb.jpg'
-                    , details: 'RedditchWeb.co.uk is the web site I had for my web design/development company \n\
+                }, {
+                    title: 'RedditchWeb',
+                    url: 'http://www.redditchweb.co.uk',
+                    stack: 'LAMP',
+                    expired: false,
+                    preview: '/assets/img/portfolio/redditchweb.jpg',
+                    details: 'RedditchWeb.co.uk is the web site I had for my web design/development company \n\
                     <br /> I have now migrated it to a WordPress installation for ease-of-use'
                 },
                 {
-                    title: 'FatReminder'
-                    , url: 'http://www.fatreminder.com'
-                    , stack: 'MEAN'
-                    , preview: '/assets/img/portfolio/fatreminder.jpg'
-                    , details: 'Fat Reminder is a service born of the idea that I could lose a few pounds! \n\
+                    title: 'FatReminder',
+                    url: 'http://www.fatreminder.com',
+                    stack: 'MEAN',
+                    expired: true,
+                    preview: '/assets/img/portfolio/fatreminder.jpg',
+                    details: 'Fat Reminder is a service born of the idea that I could lose a few pounds! \n\
                     <br /> I always struggled to keep motivation throughout the day and end up straying from my diet. \n\
                     <br /> The whole site is powered by the MEAN stack (MongoDB, Express, Angular and Node) + SASS'
                 }
             ]
-        }
-        , 'Freelance Websites': {
-            experiences: [
-                {
-                    title: 'Midland Wire Rope'
-                    , url: 'https://sawmaster.co.uk'
-                    , stack: 'MEAN'
-                    , preview: '/assets/img/portfolio/sawmaster.jpg'
-                    , details: 'A custom built e-commerce web site for a local band saw blade company'
+        },
+        'Freelance Websites': {
+            experiences: [{
+                    title: 'Saw Master',
+                    url: 'https://sawmaster.co.uk',
+                    stack: 'MEAN',
+                    expired: false,
+                    preview: '/assets/img/portfolio/sawmaster.jpg',
+                    details: 'A custom built e-commerce web site for a local band saw blade company'
                 },
                 {
-                    title: 'JordanSaws.co.uk'
-                    , url: 'http://www.jordan-saws.co.uk'
-                    , stack: 'LAMP'
-                    , preview: '/assets/img/portfolio/jordan.jpg'
-                    , details: 'A custom built e-commerce web site I made for a local company called Economy Saw Services LTD.'
-                }
-                , {
-                    title: 'Midlands Lubricants'
-                    , url: ''
-                    , stack: 'LAMP (WordPress)'
-                    , preview: '/assets/img/portfolio/midlandlubricants.jpg'
-                    , details: 'A WordPress powered web site'
-                }
-                , {
-                    title: 'Hanging Garden UK'
-                    , url: ''
-                    , stack: 'LAMP'
-                    , preview: '/assets/img/portfolio/hanging.jpg'
-                    , details: 'A content managed web site'
-                }
-            ]
-        }
-        , 'Mobile Apps': {
-            experiences: [
-                {
-                    title: 'Utta Bliss'
-                    , url: 'https://play.google.com/store/apps/details?id=com.uttabliss.app'
-                    , urlTitle: 'View on Google\'s Play Store'
-                    , stack: 'Ionic'
-                    , preview: '/assets/img/portfolio/uttabliss.png'
-                    , details: 'Utta Bliss, the totally free dating app'
-                }
-                , {
-                    title: 'Cruise.co.uk Official App'
-                    , url: ''
-                    , urlTitle: 'In alpha testing'
-                    , stack: 'Java'
-                    , preview: '/assets/img/portfolio/cruise.jpg'
-                    , details: 'I am the sole author for the official Cruise.co.uk app. The main functionality of the app is it a web view of the mobile site, but with a pull notification service.'
-                }
-                , {
-                    title: 'Stand Up! (for scrum)'
-                    , url: 'https://play.google.com/store/apps/details?id=uk.co.mrandrewjones.standup&hl=en'
-                    , urlTitle: 'View on Google\'s Play Store'
-                    , stack: 'Java'
-                    , preview: '/assets/img/portfolio/standup.jpg'
-                    , details: 'Stand Up! Is an app I made to give me some space on my phone where I can take note of the impediments, and other tasks that I work through during the day, so I have a more productive stand up the next day.'
+                    title: 'JordanSaws.co.uk',
+                    url: 'http://www.jordan-saws.co.uk',
+                    stack: 'LAMP',
+                    expired: false,
+                    preview: '/assets/img/portfolio/jordan.jpg',
+                    details: 'A custom built e-commerce web site I made for a local company called Economy Saw Services LTD.'
+                }, {
+                    title: 'Midlands Lubricants',
+                    url: 'https://www.midlandslubricants.co.uk/',
+                    stack: 'LAMP (WordPress)',
+                    expired: false,
+                    preview: '/assets/img/portfolio/midlandlubricants.jpg',
+                    details: 'A WordPress powered web site'
+                }, {
+                    title: 'Hanging Garden UK',
+                    url: 'http://hanginggardenuk.com',
+                    expired: true,
+                    stack: 'LAMP',
+                    preview: '/assets/img/portfolio/hanging.jpg',
+                    details: 'A content managed web site'
                 }
             ]
-        }
-        , 'Github Repositories': {
-            description: 'Please note, only my open source code is available via GitHub, I have a private Subversion server that hosts 90% of my code'
-            , experiences: [
-                {
-                    title: 'GitHub '
-                    , stack: 'Open Source Projects'
-                    , url: 'https://github.com/Jonezworthy'
-                    , detail: 'This is my public GitHub - for anyone to see and contribute to'
-                }
-                , {
-                    title: 'Github'
-                    , stack: 'Technical Tests'
-                    , url: 'https://github.com/Jonezworthy-private'
-                    , detail: 'This is my private GitHub - mainly for technical tests for recruiters'
-                }
-            ]
+        },
+        'Mobile Apps': {
+            experiences: [{
+                title: 'Utta Bliss',
+                url: 'https://play.google.com/store/apps/details?id=com.uttabliss.app',
+                urlTitle: 'View on Google\'s Play Store',
+                stack: 'Ionic',
+                preview: '/assets/img/portfolio/uttabliss.png',
+                details: 'Utta Bliss, the totally free dating app'
+            }, {
+                title: 'Cruise.co.uk Official App',
+                url: '',
+                urlTitle: 'In alpha testing',
+                stack: 'Java',
+                preview: '/assets/img/portfolio/cruise.jpg',
+                details: 'I am the sole author for the official Cruise.co.uk app. The main functionality of the app is it a web view of the mobile site, but with a pull notification service.'
+            }, {
+                title: 'Stand Up! (for scrum)',
+                url: 'https://play.google.com/store/apps/details?id=uk.co.mrandrewjones.standup&hl=en',
+                urlTitle: 'View on Google\'s Play Store',
+                stack: 'Java',
+                preview: '/assets/img/portfolio/standup.jpg',
+                details: 'Stand Up! Is an app I made to give me some space on my phone where I can take note of the impediments, and other tasks that I work through during the day, so I have a more productive stand up the next day.'
+            }]
+        },
+        'Github Repositories': {
+            description: 'Please note, only my open source code is available via GitHub, I have a private Subversion server that hosts 90% of my code',
+            experiences: [{
+                title: 'GitHub ',
+                stack: 'Open Source Projects',
+                url: 'https://github.com/Jonezworthy',
+                detail: 'This is my public GitHub - for anyone to see and contribute to'
+            }, {
+                title: 'Github',
+                stack: 'Technical Tests',
+                url: 'https://github.com/Jonezworthy-private',
+                detail: 'This is my private GitHub - mainly for technical tests for recruiters'
+            }]
         }
 
     };
 
 });
-angular.module('MrAndrewJones').controller('controllerTechnology', function ($scope, $http, $mdDialog, $mdMedia, $window) {
+angular.module('MrAndrewJones').controller('controllerTechnology', function($scope, $http, $mdDialog, $mdMedia, $window) {
     var tech = this;
     this.searchValues = {};
     this.searchKeys = {};
@@ -345,44 +340,44 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
     tech.oTechnologies = {
         /* ************************************** */
         'Server Side': {
-            'Server Languages': ['JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 7 (Procedural, OOP, MVC)', 'Java'],
+            'Server Languages': ['TypeScript', 'JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 7 (Procedural, OOP, MVC)', 'Java', 'C#'],
             'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL', 'CosmosDB'],
-            'Hosting': ['Microsoft Azure', 'AWS', 'UK Fast CloudFlex'],
-            'Operating Systems': ['Windows', 'Linux (Ubuntu/Gentoo/CentOS)', 'Android'],
+            'Hosting': ['Microsoft Azure', 'AWS', 'UK Fast CloudFlex', 'MongoDB Atlas'],
+            'Server Management OS': ['Windows Server', 'Linux (Ubuntu + Gentoo + CentOS)'],
             'Apache': ['Virtual Hosts', 'Rewrite Rules', 'Reverse Proxy'],
             'NginX': ['Server Definition', 'Reverse Proxy'],
             'Templating': ['Smarty', 'Jade/Pug', 'EJS', 'Handlebars'],
             'Other': ['PHP5-FPM', 'Mongoose']
         },
         'Client Side': {
-            'Client Languages': ['JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', 'HTML & HTML5', 'CSS & CSS3 & SASS', 'TypeScript'],
-            'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'Angular2 (4+)', 'Ionic 3+', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI'],
+            'Client Languages': ['JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', 'HTML & HTML5', 'CSS & CSS3 & SASS'],
+            'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'Angular2 (6+)', 'Ionic 3+', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI'],
             'Caching': ['Local Storage API', 'Session Storage API', 'ETag', 'Expires headers'],
             'Compatibilities': ['normalize.css', 'modernizr.js', 'polyfills'],
             'CSS Libraries or Frameworks': ['Angular Materials', 'Bootstrap', 'Font Awesome']
         },
         'Principles': {
-            'Design Patterns': ['MVC/MVP/SoC', 'Programming Design Patterns', 'RESTful APIs', 'Mobile first'],
+            'Design Patterns': ['MVC/MVP/SoC', 'Micro Services', 'Programming Design Patterns', 'RESTful APIs', 'Mobile first'],
             'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN'],
             'Testing': ['Test-driven Development', 'Unit/Automated/Acceptance Testing', 'Regression Testing', 'JasmineJS', 'KarmaJS', 'MochaJS + ShouldJS'],
-            'Continuous Integration': ['Jenkins', 'Gulp (Task Management)', 'Visual Studio Pipelines'],
+            'Continuous Integration': ['Visual Studio Pipelines', 'Jenkins', 'Gulp (Task Management)'],
             'Security': ['OWASP', 'XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
         },
         'Network': {
             'Email Configuration': ['SPF', 'DMARC', 'DKIM', 'Microsoft Exchange'],
             'DNS and Dynamic DNS': ['A/CNAME/MX', 'Load balancing', 'Domain Registrar'],
-            'Communication Protocols': ['FTP', 'SFTP', 'SSH', 'SSL']
+            'Communication Protocols': ['FTP', 'SFTP', 'SSH', 'SSL'],
+            'CDN': ['Akamai CDN', 'Akamai Fast DNS', 'Cloudflare', 'Azure Blob Storage'],
+            'Windows': ['Active Directory', 'Domain Controller', 'Microsoft Exchange', 'VPNs']
         },
         'Administration': {
             'Work Management': ['Scrum', 'Agile Development', 'JIRA', 'FreshDesk', 'Trello', 'Visual Studio Online'],
-            'Version Control': ['SVN (CLI + Tortoise)', 'Git', 'GitHub'],
+            'Version Control': ['SVN (CLI + Tortoise)', 'Git', 'GitHub', 'Visual Studio Team Services'],
             'Scripting': ['PowerShell', 'Bash', 'Batch'],
-            'CDN': ['Akamai CDN', 'Akamai Fast DNS', 'Cloudflare', 'Azure Blob Storage'],
             'Status': ['HostTracker', 'Uptime Monitor'],
-            'Windows': ['Active Directory', 'Domain Controller', 'Microsoft Exchange', 'VPN']
         },
         'Third Party': {
-            'APIs': ['Exchange Web Services', 'Google Maps', 'Google Graphs', 'Facebook, Twitter, YouTube, Google Plus', 'Wikipedia', 'OpenWeather', 'Text messaging (textlocal.com & fastsms.co.uk)', 'PayPal & PayPal APN', 'and more...'],
+            'APIs': ['Slack', 'Exchange Web Services', 'Google Maps', 'Google Graphs', 'Facebook, Twitter, YouTube, Google Plus', 'Wikipedia', 'OpenWeather', 'Text messaging (textlocal.com & fastsms.co.uk)', 'PayPal & PayPal APN', 'and more...'],
             'Analytical': ['Google Analytics', 'Google Webmasters'],
             'Other': ['Amazon Alexa', 'WordPress', 'vBulletin', 'Eysys recommendation engine', 'Tintup Social', 'Voice recognition']
         }
@@ -391,7 +386,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
 
     tech.oTechnologiesCopy = JSON.parse(JSON.stringify(tech.oTechnologies));
 
-    tech.runChart = function () {
+    tech.runChart = function() {
         // if (!google || !('charts' in google)) {
         //     return null;
         // }
@@ -466,11 +461,11 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
         //     chart.draw(data, options);
         // }
     };
-    setTimeout(function () {
+    setTimeout(function() {
         tech.runChart();
     }, 50);
 
-    tech.searchChange = function () {
+    tech.searchChange = function() {
         tech.oTechnologies = JSON.parse(JSON.stringify(tech.oTechnologiesCopy));
         console.log(tech.oTechnologies);
 
@@ -511,53 +506,54 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
 
     };
 });
-angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $http, $mdDialog, $mdMedia, $window) {
+angular.module('MrAndrewJones').controller('controllerWork', function($scope, $http, $mdDialog, $mdMedia, $window) {
     var work = this;
     work.oExperiences = {
-        'Employment': [
-            {
-                from: 'August 2017'
-                , to: 'Current'
-                , companyName: 'The NEC Group/The Ticket Factory'
-                , companyDescription: 'Huge exhibition company'
-                , title: 'Lead Software/Web Developer'
-                , details: {
-                    'Stack': 'MEAN'
-                    , 'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, CSS3 and HTML5. </strong> Utilising Microsoft Azure\'s cloud platform'
-                    , 'Notable Achievements': '\
+        'Employment': [{
+                from: 'August 2017',
+                to: 'Current',
+                companyName: 'The NEC Group/The Ticket Factory',
+                companyDescription: 'Huge exhibition company',
+                title: 'Lead Software/Web Developer',
+                details: {
+                    'Stack': 'MEAN',
+                    'Technologies': 'Development technologies regularly used: <strong>TypeScript, JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, CSS3 and HTML5. </strong> Utilising Microsoft Azure\'s cloud platform',
+                    'Notable Achievements': '\
                         <ul>\n\
                             <li>Introduced continuous integration</li>\n\
                             <li>Introduced automated testing</li>\n\
-                            <li>Managing product life cycles in software development, app development and web development</li>\n\
-                        </ul>'
-                    , 'Other Duties': '\
+                            <li>Managing product life cycles in software, app, and web development</li>\n\
+                        </ul>',
+                    'Other Duties': '\
                         <ul>\n\
                             <li>Making decisions on server infrastructure</li>\n\
                             <li>Code reviews</li>\n\
                             <li>Managing and scheduling projects</li>\n\
-                        </ul>'
-                    , 'Line Manager Duties': '\
+                            <li>Liasing with product owners</li>\n\
+                            <li>Heading up stand ups and weekly progress meetings</li>\n\
+                        </ul>',
+                    'Line Manager Duties': '\
                         <ul>\n\
                             <li>Managing and leading my own team</li>\n\
                             <li>Approving and managing annual leave</li>\n\
                             <li>Conducting performance reviews</li>\n\
                             <li>Mentoring junior developers</li>\n\
-                        </ul>'
-                    , 'General Info': 'I have 2 other developers in my team, we look after the Expoware services. '
+                        </ul>',
+                    'General Info': 'I have 2 other developers in my team, we look after the Expoware services. '
 
                 }
             },
             {
-                from: 'July 2013'
-                , to: 'August 2017'
-                , companyName: 'Cruise.co/Cruise.co.uk'
-                , companyDescription: 'International travel agent for Cruises/holidays'
-                , title: 'Senior Software Engineer'
-                , details: {
-                    'Stack': 'LASP'
-                    , 'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, PHP, MSSQL, JQuery, CSS3 and HTML5. </strong> \n\
-                        <br />Daily use of Ubuntu, running and creating shell scripts, apache configuration and virtual hosts, Akamai configuration, load balancing within an Agile development structure'
-                    , 'Notable Achievements': '\
+                from: 'July 2013',
+                to: 'August 2017',
+                companyName: 'Cruise.co/Cruise.co.uk',
+                companyDescription: 'International travel agent for Cruises/holidays',
+                title: 'Senior Software Engineer',
+                details: {
+                    'Stack': 'LASP',
+                    'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, PHP, MSSQL, JQuery, CSS3 and HTML5. </strong> \n\
+                        <br />Daily use of Ubuntu, running and creating shell scripts, apache configuration and virtual hosts, Akamai configuration, load balancing within an Agile development structure',
+                    'Notable Achievements': '\
                         <ul>\n\
                             <li>I am the sole author of the company\'s Android App</li>\n\
                             <li>Created an automated unsubscribe system using Exchange Web Service API</li>\n\
@@ -565,15 +561,15 @@ angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $
                             <li>Created a Google Chrome extension to aid the Sales staff with their day-to-day work</li>\n\
                             <li>Was sole authority on architeching the company\'s CRM infrastructure</li>\n\
                             <li>Created a caching library for jQuery\'s AJAX</li>\n\
-                        </ul>'
-                    , 'Other Duties': '\
+                        </ul>',
+                    'Other Duties': '\
                         <ul>\n\
                             <li>Making decisions on server infrastructure</li>\n\
                             <li>Code reviews</li>\n\
                             <li>Managing and scheduling projects</li>\n\
                             <li>Mentoring junior developers</li>\n\
-                        </ul>'
-                    , 'Senior duties': '\n\
+                        </ul>',
+                    'Senior duties': '\n\
                             <ul>\n\
                                 <li>Managing and leading my own team</li>\n\
                                 <li>Conducting interviews</li>\n\
@@ -581,35 +577,34 @@ angular.module('MrAndrewJones').controller('controllerWork', function ($scope, $
                                 <li>Answering technical questions/reviewing candidate code on technical level</li>\n\
                             </ul>'
 
-                    , 'General Info': 'I work as part of a team of 13 developers, developing the web site, our content management system and booking systems. '
+                    ,
+                    'General Info': 'I work as part of a team of 13 developers, developing the web site, our content management system and booking systems. '
 
                 }
-            }
-            , {
-                to: 'May 2013'
-                , from: 'January 2013'
-                , companyName: 'Arrow Consultancy(Redditch) LTD.'
-                , companyDescription: 'A recruitment agency'
-                , title: 'IT Consultant/Developer'
-                , details: {
-                    'Stack': 'LAMP'
-                    , 'Technologies': 'Development technologies regularly used: <strong>PHP, MySQL, JavaScript, JQuery, CSS and HTML</strong>. I created an intricate back end system which powered the website. '
-                    , 'Notable Achievements': 'The CRM which is still partially demo-able (on request – it takes some set up), was an impressively large task I had to undertake single handedly '
-                    , 'Reason for leaving': 'Was made redundant when the company folded '
+            }, {
+                to: 'May 2013',
+                from: 'January 2013',
+                companyName: 'Arrow Consultancy(Redditch) LTD.',
+                companyDescription: 'A recruitment agency',
+                title: 'IT Consultant/Developer',
+                details: {
+                    'Stack': 'LAMP',
+                    'Technologies': 'Development technologies regularly used: <strong>PHP, MySQL, JavaScript, JQuery, CSS and HTML</strong>. I created an intricate back end system which powered the website. ',
+                    'Notable Achievements': 'The CRM which is still partially demo-able (on request – it takes some set up), was an impressively large task I had to undertake single handedly ',
+                    'Reason for leaving': 'Was made redundant when the company folded '
                 }
-            }
-            , {
-                to: 'May 2013'
-                , from: 'January 2011'
-                , companyName: 'Redditch Web Solutions/RedditchWeb.co.uk'
-                , companyDescription: 'My web design/development company'
-                , title: 'Lead Designer/Developer '
-                , details: {
-                    'Stack': 'LAMP'
-                    , 'Technologies': 'I was selling website design, hosting and support services. Skills used in development: <strong>HTML, PHP with MySQL, JavaScript and CSS. </strong>'
-                    , 'Notable Achievements': 'Creating a custom a bespoke online shop for <a class="md-primary" href="http://www.jordan-saws.co.uk/" target="_blank">http://www.jordan-saws.co.uk </a>\n\
-                        <br /> Due to their products being so unique in requirements, it was best to create a sequential, step by step process for choosing your specific product.'
-                    , 'Reason for leaving': 'I closed the company after I found permanent, stable employment '
+            }, {
+                to: 'May 2013',
+                from: 'January 2011',
+                companyName: 'Redditch Web Solutions/RedditchWeb.co.uk',
+                companyDescription: 'My web design/development company',
+                title: 'Lead Designer/Developer ',
+                details: {
+                    'Stack': 'LAMP',
+                    'Technologies': 'I was selling website design, hosting and support services. Skills used in development: <strong>HTML, PHP with MySQL, JavaScript and CSS. </strong>',
+                    'Notable Achievements': 'Creating a custom a bespoke online shop for <a class="md-primary" href="http://www.jordan-saws.co.uk/" target="_blank">http://www.jordan-saws.co.uk </a>\n\
+                        <br /> Due to their products being so unique in requirements, it was best to create a sequential, step by step process for choosing your specific product.',
+                    'Reason for leaving': 'I closed the company after I found permanent, stable employment '
                 }
             }
         ]
