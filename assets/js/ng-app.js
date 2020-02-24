@@ -344,21 +344,19 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
 
     tech.oTechnologies = {
         /* ************************************** */
-        'Server/Software Side': {
+        'Server Side': {
             'Languages': [
                 { value: 'TypeScript', history: 'current' },
                 { value: 'JavaScript (NodeJS) (ES6, ES2016+)', history: 'current' },
                 { value: 'NodeJS with Express', history: 'current' },
                 { value: 'PHP 5.1 -> 7 (Procedural, OOP, MVC)', history: 'previous' },
-                { value: 'Java', history: 'hobby' },
-                { value: 'C#', history: 'current' },
             ],
             'Databases': [
                 { value: 'MongoDB', history: 'current' },
+                { value: 'CosmosDB', history: 'current' },
                 { value: 'MSSQL', history: 'previous' },
                 { value: 'MySQL', history: 'hobby' },
                 { value: 'PostgreSQL', history: 'previous' },
-                { value: 'CosmosDB', history: 'current' },
             ],
             'Hosting': [
                 { value: 'Microsoft Azure', history: 'current' },
@@ -390,11 +388,15 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: 'PHP5-FPM', history: 'previous' },
             ]
         },
-        'Client Side': {
+        'Client/Software Side': {
             'Client Languages': [
                 { value: 'JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', history: 'current' },
                 { value: 'HTML & HTML5', history: 'current' },
                 { value: 'CSS & CSS3 & SASS', history: 'current' },
+            ],
+            'Software Languages': [
+                { value: 'C#', history: 'current' },
+                { value: 'Java', history: 'hobby' },
             ],
             'JavaScript Libraries or Frameworks': [
                 { value: 'AngularJS 1.5', history: 'current' },
