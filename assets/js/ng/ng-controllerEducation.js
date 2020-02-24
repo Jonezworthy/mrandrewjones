@@ -3,6 +3,11 @@ angular.module('MrAndrewJones').controller('controllerEducation', function($scop
     education.oExperiences = {
 
         'Qualifications': [{
+            title: 'New Leadership Programme',
+            issuer: 'The NEC',
+            date: 'December 2019',
+            grade: 'Pass'
+        }, {
             title: 'M201 MongoDB Performance',
             issuer: 'MongoDB University',
             date: 'October 2018',

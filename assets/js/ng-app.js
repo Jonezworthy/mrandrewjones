@@ -140,6 +140,11 @@ angular.module('MrAndrewJones').controller('controllerEducation', function($scop
     education.oExperiences = {
 
         'Qualifications': [{
+            title: 'New Leadership Programme',
+            issuer: 'The NEC',
+            date: 'December 2019',
+            grade: 'Pass'
+        }, {
             title: 'M201 MongoDB Performance',
             issuer: 'MongoDB University',
             date: 'October 2018',
@@ -339,11 +344,11 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
 
     tech.oTechnologies = {
         /* ************************************** */
-        'Server Side': {
-            'Server Languages': ['TypeScript', 'JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 7 (Procedural, OOP, MVC)', 'Java', 'C#'],
+        'Server/Software Side': {
+            'Languages': ['TypeScript', 'JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 7 (Procedural, OOP, MVC)', 'Java', 'C#'],
             'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL', 'CosmosDB'],
             'Hosting': ['Microsoft Azure', 'AWS', 'UK Fast CloudFlex', 'MongoDB Atlas'],
-            'Server Management OS': ['Windows Server', 'Linux (Ubuntu + Gentoo + CentOS)'],
+            'Server Management': ['Windows Server', 'Linux (Ubuntu + Gentoo + CentOS)'],
             'Apache': ['Virtual Hosts', 'Rewrite Rules', 'Reverse Proxy'],
             'NginX': ['Server Definition', 'Reverse Proxy'],
             'Templating': ['Smarty', 'Jade/Pug', 'EJS', 'Handlebars'],
@@ -357,22 +362,22 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
             'CSS Libraries or Frameworks': ['Angular Materials', 'Bootstrap', 'Font Awesome']
         },
         'Principles': {
-            'Design Patterns': ['MVC/MVP/SoC', 'Micro Services', 'Programming Design Patterns', 'RESTful APIs', 'Mobile first'],
+            'Design Patterns': ['MVC/MVP/SoC', 'Micro Services', 'RESTful APIs', 'Mobile first'],
             'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN'],
             'Testing': ['Test-driven Development', 'Unit/Automated/Acceptance Testing', 'Regression Testing', 'JasmineJS', 'KarmaJS', 'MochaJS + ShouldJS'],
             'Continuous Integration': ['Visual Studio Pipelines', 'Jenkins', 'Gulp (Task Management)'],
-            'Security': ['OWASP', 'XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
+            'Security': ['OWASP', 'PCI-DSS', 'XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
         },
-        'Network': {
+        'Networking': {
             'Email Configuration': ['SPF', 'DMARC', 'DKIM', 'Microsoft Exchange'],
             'DNS and Dynamic DNS': ['A/CNAME/MX', 'Load balancing', 'Domain Registrar'],
             'Communication Protocols': ['FTP', 'SFTP', 'SSH', 'SSL'],
-            'CDN': ['Akamai CDN', 'Akamai Fast DNS', 'Cloudflare', 'Azure Blob Storage'],
+            'CDN': ['Cloudflare', 'Akamai CDN', 'Akamai Fast DNS', 'Azure Blob Storage'],
             'Windows': ['Active Directory', 'Domain Controller', 'Microsoft Exchange', 'VPNs']
         },
         'Administration': {
             'Work Management': ['Scrum', 'Agile Development', 'JIRA', 'FreshDesk', 'Trello', 'Visual Studio Online'],
-            'Version Control': ['SVN (CLI + Tortoise)', 'Git', 'GitHub', 'Visual Studio Team Services'],
+            'Version Control': ['Git', 'SVN (CLI + Tortoise)', 'GitHub', 'Visual Studio Team Services'],
             'Scripting': ['PowerShell', 'Bash', 'Batch'],
             'Status': ['HostTracker', 'Uptime Monitor'],
         },
