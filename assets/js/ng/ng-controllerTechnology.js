@@ -56,7 +56,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
             'Client Languages': [
                 { value: 'JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', history: 'current' },
                 { value: 'HTML & HTML5', history: 'current' },
-                { value: 'CSS & CSS3 & SASS', history: 'current' },
+                { value: 'CSS & CSS3 & SCSS', history: 'current' },
             ],
             'Software Languages': [
                 { value: 'C#', history: 'current' },
@@ -89,6 +89,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
         'Principles': {
             'Design Patterns': [
                 { value: 'MVC/MVP/SoC', history: 'current' },
+                { value: '(SaaS) Software As A Service', history: 'current' },
                 { value: 'Micro Services', history: 'current' },
                 { value: 'RESTful APIs', history: 'current' },
                 { value: 'Mobile first', history: 'current' },
