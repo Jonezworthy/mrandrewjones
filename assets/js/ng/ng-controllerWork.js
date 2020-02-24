@@ -2,21 +2,28 @@ angular.module('MrAndrewJones').controller('controllerWork', function($scope, $h
     var work = this;
     work.oExperiences = {
         'Employment': [{
-                from: 'August 2017',
+                from: 'October 2017',
                 to: 'Current',
                 companyName: 'The NEC Group/The Ticket Factory',
                 companyDescription: 'Huge exhibition company',
                 title: 'Lead Software/Web Developer',
                 details: {
                     'Stack': 'MEAN',
-                    'Technologies': 'Development technologies regularly used: <strong>TypeScript, JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, CSS3 and HTML5. </strong> Utilising Microsoft Azure\'s cloud platform',
+                    'Technologies': 'Development technologies used: <strong>TypeScript, JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, and HTML5. </strong> Utilising Microsoft Azure\'s cloud platform',
                     'Notable Achievements': '\
                         <ul>\n\
                             <li>Introduced continuous integration</li>\n\
                             <li>Introduced automated testing</li>\n\
                             <li>Managing product life cycles in software, app, and web development</li>\n\
                         </ul>',
-                    'Other Duties': '\
+                    'Notable Skills': '\
+                        <ul>\n\
+                            <li>Working to strict deadlines</li>\n\
+                            <li>Working with multiple clients simultaneously</li>\n\
+                            <li>Effective communication with external clients</li>\n\
+                            <li>Providing documentation and demonstrations</li>\n\
+                        </ul>',
+                    'Lead Developer Duties': '\
                         <ul>\n\
                             <li>Making decisions on server infrastructure</li>\n\
                             <li>Code reviews</li>\n\
@@ -37,7 +44,7 @@ angular.module('MrAndrewJones').controller('controllerWork', function($scope, $h
             },
             {
                 from: 'July 2013',
-                to: 'August 2017',
+                to: 'October 2017',
                 companyName: 'Cruise.co/Cruise.co.uk',
                 companyDescription: 'International travel agent for Cruises/holidays',
                 title: 'Senior Software Engineer',

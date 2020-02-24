@@ -111,6 +111,36 @@ img {
     color: #009926;
 }
 
+.tech-list {
+    list-style: none;
+    li {
+        h5 {
+            display: inline;
+        }
+    }
+    >li:before {
+        content: "\2022";
+        color: #fff;
+        font-size: 35px;
+        font-weight: bold;
+        display: inline-block;
+        width: 15px;
+        margin-left: -30px;
+        margin-top: 0px;
+        height: auto;
+        vertical-align: text-top;
+    }
+    >li[class='current']:before {
+        color: #ffb74d;
+    }
+    >li[class='previous']:before {
+        color: #8c9eff;
+    }
+    >li[class='hobby']:before {
+        color: #211400;
+    }
+}
+
 
 /* Over-ride */
 

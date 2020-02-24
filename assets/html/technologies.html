@@ -82,6 +82,12 @@
                             Filter Results?
                         </md-switch>
                     </form>
+                    <h3>Colour Key:</h3>
+                    <ul class="tech-list">
+                        <li class="current">Current role</li>
+                        <li class="previous">Previous role</li>
+                        <li class="hobby">Hobby skill</li>
+                    </ul>
 
                     <ul ng-show="controller.displayMode === 'text'" class="psuedo-list" layout="row" layout-padding layout-wrap>
                         <li flex="100" flex-gt-sm="50" flex-gt-md="33" ng-repeat="(categoryName, oCategory)  in tech.oTechnologies" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchCategories['show' + categoryName] === true">
@@ -90,9 +96,9 @@
                                 <ul>
                                     <li ng-repeat="(subcategoryName, oSubcategory) in oCategory" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchKeys['show' + subcategoryName] === true">
                                         <h4 class="md-subhead" ng-class="{'emphasise': tech.searchKeys['show' + subcategoryName] === true}">{{subcategoryName}}</h4>
-                                        <ul>
-                                            <li ng-repeat="techName in oSubcategory" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchValues['show' + techName] === true">
-                                                <h5 class="md-body-1" ng-class="{'emphasise': tech.searchValues['show' + techName] === true}">{{techName}}</h5>
+                                        <ul class="tech-list">
+                                            <li class="{{techName.history}}" ng-repeat="techName in oSubcategory" ng-show="!tech.searchTerm || !tech.filterResults || tech.searchValues['show' + techName.value] === true">
+                                                <h5 class="md-body-1" ng-class="{'emphasise': tech.searchValues['show' + techName.value] === true}">{{techName.value}}</h5>
                                             </li>
                                         </ul>
                                     </li>

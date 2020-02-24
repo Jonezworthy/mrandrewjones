@@ -1,118 +1,118 @@
-var angularMaterialSettings = function ($mdThemingProvider) {
+var angularMaterialSettings = function($mdThemingProvider) {
     $mdThemingProvider.theme('default').primaryPalette('orange').accentPalette('indigo').backgroundPalette('blue').warnPalette('red');
 };
 
 angular.module('MrAndrewJones', ['ngMaterial', 'ngMessages', 'ngSanitize', 'ngRoute']).config(['$routeProvider', '$locationProvider',
-    function ($routeProvider, $locationProvider) {
+        function($routeProvider, $locationProvider) {
 
-        $routeProvider
+            $routeProvider
                 .when('/', {
-                    templateUrl: '/assets/html/default.html'
-                    , controller: 'controllerMain'
+                    templateUrl: '/assets/html/default.html',
+                    controller: 'controllerMain'
                 })
                 .when('/me/', {
-                    templateUrl: '/assets/html/me.html'
-                    , controller: 'controllerMain'
+                    templateUrl: '/assets/html/me.html',
+                    controller: 'controllerMain'
                 })
                 .when('/work/', {
-                    templateUrl: '/assets/html/work.html'
-                    , controller: 'controllerMain'
+                    templateUrl: '/assets/html/work.html',
+                    controller: 'controllerMain'
                 })
                 .when('/portfolio/', {
-                    templateUrl: '/assets/html/portfolio.html'
-                    , controller: 'controllerMain'
+                    templateUrl: '/assets/html/portfolio.html',
+                    controller: 'controllerMain'
                 })
                 .when('/education/', {
-                    templateUrl: '/assets/html/education.html'
-                    , controller: 'controllerMain'
+                    templateUrl: '/assets/html/education.html',
+                    controller: 'controllerMain'
                 })
                 .when('/contact/', {
-                    templateUrl: '/assets/html/contact.html'
-                    , controller: 'controllerMain'
+                    templateUrl: '/assets/html/contact.html',
+                    controller: 'controllerMain'
                 })
                 .when('/technologies/', {
-                    templateUrl: '/assets/html/technologies.html'
-                    , controller: 'controllerMain'
+                    templateUrl: '/assets/html/technologies.html',
+                    controller: 'controllerMain'
                 });
 
-        $locationProvider.html5Mode(true);
+            $locationProvider.html5Mode(true);
 
-    }])
-        .controller('controllerMain', function ($scope, $http, $mdDialog, $mdMedia, $window, $route, $routeParams, $location) {
-            var controller = this;
+        }
+    ])
+    .controller('controllerMain', function($scope, $http, $mdDialog, $mdMedia, $window, $route, $routeParams, $location) {
+        var controller = this;
 
-            $scope.controller.isHomepage = ($location['$$path'] === '/');
-            controller.convertToXML = function (oObject) {
-                var xml = '<span class="key">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span>';
-                xml += '\n\t<span class="key">&lt;Technologies&gt;</span>\n';
-                for (var category in oObject) {
-                    xml += '\t\t<span class="key">&lt;' + category.replace(/\s/g, "") + '&gt;</span>';
-                    for (var subcategory in oObject[category]) {
+        $scope.controller.isHomepage = ($location['$$path'] === '/');
+        controller.convertToXML = function(oObject) {
+            var xml = '<span class="key">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span>';
+            xml += '\n\t<span class="key">&lt;Technologies&gt;</span>\n';
+            for (var category in oObject) {
+                xml += '\t\t<span class="key">&lt;' + category.replace(/\s/g, "") + '&gt;</span>';
+                for (var subcategory in oObject[category]) {
 
-                        for (var i = 0; i < oObject[category][subcategory].length; i++) {
-                            xml += '\n\t\t\t<span class="key">&lt;' + subcategory.replace(/\s/g, "") + '&gt;</span>' + oObject[category][subcategory][i].replace(/(\&)/, "&amp;") + '<span class="key">&lt;/' + subcategory.replace(/\s/g, "") + '&gt;</span>';
-                        }
-
+                    for (var i = 0; i < oObject[category][subcategory].length; i++) {
+                        xml += '\n\t\t\t<span class="key">&lt;' + subcategory.replace(/\s/g, "") + '&gt;</span>' + oObject[category][subcategory][i].value.replace(/(\&)/, "&amp;") + '<span class="key">&lt;/' + subcategory.replace(/\s/g, "") + '&gt;</span>';
                     }
-                    xml += '\n\t\t<span class="key">&lt;/' + category.replace(/\s/g, "") + '&gt;</span> \n';
+
                 }
-                xml += '\t<span class="key">&lt;/Technologies&gt;</span>';
-                return xml;
-            };
-            controller.convertToJSON = function (oObject) {
-                var json = JSON.stringify(oObject, null, 4);
-                //http://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
-                json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-                return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-                    var cls = 'number';
-                    if (/^"/.test(match)) {
-                        if (/:$/.test(match)) {
-                            cls = 'key';
-                        } else {
-                            cls = 'string';
-                        }
-                    } else if (/true|false/.test(match)) {
-                        cls = 'boolean';
-                    } else if (/null/.test(match)) {
-                        cls = 'null';
-                    }
-                    return '<span class="' + cls + '">' + match + '</span>';
-                });
-            };
-         
-
-            controller.toggleDisplayMode = function (displayMode) {
-                controller.displayMode = displayMode;
-            };
-            controller.toggleDisplayMode('text');
-
-            controller.isMobile = ($mdMedia('md') || $mdMedia('sm') || $mdMedia('xs'));
-
-            if (!window.hasPrintedMemo) {
-
-                var defaultFormatting = 'background:#31364c;color: #ffffff;';
-                console.log('%cWelcome to my portfolio site :)', 'background:#31364c;color: #ffffff;font-size:12px;font-size:40px;padding:10px 10px 250px 10px;');
-
-                console.log('%cI\'m guessing you are a developer your self if you\'re looking at this!', defaultFormatting);
-
-                console.log('\n\n');
-
-                console.log('%cHere\'s some useful information for you:', defaultFormatting + 'font-weight:bold;font-size:18px;');
-                console.log('%cMy GitHub (Open Source Stuff) : https://github.com/Jonezworthy', defaultFormatting);
-                console.log('%cMy Private GitHub (Mostly technical tests) : https://github.com/Jonezworthy-private', defaultFormatting);
-
-                console.log('\n\n');
-
-                console.log('%cDon\'t forget to check out these subreddits too!:', defaultFormatting + 'font-weight:bold;font-size:18px;');
-                console.log('%cProgrammerHumor : https://www.reddit.com/r/ProgrammerHumor/', defaultFormatting);
-                console.log('%cWebDev : https://www.reddit.com/r/webdev/', defaultFormatting);
-                console.log('%cJavaScript : https://www.reddit.com/r/javascript/', defaultFormatting);
-
-                window.hasPrintedMemo = true;
+                xml += '\n\t\t<span class="key">&lt;/' + category.replace(/\s/g, "") + '&gt;</span> \n';
             }
-        });
-angular.module('MrAndrewJones').config(angularMaterialSettings);
+            xml += '\t<span class="key">&lt;/Technologies&gt;</span>';
+            return xml;
+        };
+        controller.convertToJSON = function(oObject) {
+            var json = JSON.stringify(oObject, null, 4);
+            //http://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function(match) {
+                var cls = 'number';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'key';
+                    } else {
+                        cls = 'string';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'null';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+        };
 
+
+        controller.toggleDisplayMode = function(displayMode) {
+            controller.displayMode = displayMode;
+        };
+        controller.toggleDisplayMode('text');
+
+        controller.isMobile = ($mdMedia('md') || $mdMedia('sm') || $mdMedia('xs'));
+
+        if (!window.hasPrintedMemo) {
+
+            var defaultFormatting = 'background:#31364c;color: #ffffff;';
+            console.log('%cWelcome to my portfolio site :)', 'background:#31364c;color: #ffffff;font-size:12px;font-size:40px;padding:10px 10px 250px 10px;');
+
+            console.log('%cI\'m guessing you are a developer your self if you\'re looking at this!', defaultFormatting);
+
+            console.log('\n\n');
+
+            console.log('%cHere\'s some useful information for you:', defaultFormatting + 'font-weight:bold;font-size:18px;');
+            console.log('%cMy GitHub (Open Source Stuff) : https://github.com/Jonezworthy', defaultFormatting);
+            console.log('%cMy Private GitHub (Mostly technical tests) : https://github.com/Jonezworthy-private', defaultFormatting);
+
+            console.log('\n\n');
+
+            console.log('%cDon\'t forget to check out these subreddits too!:', defaultFormatting + 'font-weight:bold;font-size:18px;');
+            console.log('%cProgrammerHumor : https://www.reddit.com/r/ProgrammerHumor/', defaultFormatting);
+            console.log('%cWebDev : https://www.reddit.com/r/webdev/', defaultFormatting);
+            console.log('%cJavaScript : https://www.reddit.com/r/javascript/', defaultFormatting);
+
+            window.hasPrintedMemo = true;
+        }
+    });
+angular.module('MrAndrewJones').config(angularMaterialSettings);
 angular.module('MrAndrewJones').controller('controllerContact', function ($scope, $http, $mdDialog, $mdMedia, $window) {
     var contact = this;
     contact.slider = 10;
@@ -345,46 +345,200 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
     tech.oTechnologies = {
         /* ************************************** */
         'Server/Software Side': {
-            'Languages': ['TypeScript', 'JavaScript (NodeJS) (ES6, ES2016+)', 'NodeJS with Express', 'PHP 5.1 -> 7 (Procedural, OOP, MVC)', 'Java', 'C#'],
-            'Databases': ['MongoDB', 'MSSQL', 'MySQL', 'PostgreSQL', 'CosmosDB'],
-            'Hosting': ['Microsoft Azure', 'AWS', 'UK Fast CloudFlex', 'MongoDB Atlas'],
-            'Server Management': ['Windows Server', 'Linux (Ubuntu + Gentoo + CentOS)'],
-            'Apache': ['Virtual Hosts', 'Rewrite Rules', 'Reverse Proxy'],
-            'NginX': ['Server Definition', 'Reverse Proxy'],
-            'Templating': ['Smarty', 'Jade/Pug', 'EJS', 'Handlebars'],
-            'Other': ['PHP5-FPM', 'Mongoose']
+            'Languages': [
+                { value: 'TypeScript', history: 'current' },
+                { value: 'JavaScript (NodeJS) (ES6, ES2016+)', history: 'current' },
+                { value: 'NodeJS with Express', history: 'current' },
+                { value: 'PHP 5.1 -> 7 (Procedural, OOP, MVC)', history: 'previous' },
+                { value: 'Java', history: 'hobby' },
+                { value: 'C#', history: 'current' },
+            ],
+            'Databases': [
+                { value: 'MongoDB', history: 'current' },
+                { value: 'MSSQL', history: 'previous' },
+                { value: 'MySQL', history: 'hobby' },
+                { value: 'PostgreSQL', history: 'previous' },
+                { value: 'CosmosDB', history: 'current' },
+            ],
+            'Hosting': [
+                { value: 'Microsoft Azure', history: 'current' },
+                { value: 'MongoDB Atlas', history: 'current' },
+                { value: 'AWS', history: 'previous' },
+                { value: 'UK Fast CloudFlex', history: 'previous' },
+            ],
+            'Server Management': [
+                { value: 'Windows Server', history: 'current' },
+                { value: 'Linux (Ubuntu + Gentoo + CentOS)', history: 'previous' },
+            ],
+            'Apache': [
+                { value: 'Virtual Hosts', history: 'previous' },
+                { value: 'Rewrite Rules', history: 'previous' },
+                { value: 'Reverse Proxy', history: 'previous' },
+            ],
+            'NginX': [
+                { value: 'Server Definition', history: 'previous' },
+                { value: 'Reverse Proxy', history: 'previous' },
+            ],
+            'Templating': [
+                { value: 'Jade/Pug', history: 'current' },
+                { value: 'Smarty', history: 'previous' },
+                { value: 'EJS', history: 'hobby' },
+                { value: 'Handlebars', history: 'hobby' },
+            ],
+            'Other': [
+                { value: 'Mongoose', history: 'current' },
+                { value: 'PHP5-FPM', history: 'previous' },
+            ]
         },
         'Client Side': {
-            'Client Languages': ['JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', 'HTML & HTML5', 'CSS & CSS3 & SASS'],
-            'JavaScript Libraries or Frameworks': ['AngularJS 1.5', 'Angular2 (6+)', 'Ionic 3+', 'jQuery (1.1.12 -> 1.7.2 mostly)', 'jQuery UI'],
-            'Caching': ['Local Storage API', 'Session Storage API', 'ETag', 'Expires headers'],
-            'Compatibilities': ['normalize.css', 'modernizr.js', 'polyfills'],
-            'CSS Libraries or Frameworks': ['Angular Materials', 'Bootstrap', 'Font Awesome']
+            'Client Languages': [
+                { value: 'JavaScript (OOP, OL, Prototyping, ES6, ES2016+)', history: 'current' },
+                { value: 'HTML & HTML5', history: 'current' },
+                { value: 'CSS & CSS3 & SASS', history: 'current' },
+            ],
+            'JavaScript Libraries or Frameworks': [
+                { value: 'AngularJS 1.5', history: 'current' },
+                { value: 'Angular2 (6+)', history: 'current' },
+                { value: 'Ionic 3+', history: 'current' },
+                { value: 'jQuery (1.1.12 -> 1.7.2 mostly)', history: 'current' },
+                { value: 'jQuery UI', history: 'previous' },
+            ],
+            'Caching': [
+                { value: 'Local Storage API', history: 'current' },
+                { value: 'Session Storage API', history: 'current' },
+                { value: 'ETag', history: 'previous' },
+                { value: 'Expires headers', history: 'previous' },
+            ],
+            'Compatibilities': [
+                { value: 'polyfills', history: 'current' },
+                { value: 'normalize.css', history: 'previous' },
+                { value: 'modernizr.js', history: 'previous' },
+            ],
+            'CSS Libraries or Frameworks': [
+                { value: 'Angular Materials', history: 'current' },
+                { value: 'Bootstrap', history: 'previous' },
+                { value: 'Font Awesome', history: 'previous' },
+            ]
         },
         'Principles': {
-            'Design Patterns': ['MVC/MVP/SoC', 'Micro Services', 'RESTful APIs', 'Mobile first'],
-            'Stacks': ['LASP', 'LAMP', 'WAMP', 'MEAN', 'SEAN'],
-            'Testing': ['Test-driven Development', 'Unit/Automated/Acceptance Testing', 'Regression Testing', 'JasmineJS', 'KarmaJS', 'MochaJS + ShouldJS'],
-            'Continuous Integration': ['Visual Studio Pipelines', 'Jenkins', 'Gulp (Task Management)'],
-            'Security': ['OWASP', 'PCI-DSS', 'XSS', 'SQL Injection', 'Session Hijacking', 'Rule of least privilege']
+            'Design Patterns': [
+                { value: 'MVC/MVP/SoC', history: 'current' },
+                { value: 'Micro Services', history: 'current' },
+                { value: 'RESTful APIs', history: 'current' },
+                { value: 'Mobile first', history: 'current' },
+            ],
+            'Stacks': [
+                { value: 'MEAN', history: 'current' },
+                { value: 'LASP', history: 'previous' },
+                { value: 'LAMP', history: 'previous' },
+                { value: 'SEAN', history: 'previous' },
+                { value: 'WAMP', history: 'hobby' },
+            ],
+            'Testing': [
+                { value: 'JasmineJS', history: 'current' },
+                { value: 'KarmaJS', history: 'current' },
+                { value: 'MochaJS + ShouldJS', history: 'current' },
+                { value: 'Test-driven Development', history: 'current' },
+                { value: 'Unit/Automated/Acceptance Testing', history: 'current' },
+                { value: 'Regression Testing', history: 'previous' },
+            ],
+            'Continuous Integration': [
+                { value: 'Visual Studio Pipelines', history: 'current' },
+                { value: 'Jenkins', history: 'previous' },
+                { value: 'Gulp (Task Management)', history: 'hobby' },
+            ],
+            'Security': [
+                { value: 'OWASP', history: 'current' },
+                { value: 'PCI-DSS', history: 'current' },
+                { value: 'XSS', history: 'current' },
+                { value: 'SQL Injection', history: 'current' },
+                { value: 'Session Hijacking', history: 'current' },
+                { value: 'Rule of least privilege', history: 'current' },
+            ]
         },
         'Networking': {
-            'Email Configuration': ['SPF', 'DMARC', 'DKIM', 'Microsoft Exchange'],
-            'DNS and Dynamic DNS': ['A/CNAME/MX', 'Load balancing', 'Domain Registrar'],
-            'Communication Protocols': ['FTP', 'SFTP', 'SSH', 'SSL'],
-            'CDN': ['Cloudflare', 'Akamai CDN', 'Akamai Fast DNS', 'Azure Blob Storage'],
-            'Windows': ['Active Directory', 'Domain Controller', 'Microsoft Exchange', 'VPNs']
+            'Email Configuration': [
+                { value: 'SPF', history: 'current' },
+                { value: 'DMARC', history: 'current' },
+                { value: 'DKIM', history: 'current' },
+                { value: 'Microsoft Exchange', history: 'previous' },
+            ],
+            'DNS and Dynamic DNS': [
+                { value: 'A/CNAME/MX', history: 'current' },
+                { value: 'Load balancing', history: 'previous' },
+                { value: 'Domain Registrar', history: 'previous' },
+            ],
+            'Communication Protocols': [
+                { value: 'SSH', history: 'current' },
+                { value: 'SSL', history: 'current' },
+                { value: 'FTP, SFTP', history: 'previous' },
+            ],
+            'CDN': [
+                { value: 'Cloudflare', history: 'current' },
+                { value: 'Azure Blob Storage', history: 'current' },
+                { value: 'Akamai CDN', history: 'previous' },
+                { value: 'Akamai Fast DNS', history: 'previous' },
+            ],
+            'Windows': [
+                { value: 'VPNs', history: 'current' },
+                { value: 'Active Directory', history: 'previous' },
+                { value: 'Domain Controller', history: 'previous' },
+                { value: 'Microsoft Exchange', history: 'previous' },
+            ]
         },
         'Administration': {
-            'Work Management': ['Scrum', 'Agile Development', 'JIRA', 'FreshDesk', 'Trello', 'Visual Studio Online'],
-            'Version Control': ['Git', 'SVN (CLI + Tortoise)', 'GitHub', 'Visual Studio Team Services'],
-            'Scripting': ['PowerShell', 'Bash', 'Batch'],
-            'Status': ['HostTracker', 'Uptime Monitor'],
+            'Work Management': [
+                { value: 'Scrum', history: 'current' },
+                { value: 'Lean Methodologies', history: 'current' },
+                { value: 'Agile Development', history: 'current' },
+                { value: 'Visual Studio Online', history: 'current' },
+                { value: 'JIRA', history: 'previous' },
+                { value: 'FreshDesk', history: 'previous' },
+                { value: 'Trello', history: 'previous' },
+            ],
+            'Version Control': [
+                { value: 'Git', history: 'current' },
+                { value: 'Visual Studio Team Services', history: 'current' },
+                { value: 'SVN (CLI + Tortoise)', history: 'previous' },
+                { value: 'GitHub', history: 'previous' },
+            ],
+            'Scripting': [
+                { value: 'PowerShell', history: 'current' },
+                { value: 'Bash', history: 'previous' },
+                { value: 'Batch', history: 'previous' },
+            ],
+            'Status': [
+                { value: 'Status Cake', history: 'current' },
+                { value: 'HostTracker', history: 'previous' },
+                { value: 'Uptime Monitor', history: 'hobby' },
+            ],
         },
         'Third Party': {
-            'APIs': ['Slack', 'Exchange Web Services', 'Google Maps', 'Google Graphs', 'Facebook, Twitter, YouTube, Google Plus', 'Wikipedia', 'OpenWeather', 'Text messaging (textlocal.com & fastsms.co.uk)', 'PayPal & PayPal APN', 'and more...'],
-            'Analytical': ['Google Analytics', 'Google Webmasters'],
-            'Other': ['Amazon Alexa', 'WordPress', 'vBulletin', 'Eysys recommendation engine', 'Tintup Social', 'Voice recognition']
+            'APIs': [
+                { value: 'Slack', history: 'current' },
+                { value: 'Trello', history: 'current' },
+                { value: 'Exchange Web Services', history: 'previous' },
+                { value: 'Google Maps', history: 'current' },
+                { value: 'Google Graphs', history: 'previous' },
+                { value: 'Facebook, Twitter, YouTube, Google Plus', history: 'previous' },
+                { value: 'Wikipedia', history: 'previous' },
+                { value: 'OpenWeather', history: 'previous' },
+                { value: 'Text messaging (textlocal.com & fastsms.co.uk)', history: 'previous' },
+                { value: 'PayPal & PayPal APN', history: 'current' },
+                { value: 'and more...', history: 'current' },
+            ],
+            'Analytical': [
+                { value: 'Google Analytics', history: 'current' },
+                { value: 'Google Webmasters', history: 'current' },
+            ],
+            'Other': [
+                { value: 'Amazon Alexa', history: 'current' },
+                { value: 'WordPress', history: 'previous' },
+                { value: 'vBulletin', history: 'previous' },
+                { value: 'Eysys recommendation engine', history: 'previous' },
+                { value: 'Tintup Social', history: 'previous' },
+                { value: 'Voice recognition', history: 'previous' },
+            ]
         }
     };
 
@@ -472,7 +626,6 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
 
     tech.searchChange = function() {
         tech.oTechnologies = JSON.parse(JSON.stringify(tech.oTechnologiesCopy));
-        console.log(tech.oTechnologies);
 
         var searchTerm = tech.searchTerm.toString(),
             setAll;
@@ -495,7 +648,8 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
 
 
                 for (var i = 0; i < tech.oTechnologies[category][key].length; i++) {
-                    var techword = tech.oTechnologies[category][key][i];
+                    var techwordObject = tech.oTechnologies[category][key][i]
+                    var techword = techwordObject.value;
                     if (tech.searchTerm && tech.searchTerm.toString()) {
 
                         if (techword.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0 || setAll) {
@@ -515,21 +669,28 @@ angular.module('MrAndrewJones').controller('controllerWork', function($scope, $h
     var work = this;
     work.oExperiences = {
         'Employment': [{
-                from: 'August 2017',
+                from: 'October 2017',
                 to: 'Current',
                 companyName: 'The NEC Group/The Ticket Factory',
                 companyDescription: 'Huge exhibition company',
                 title: 'Lead Software/Web Developer',
                 details: {
                     'Stack': 'MEAN',
-                    'Technologies': 'Development technologies regularly used: <strong>TypeScript, JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, CSS3 and HTML5. </strong> Utilising Microsoft Azure\'s cloud platform',
+                    'Technologies': 'Development technologies used: <strong>TypeScript, JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, and HTML5. </strong> Utilising Microsoft Azure\'s cloud platform',
                     'Notable Achievements': '\
                         <ul>\n\
                             <li>Introduced continuous integration</li>\n\
                             <li>Introduced automated testing</li>\n\
                             <li>Managing product life cycles in software, app, and web development</li>\n\
                         </ul>',
-                    'Other Duties': '\
+                    'Notable Skills': '\
+                        <ul>\n\
+                            <li>Working to strict deadlines</li>\n\
+                            <li>Working with multiple clients simultaneously</li>\n\
+                            <li>Effective communication with external clients</li>\n\
+                            <li>Providing documentation and demonstrations</li>\n\
+                        </ul>',
+                    'Lead Developer Duties': '\
                         <ul>\n\
                             <li>Making decisions on server infrastructure</li>\n\
                             <li>Code reviews</li>\n\
@@ -550,7 +711,7 @@ angular.module('MrAndrewJones').controller('controllerWork', function($scope, $h
             },
             {
                 from: 'July 2013',
-                to: 'August 2017',
+                to: 'October 2017',
                 companyName: 'Cruise.co/Cruise.co.uk',
                 companyDescription: 'International travel agent for Cruises/holidays',
                 title: 'Senior Software Engineer',
