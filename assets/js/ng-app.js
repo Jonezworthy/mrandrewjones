@@ -140,8 +140,8 @@ angular.module('MrAndrewJones').controller('controllerEducation', function($scop
     education.oExperiences = {
 
         'Qualifications': [{
-            title: 'New Leadership Programme',
-            issuer: 'The NEC',
+            title: 'New Leadership Programme (6 day course)',
+            issuer: 'The NEC / Beyond Theory',
             date: 'December 2019',
             grade: 'Pass'
         }, {
