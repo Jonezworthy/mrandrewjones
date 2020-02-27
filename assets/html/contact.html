@@ -1,11 +1,11 @@
 <div layout-margin-gt-md>
-    <md-content ng-controller="controllerContact as contact" >
-        <md-toolbar class="md-accent md-hue-1" >
+    <md-content ng-controller="controllerContact as contact">
+        <md-toolbar class="md-accent md-hue-1">
             <div class="md-toolbar-tools">
                 <h2 flex="auto" class="md-flex">Contact</h2>
             </div>
         </md-toolbar>
-        <md-toolbar class="md-warn md-hue-1" >
+        <md-toolbar class="md-warn md-hue-1">
             <div class="md-toolbar-tools">
                 <h2 flex="auto" class="md-flex">Recruiters</h2>
             </div>
@@ -27,7 +27,7 @@
             <p>Please email me and arrange a phone call with me, unsolicited phone calls usually get ignored because I am busy!</p>
         </div>
 
-        <md-toolbar class="md-primary md-hue-1" >
+        <md-toolbar class="md-primary md-hue-1">
             <div class="md-toolbar-tools">
                 <h2 flex="auto" class="md-flex">My CV</h2>
             </div>
@@ -35,12 +35,12 @@
         <div layout-padding>
             <h2>Download my CV</h2>
             <p>This web site will always be more up to date than my CV, but you can download it here:</p>
-            <p><strong>Latest update: </strong>15/07/2017-17:53 (version 12)</p>
+            <p><strong>Latest update: </strong>27/02/2020-21:26 (version 13)</p>
             <div>
-                <md-button class="md-raised md-primary" target="_blank" href="/Andrew-Jones.pdf" download="AndrewJones.pdf">Version 12 .pdf</md-button>
+                <md-button class="md-raised md-primary" target="_blank" href="/Andrew-Jones.pdf" download="AndrewJones.pdf">Version 13.pdf</md-button>
             </div>
         </div>
-        <md-toolbar class="md-primary md-hue-1" >
+        <md-toolbar class="md-primary md-hue-1">
             <div class="md-toolbar-tools">
                 <h2 flex="auto" class="md-flex">My contact details</h2>
             </div>
@@ -62,12 +62,12 @@
                 <h3 class="md-title">Please email me for my phone number - thank you</h3>
             </div>
             <div ng-repeat="(contactHeader, oContacts) in contact.info">
-                <md-toolbar class="md-primary md-hue-1" >
+                <md-toolbar class="md-primary md-hue-1">
                     <div class="md-toolbar-tools">
                         <h2 flex="auto" class="md-flex"> {{contactHeader}}</h2>
                     </div>
                 </md-toolbar>
-                <div ng-repeat="(contactLabel, oContact) in oContacts" layout-padding> 
+                <div ng-repeat="(contactLabel, oContact) in oContacts" layout-padding>
                     <span class="md-title">{{contactLabel}}:</span>
                     <a class="md-primary" target="_blank" href="{{oContact.link}}">{{oContact.display ? oContact.display : oContact.link}}</a>
                 </div>
