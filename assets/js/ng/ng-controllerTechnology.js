@@ -140,7 +140,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
             'Communication Protocols': [
                 { value: 'SSH', history: 'current' },
                 { value: 'SSL', history: 'current' },
-                { value: 'FTP, SFTP', 'FTPS', history: 'previous' },
+                { value: 'FTP, SFTP, FTPS', history: 'previous' },
             ],
             'CDN': [
                 { value: 'Cloudflare', history: 'current' },
