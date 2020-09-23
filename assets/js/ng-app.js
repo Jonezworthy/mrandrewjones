@@ -443,6 +443,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: 'MochaJS + ShouldJS', history: 'current' },
                 { value: 'Test-driven Development', history: 'current' },
                 { value: 'Unit/Automated/Acceptance Testing', history: 'current' },
+                { value: 'Load Testing', history: 'current' },
                 { value: 'Regression Testing', history: 'previous' },
             ],
             'Continuous Integration': [
@@ -464,6 +465,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: 'SPF', history: 'current' },
                 { value: 'DMARC', history: 'current' },
                 { value: 'DKIM', history: 'current' },
+                { value: 'SendGrid', history: 'current' },
                 { value: 'Microsoft Exchange', history: 'previous' },
             ],
             'DNS and Dynamic DNS': [
@@ -474,7 +476,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
             'Communication Protocols': [
                 { value: 'SSH', history: 'current' },
                 { value: 'SSL', history: 'current' },
-                { value: 'FTP, SFTP', history: 'previous' },
+                { value: 'FTP, SFTP, FTPS', history: 'previous' },
             ],
             'CDN': [
                 { value: 'Cloudflare', history: 'current' },
