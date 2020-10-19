@@ -129,30 +129,14 @@ md-tabs.md-primary > md-tabs-wrapper {
   padding: 0;
   margin: 15px 0 0 0; }
   .basic-boxes > ul {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0; }
-    .basic-boxes > ul > li:nth-of-type(3n+1) {
-      margin: 15px 15px 15px 0; }
-    .basic-boxes > ul > li:nth-of-type(3n+3) {
-      margin: 15px 0 15px 15px; }
+    list-style: none; }
     .basic-boxes > ul > li {
-      display: block;
-      box-sizing: border-box;
-      width: calc(33.3% - 20px);
-      float: left;
-      background: #ff9800;
-      color: #000;
-      margin: 15px 15px 0 15px;
-      padding: 15px;
-      text-align: center; }
-      .basic-boxes > ul > li ul {
-        list-style: inside;
-        margin: 0;
-        padding: 0; }
-    .basic-boxes > ul > li:nth-of-type(4) {
-      clear: both; }
+      width: 100%; }
+      .basic-boxes > ul > li > div {
+        background: #ff9800;
+        color: #000;
+        padding: 20px;
+        margin: 10px; }
 
 code .string {
   color: #ffffff; }
