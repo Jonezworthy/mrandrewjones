@@ -35,7 +35,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li flex-gt-xs="100" flex-gt-sm="50" flex-gt-md="33">
+                        <li flex-gt-xs="100" flex-gt-md="33">
                             <div>
                                 <h3>Build Tools</h3>
                                 <ul>
@@ -89,7 +89,7 @@
                 <md-content class="md-padding md-body-1" ng-controller="controllerTechnology as tech">
                     <form name="techSearch" layout-margin ng-show="controller.displayMode === 'text' && !controller.isMobile" layout="row">
                         <label>Looking for something specific?: </label>
-                        <input layout-padding type="text" name="search" placeholder="Enter a value to search" value="" ng-model="tech.searchTerm" ng-change="tech.searchChange()" />
+                        <input layout-padding autocomplete="off" type="text" name="search" placeholder="Enter a value to search" value="" ng-model="tech.searchTerm" ng-change="tech.searchChange()" />
                         <md-switch ng-model="tech.filterResults" aria-label="Filter Results" class="md-warn">
                             Filter Results?
                         </md-switch>

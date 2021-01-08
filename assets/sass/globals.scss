@@ -171,3 +171,7 @@ md-tabs.md-primary>md-tabs-wrapper {
         }
     }
 }
+
+button[disabled] {
+    opacity: 0.5;
+}

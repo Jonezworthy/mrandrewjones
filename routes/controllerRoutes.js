@@ -21,6 +21,7 @@ module.exports = function(app) {
     app.get('/education', contentController.displayHomepage);
     app.get('/me', contentController.displayHomepage);
     app.get('/contact', contentController.displayHomepage);
+    app.get('/game', contentController.displayHomepage);
 
     console.log('Set alexa');
     app.post('/alexa', alexa);

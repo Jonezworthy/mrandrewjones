@@ -60,6 +60,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
             ],
             'Software Languages': [
                 { value: 'C#', history: 'current' },
+                { value: '.NET', history: 'current' },
                 { value: 'Java', history: 'hobby' },
             ],
             'JavaScript Libraries or Frameworks': [
@@ -112,6 +113,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
             ],
             'Continuous Integration': [
                 { value: 'Visual Studio Pipelines', history: 'current' },
+                { value: 'Docker', history: 'current' },
                 { value: 'Jenkins', history: 'previous' },
                 { value: 'Gulp (Task Management)', history: 'hobby' },
             ],

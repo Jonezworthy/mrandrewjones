@@ -33,6 +33,10 @@ angular.module('MrAndrewJones', ['ngMaterial', 'ngMessages', 'ngSanitize', 'ngRo
                 .when('/technologies/', {
                     templateUrl: '/assets/html/technologies.html',
                     controller: 'controllerMain'
+                })
+                .when('/game/', {
+                    templateUrl: '/assets/html/game.html',
+                    controller: 'controllerGame'
                 });
 
             $locationProvider.html5Mode(true);
