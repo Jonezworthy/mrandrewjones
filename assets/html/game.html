@@ -24,7 +24,7 @@
 
         <div ng-if="game.ready === true && !game.displayResults">
             <h1 class="center-text">Is it a Pokemon or tech?</h1>
-            <h4 class="center-text">Progress {{game.currentPosition}}/{{game.amountOfQuestions}}</h4>
+            <h4 class="center-text">Progress {{game.currentPosition + 1}}/{{game.amountOfQuestions}}</h4>
             <h2 class="center-text game-question">{{game.questions[game.currentPosition]}}</h2>
 
             <h4 ng-class="game.response === 'Correct!' ? 'correct' : 'incorrect'" class="center-text game-response">{{game.response || '&nbsp;'}}</h4>

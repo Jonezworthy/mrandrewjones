@@ -81,10 +81,10 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: 'normalize.css', history: 'previous' },
                 { value: 'modernizr.js', history: 'previous' },
             ],
-            'CSS Libraries or Frameworks': [
-                { value: 'Angular Materials', history: 'current' },
-                { value: 'Bootstrap', history: 'previous' },
-                { value: 'Font Awesome', history: 'previous' },
+            'Other': [
+                { value: '3D Modelling', history: 'hobby' },
+                { value: 'CAD', history: 'hobby' },
+                { value: '3D Printing', history: 'hobby' },
             ]
         },
         'Principles': {
