@@ -36,6 +36,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function ($sc
                 { value: 'MongoDB Atlas', history: 'current' },
                 { value: 'AWS', history: 'previous' },
                 { value: 'UK Fast CloudFlex', history: 'previous' },
+                { value: 'Netlify', history: 'hobby' },
             ],
             'Server Management': [
                 { value: 'Windows Server', history: 'current' },
