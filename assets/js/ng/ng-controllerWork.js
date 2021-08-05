@@ -94,7 +94,7 @@ angular.module('MrAndrewJones').controller('controllerWork', function($scope, $h
                 }
             }, {
                 to: 'May 2013',
-                from: 'January 2011',
+                from: 'January 2008',
                 companyName: 'Redditch Web Solutions/RedditchWeb.co.uk',
                 companyDescription: 'My web design/development company',
                 title: 'Lead Designer/Developer ',

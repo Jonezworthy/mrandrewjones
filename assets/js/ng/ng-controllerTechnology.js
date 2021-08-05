@@ -1,10 +1,11 @@
-angular.module('MrAndrewJones').controller('controllerTechnology', function($scope, $http, $mdDialog, $mdMedia, $window) {
+angular.module('MrAndrewJones').controller('controllerTechnology', function ($scope, $http, $mdDialog, $mdMedia, $window) {
     var tech = this;
     this.searchValues = {};
     this.searchKeys = {};
     this.searchCategories = {};
     this.filterResults = true;
     this.selectedIndex = 0;
+    this.experience = (new Date().getFullYear() - 2008);
 
     tech.oTechnologies = {
         /* ************************************** */
@@ -22,6 +23,14 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: 'MySQL', history: 'hobby' },
                 { value: 'PostgreSQL', history: 'previous' },
             ],
+            'Server Libraries or Frameworks': [
+                { value: 'Mongoose', history: 'current' },
+                { value: 'Express', history: 'current' },
+                { value: 'Cheerio', history: 'current' },
+                { value: 'Puppeteer', history: 'current' },
+                { value: 'NginX', history: 'previous' },
+                { value: 'Apache', history: 'previous' },
+            ],
             'Hosting': [
                 { value: 'Microsoft Azure', history: 'current' },
                 { value: 'MongoDB Atlas', history: 'current' },
@@ -32,15 +41,6 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: 'Windows Server', history: 'current' },
                 { value: 'Linux (Ubuntu + Gentoo + CentOS)', history: 'previous' },
             ],
-            'Apache': [
-                { value: 'Virtual Hosts', history: 'previous' },
-                { value: 'Rewrite Rules', history: 'previous' },
-                { value: 'Reverse Proxy', history: 'previous' },
-            ],
-            'NginX': [
-                { value: 'Server Definition', history: 'previous' },
-                { value: 'Reverse Proxy', history: 'previous' },
-            ],
             'Templating': [
                 { value: 'Jade/Pug', history: 'current' },
                 { value: 'Smarty', history: 'previous' },
@@ -48,7 +48,6 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: 'Handlebars', history: 'hobby' },
             ],
             'Other': [
-                { value: 'Mongoose', history: 'current' },
                 { value: 'PHP5-FPM', history: 'previous' },
             ]
         },
@@ -63,7 +62,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: '.NET', history: 'current' },
                 { value: 'Java', history: 'hobby' },
             ],
-            'JavaScript Libraries or Frameworks': [
+            'Client Libraries or Frameworks': [
                 { value: 'AngularJS 1.5', history: 'current' },
                 { value: 'Angular2 (6+)', history: 'current' },
                 { value: 'Ionic 3+', history: 'current' },
@@ -71,10 +70,9 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: 'jQuery UI', history: 'previous' },
             ],
             'Caching': [
-                { value: 'Local Storage API', history: 'current' },
-                { value: 'Session Storage API', history: 'current' },
-                { value: 'ETag', history: 'previous' },
-                { value: 'Expires headers', history: 'previous' },
+                { value: 'Browser Storage APIs', history: 'current' },
+                { value: 'Redis.io', history: 'current' },
+                { value: 'Cloudflare Functions', history: 'current' },
             ],
             'Compatibilities': [
                 { value: 'polyfills', history: 'current' },
@@ -94,6 +92,10 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
                 { value: 'Micro Services', history: 'current' },
                 { value: 'RESTful APIs', history: 'current' },
                 { value: 'Mobile first', history: 'current' },
+            ],
+            'Payments': [
+                { value: 'BarclayCard', history: 'current' },
+                { value: 'PayPal', history: 'current' },
             ],
             'Stacks': [
                 { value: 'MEAN', history: 'current' },
@@ -216,7 +218,7 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
 
     tech.oTechnologiesCopy = JSON.parse(JSON.stringify(tech.oTechnologies));
 
-    tech.runChart = function() {
+    tech.runChart = function () {
         // if (!google || !('charts' in google)) {
         //     return null;
         // }
@@ -291,11 +293,11 @@ angular.module('MrAndrewJones').controller('controllerTechnology', function($sco
         //     chart.draw(data, options);
         // }
     };
-    setTimeout(function() {
+    setTimeout(function () {
         tech.runChart();
     }, 50);
 
-    tech.searchChange = function() {
+    tech.searchChange = function () {
         tech.oTechnologies = JSON.parse(JSON.stringify(tech.oTechnologiesCopy));
 
         var searchTerm = tech.searchTerm.toString(),

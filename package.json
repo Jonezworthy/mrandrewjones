@@ -2,12 +2,16 @@
     "name": "projectinspire",
     "version": "0.9.0",
     "description": "Project Inspire",
-    "main": "main.js",
+    "main": "inspire.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "preinstall": "npx npm-force-resolutions"
     },
     "author": "",
     "license": "ISC",
+    "resolutions": {
+        "graceful-fs": "^4.2.4"
+    },
     "dependencies": {
         "alexa-message-builder": "^1.2.0",
         "alexa-verifier-middleware": "^1.0.3",
@@ -17,12 +21,12 @@
         "dateformat": "^1.0.12",
         "express": "^4.17.1",
         "express-device": "^0.4.2",
-        "gulp-sass": "^4.1.0",
+        "graceful-fs": "4.2.2",
+        "gulp-sass": "^4.1.1",
         "jade": "^1.11.0",
-        "mobile-detect": "^1.4.4",
-        "mongodb": "^3.1.13",
-        "nodemon": "^1.19.4",
-        "graceful-fs": "4.2.2"
+        "mobile-detect": "^1.4.5",
+        "mongodb": "^3.6.10",
+        "nodemon": "^1.19.4"
     },
     "devDependencies": {
         "gulp": "^3.9.1",

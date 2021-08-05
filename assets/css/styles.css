@@ -11,14 +11,14 @@
 html {
   font-family: "Palanquin", sans-serif;
   font-weight: 300;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: transparent; }
 
 body {
   background-color: #2a2f45;
   background-repeat: no-repeat;
   background-size: 1000%;
-  color: #FFFFFF; }
+  color: #ffffff; }
 
 h1,
 h2,
@@ -37,11 +37,11 @@ a {
   display: inline; }
 
 p {
-  margin: .25em; }
+  margin: 0.25em; }
 
 h1 {
   text-align: center;
-  margin: .5em 0;
+  margin: 0.5em 0;
   color: #ffffff; }
 
 .left-text {
@@ -54,7 +54,7 @@ h1 {
   text-align: right; }
 
 md-content {
-  color: #FFFFFF;
+  color: #ffffff;
   background: none; }
 
 md-content.bg-coloured {
@@ -110,11 +110,11 @@ img {
     margin-top: 0px;
     height: auto;
     vertical-align: text-top; }
-  .tech-list > li[class='current']:before {
+  .tech-list > li[class="current"]:before {
     color: #ffb74d; }
-  .tech-list > li[class='previous']:before {
+  .tech-list > li[class="previous"]:before {
     color: #8c9eff; }
-  .tech-list > li[class='hobby']:before {
+  .tech-list > li[class="hobby"]:before {
     color: #211400; }
 
 /* Over-ride */
@@ -140,6 +140,13 @@ md-tabs.md-primary > md-tabs-wrapper {
 
 button[disabled] {
   opacity: 0.5; }
+
+.statement {
+  margin: 0;
+  padding: 1rem 0;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center; }
 
 code .string {
   color: #ffffff; }
