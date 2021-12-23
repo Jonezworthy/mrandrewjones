@@ -1,0 +1,63 @@
+<div class="game" layout-margin-gt-md>
+    <md-content ng-controller="controllerGame as game">
+        <md-toolbar class="md-accent md-hue-1">
+            <div class="md-toolbar-tools">
+                <h2 flex="auto" class="md-flex">Pokemon Or Tech?</h2>
+            </div>
+        </md-toolbar>
+
+        <div ng-if="!game.ready">
+            <h1 class="center-text">How to play?</h1>
+            <h4 class="center-text">You will be given 5/10/25 names, 1 at a time, and you need to select whether you think it is the name of a Pokemon or a name of a technology of some sort</h4>
+
+            <div layout-margin layout="row" layout-wrap>
+
+                <md-button layout-padding flex="100" flex-gt-sm="33" layout="center center" ng-click="game.amountOfQuestions = 5; game.start()" class="md-raised md-primary game-start-button">Play with 5 names</md-button>
+
+                <md-button layout-padding flex="100" flex-gt-sm="33" layout="center center" ng-click="game.amountOfQuestions = 10; game.start()" class="md-raised md-primary game-start-button">Play with 10 names</md-button>
+
+                <md-button layout-padding flex="100" flex-gt-sm="33" layout="center center" ng-click="game.amountOfQuestions = 20; game.start()" class="md-raised md-primary game-start-button">Play with 20 names</md-button>
+            </div>
+
+            <div class="clr"></div>
+        </div>
+
+        <div ng-if="game.ready === true && !game.displayResults">
+            <h1 class="center-text">Is it a Pokemon or tech?</h1>
+            <h4 class="center-text">Progress {{game.currentPosition + 1}}/{{game.amountOfQuestions}}</h4>
+            <h2 class="center-text game-question">{{game.questions[game.currentPosition]}}</h2>
+
+            <h4 ng-class="game.response === 'Correct!' ? 'correct' : 'incorrect'" class="center-text game-response">{{game.response || '&nbsp;'}}</h4>
+
+            <div layout-margin layout="row">
+
+                <md-button [disabled]="game.hideControls" layout-padding flex="100" flex-gt-sm="50" ng-click="game.answer('pokemon')" class="md-raised md-primary game-answer-button pokemon">Pokemon!</md-button>
+                <md-button [disabled]="game.hideControls" layout-padding flex="100" flex-gt-sm="50" ng-click="game.answer('tech')" class="md-raised md-primary game-answer-button tech">Tech!</md-button>
+
+            </div>
+
+            <div class="clr"></div>
+
+            <md-button layout="center center" ng-click="game.reset()" class="md-raised game-reset md-warn">Cancel / Reset</md-button>
+        </div>
+        <div ng-if="game.displayResults">
+            <h1 class="center-text">Results</h1>
+            <p class="game-results-share-text">You can copy and paste the URL to share your results with others!</p>
+            <h5 class="game-results-correct correct"><span>{{game.results.correct}}</span> correct</h5>
+            <h5 class="game-results-incorrect incorrect"><span>{{game.results.incorrect}}</span> incorrect</h5>
+            <ul class="game-results-list">
+                <li ng-repeat="oQuestion in game.results.questions">
+                    <i class="material-icons correct" ng-if="oQuestion.correct">done</i>
+                    <i class="material-icons incorrect" ng-if="!oQuestion.correct">close</i>
+                    <span class="game-results-question">{{oQuestion.question}} </span>
+                    <span class="game-results-question-answer"> - you answered: {{oQuestion.answer}}</span>
+                </li>
+            </ul>
+
+            <h2 class="game-results-summary">You got {{game.results.correct}}/{{game.amountOfQuestions}} ({{game.results.accuracy}}%)</h2>
+            <br />
+            <md-button layout="center center" ng-click="game.reset()" class="md-raised md-primary game-start-button">Start again?</md-button>
+            <br />
+        </div>
+    </md-content>
+</div>

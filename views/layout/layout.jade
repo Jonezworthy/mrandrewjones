@@ -1,0 +1,67 @@
+doctype
+html(ng-app="MrAndrewJones" xmlns="http://www.w3.org/1999/xhtml" lang="en")      
+    //
+        ███▄ ▄███▓ ██▀███      ▄▄▄       ███▄    █ ▓█████▄  ██▀███  ▓█████  █     █░    ▄▄▄██▀▀▀▒█████   ███▄    █ ▓█████   ██████ 
+        ▓██▒▀█▀ ██▒▓██ ▒ ██▒   ▒████▄     ██ ▀█   █ ▒██▀ ██▌▓██ ▒ ██▒▓█   ▀ ▓█░ █ ░█░      ▒██  ▒██▒  ██▒ ██ ▀█   █ ▓█   ▀ ▒██    ▒ 
+        ▓██    ▓██░▓██ ░▄█ ▒   ▒██  ▀█▄  ▓██  ▀█ ██▒░██   █▌▓██ ░▄█ ▒▒███   ▒█░ █ ░█       ░██  ▒██░  ██▒▓██  ▀█ ██▒▒███   ░ ▓██▄   
+        ▒██    ▒██ ▒██▀▀█▄     ░██▄▄▄▄██ ▓██▒  ▐▌██▒░▓█▄   ▌▒██▀▀█▄  ▒▓█  ▄ ░█░ █ ░█    ▓██▄██▓ ▒██   ██░▓██▒  ▐▌██▒▒▓█  ▄   ▒   ██▒
+        ▒██▒   ░██▒░██▓ ▒██▒    ▓█   ▓██▒▒██░   ▓██░░▒████▓ ░██▓ ▒██▒░▒████▒░░██▒██▓     ▓███▒  ░ ████▓▒░▒██░   ▓██░░▒████▒▒██████▒▒
+        ░ ▒░   ░  ░░ ▒▓ ░▒▓░    ▒▒   ▓▒█░░ ▒░   ▒ ▒  ▒▒▓  ▒ ░ ▒▓ ░▒▓░░░ ▒░ ░░ ▓░▒ ▒      ▒▓▒▒░  ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░░ ▒░ ░▒ ▒▓▒ ▒ ░
+        ░  ░      ░  ░▒ ░ ▒░     ▒   ▒▒ ░░ ░░   ░ ▒░ ░ ▒  ▒   ░▒ ░ ▒░ ░ ░  ░  ▒ ░ ░      ▒ ░▒░    ░ ▒ ▒░ ░ ░░   ░ ▒░ ░ ░  ░░ ░▒  ░ ░
+        ░      ░     ░░   ░      ░   ▒      ░   ░ ░  ░ ░  ░   ░░   ░    ░     ░   ░      ░ ░ ░  ░ ░ ░ ▒     ░   ░ ░    ░   ░  ░  ░  
+            ░      ░              ░  ░         ░    ░       ░        ░  ░    ░        ░   ░      ░ ░           ░    ░  ░      ░  
+                                                    ░                                                                              
+    // Welcome to my portfolio site, guessing you're a developer
+    //  
+    // Here's some useful information for you:
+    // My GitHub (Open Source Stuff) : https://github.com/Jonezworthy
+    // My Private GitHub (Mostly technical tests) : https://github.com/Jonezworthy-private
+    //   
+    // Don\'t forget to check out these subreddits too!:
+    // ProgrammerHumor : https://www.reddit.com/r/ProgrammerHumor/
+    // WebDev : https://www.reddit.com/r/webdev/
+    // JavaScript : https://www.reddit.com/r/javascript/
+
+    head
+        title #{metaData.metaTitle}
+        block styles
+            link(rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons")
+            link(rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css")
+            link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Palanquin:300,400,500")
+            link(rel="stylesheet" href="/assets/css/styles.css")
+        block scripts
+            script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js")
+            script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js")
+            script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js")
+            script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js")
+            script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js")
+            script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js")
+            script(src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js")
+            script(src="/assets/js/ng-app.js")
+            script(src="/assets/js/googleAnalytics.js")
+            script(src="https://www.gstatic.com/charts/loader.js")
+        block metatags
+            meta(name="description" content="#{metaData.metaDescription}")
+
+            meta(property="og:title" content="#{metaData.metaOgTitle}")
+            meta(property="og:image" content="#{metaData.metaOgImage}")
+            meta(property="og:site_name" content="mrandrewjones.co.uk")
+            
+            meta(name="google-site-verification" content="AlT4ZawgcMfkK038_CssAWXHQSzAxABJMKcoUrMYhPw")
+            meta(name="viewport" content="width=device-width, initial-scale=1.0")
+            meta(name="theme-color" content="#000000")
+            meta(http-equiv="Content Type" content="text/html; charset=utf-8")
+            
+            base(href="/")
+
+
+    body(ng-controller="controllerMain as controller")
+        block header
+                    
+        block content
+
+        block foot
+            div(class="clr")
+            footer
+                p 
+       
