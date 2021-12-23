@@ -23,13 +23,12 @@ h1 {
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 @keyframes slidein {
     from {
-        transform: translateX(5000px)
+        transform: translateX(5000px);
     }
-  
+
     to {
-      transform:translateX(0px)
+        transform: translateX(0px);
     }
-  }
+}
