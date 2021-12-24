@@ -1,0 +1,77 @@
+.header-container {
+    background: #e1e1e1;
+    padding: 1rem;
+    filter: invert(100%);
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 8rem;
+        margin: 0;
+        filter: invert(100%);
+        font-family: sans-serif;
+        width: fit-content;
+        overflow: hidden;
+    }
+    h1 {
+        font-family: "Source Sans Pro", sans-serif;
+        color: #fff;
+        font-size: 40px;
+        font-weight: 600;
+        padding: 1rem 2rem;
+        margin: 0;
+    }
+    .box {
+        background-color: #fff;
+        height: 8rem;
+        width: 100%;
+        mix-blend-mode: difference;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        animation-name: slidein;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        // animation-iteration-count: infinite;
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+}
+
+@keyframes slidein {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes fadein {
+    from {
+        background: #222;
+    }
+
+    to {
+        transform: #fff;
+    }
+}
+
+@keyframes fadeSlidein {
+    0% {
+        left: 5000px;
+    }
+    25% {
+        background: #222;
+    }
+    50% {
+    }
+    85% {
+        background: #fff;
+    }
+    100% {
+        left: 0;
+    }
+}
