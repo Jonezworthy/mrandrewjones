@@ -1,5 +1,5 @@
 {
-  "name": "angular.io-example",
+  "name": "mr-andrew-jones",
   "version": "0.0.0",
   "description": "Example project from an angular.io guide.",
   "license": "MIT",
@@ -10,10 +10,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run angular.io-example:serve-ssr",
-    "serve:ssr": "node dist/angular.io-example/server/main.js",
-    "build:ssr": "ng build && ng run angular.io-example:server",
-    "prerender": "ng run angular.io-example:prerender"
+    "dev:ssr": "ng run mr-andrew-jones:serve-ssr",
+    "serve:ssr": "node dist/mr-andrew-jones/server/main.js",
+    "build:ssr": "ng build && ng run mr-andrew-jones:server",
+    "prerender": "ng run mr-andrew-jones:prerender"
   },
   "private": true,
   "dependencies": {
@@ -52,6 +52,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ng-packagr": "^13.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~10.1.0",
     "typescript": "~4.5.2"

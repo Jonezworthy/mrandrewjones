@@ -1,8 +1,15 @@
-<div class="header-container">
-    <header>
-        <h1>Mr Andrew Jones</h1>
-        <a routerLink="/" class="box"></a>
-        <p style="display: none;">Looking at how it works are we? :D </p>
-    </header>
-</div>
-<router-outlet></router-outlet>
+<header>
+    <h1>
+        Mr Andrew Jones
+    </h1>
+</header>
+
+<section>
+
+    <app-menu></app-menu>
+
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+
+</section>

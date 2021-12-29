@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular.io-example": {
+    "mr-andrew-jones": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,18 +17,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular.io-example/browser",
+            "outputPath": "dist/mr-andrew-jones/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -69,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular.io-example:build:production"
+              "browserTarget": "mr-andrew-jones:build:production"
             },
             "development": {
-              "browserTarget": "angular.io-example:build:development"
+              "browserTarget": "mr-andrew-jones:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular.io-example:build"
+            "browserTarget": "mr-andrew-jones:build"
           }
         },
         "test": {
@@ -92,11 +91,10 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -105,18 +103,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular.io-example:serve"
+            "devServerTarget": "mr-andrew-jones:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular.io-example:serve:production"
+              "devServerTarget": "mr-andrew-jones:serve:production"
             }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/angular.io-example/server",
+            "outputPath": "dist/mr-andrew-jones/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -142,12 +140,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "angular.io-example:build:development",
-              "serverTarget": "angular.io-example:server:development"
+              "browserTarget": "mr-andrew-jones:build:development",
+              "serverTarget": "mr-andrew-jones:server:development"
             },
             "production": {
-              "browserTarget": "angular.io-example:build:production",
-              "serverTarget": "angular.io-example:server:production"
+              "browserTarget": "mr-andrew-jones:build:production",
+              "serverTarget": "mr-andrew-jones:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -161,18 +159,49 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular.io-example:build:production",
-              "serverTarget": "angular.io-example:server:production"
+              "browserTarget": "mr-andrew-jones:build:production",
+              "serverTarget": "mr-andrew-jones:server:production"
             },
             "development": {
-              "browserTarget": "angular.io-example:build:development",
-              "serverTarget": "angular.io-example:server:development"
+              "browserTarget": "mr-andrew-jones:build:development",
+              "serverTarget": "mr-andrew-jones:server:development"
             }
           },
           "defaultConfiguration": "production"
         }
       }
+    },
+    "technologies": {
+      "projectType": "library",
+      "root": "projects/technologies",
+      "sourceRoot": "projects/technologies/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/technologies/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/technologies/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/technologies/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/technologies/src/test.ts",
+            "tsConfig": "projects/technologies/tsconfig.spec.json",
+            "karmaConfig": "projects/technologies/karma.conf.js"
+          }
+        }
+      }
     }
   },
-  "defaultProject": "angular.io-example"
+  "defaultProject": "mr-andrew-jones"
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './dashboard.component';
+import { WorkRoutingModule } from './work-routing.module';
+import { WorkComponent } from './work.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,10 +9,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
-    declarations: [DashboardComponent],
+    declarations: [WorkComponent],
     imports: [
         CommonModule,
-        DashboardRoutingModule,
+        WorkRoutingModule,
         MatCardModule,
         MatButtonModule,
         MatIconModule,
@@ -21,4 +21,4 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ],
     providers: []
 })
-export class DashboardModule { }
+export class WorkModule { }

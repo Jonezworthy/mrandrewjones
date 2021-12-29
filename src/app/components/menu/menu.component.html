@@ -1,0 +1,7 @@
+<div class="container" *ngIf="menuItems">
+
+    <button *ngFor="let menuItem of menuItems" matRipple [class]="isActiveRoute(menuItem.routerLink)" routerLink="/{{menuItem.routerLink}}">
+        <i class="fad {{menuItem.icon}} {{ menuItem.reverseOpacity ? 'fa-swap-opacity' : '' }}"></i>
+        <span>{{menuItem.label}}</span>
+    </button>
+</div> 
