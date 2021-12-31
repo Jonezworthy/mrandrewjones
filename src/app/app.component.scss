@@ -6,13 +6,3 @@ h1 {
     font-size: 6rem;
     line-height: 6rem;
 }
-
-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    > div {
-        flex-grow: 1;
-    }
-}

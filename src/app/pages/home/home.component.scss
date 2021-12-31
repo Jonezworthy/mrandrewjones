@@ -1,12 +1,112 @@
-p {
-}
 .mat-card {
-    background: #242424;
-    color: #fff;
-    box-shadow: none;
-    height: 3rem;
-    transition: none;
-    border-radius: 10px;
+    &.hero {
+        .mat-card-content {
+            font-family: "Source Sans Pro", sans-serif !important;
+            background: none;
+            min-width: initial;
+            text-align: center;
+            width: auto;
+            h1 {
+                font-family: inherit;
+                font-size: 6rem;
+                font-weight: 200;
+                margin: 0;
+            }
+            p {
+                font-family: inherit;
+                text-align: right;
+                font-weight: 300;
+            }
+        }
+    }
+    &.about {
+        .mat-card-content,
+        h2 {
+            height: 14rem;
+        }
+        h2 {
+            line-height: 14rem;
+        }
+    }
+    &.tech {
+        h2 {
+            height: 15rem;
+            line-height: 15rem;
+        }
+        .mat-card-content {
+            height: 15rem;
+            .tech-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+
+                li {
+                    display: inline-block;
+                    width: 10rem;
+                    height: 7rem;
+                    text-align: center;
+                    overflow: hidden;
+
+                    i {
+                        font-size: 4.8rem;
+                    }
+                    img {
+                        display: block;
+                        height: 100%;
+                        margin: auto;
+                        max-height: 4.8rem;
+                        max-width: 100%;
+                        filter: grayscale(100%);
+                    }
+                    p {
+                        margin: 0.1rem 0 0 0;
+                        font-weight: 200;
+                        font-family: "Source Sans Pro";
+                    }
+                }
+            }
+        }
+    }
+    &.portfolio {
+        h2 {
+            height: 30rem;
+            line-height: 30rem;
+        }
+        .mat-card-content {
+            height: 30rem;
+            .portfolio-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    max-height: 20rem;
+                    margin: 1rem;
+                    border: 1px solid #242932;
+                }
+            }
+        }
+    }
+    &.work {
+        h2 {
+            height: 14rem;
+            line-height: 14rem;
+        }
+        .mat-card-content {
+            height: 14rem;
+
+            img {
+                width: 25%;
+                float: right;
+            }
+        }
+    }
 }
 
 /* Back up of old header */

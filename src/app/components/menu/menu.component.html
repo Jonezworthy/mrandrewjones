@@ -1,7 +1,12 @@
-<div class="container" *ngIf="menuItems">
-
-    <button *ngFor="let menuItem of menuItems" matRipple [class]="isActiveRoute(menuItem.routerLink)" routerLink="/{{menuItem.routerLink}}">
+<nav class="container" *ngIf="menuItems">
+    <h1>Mr Andrew Jones</h1>
+    <ul>
+        <li *ngFor="let menuItem of menuItems">
+            <a routerLink="/{{menuItem.routerLink}}">{{menuItem.label}}</a>
+        </li>
+    </ul>
+    <!-- <button matRipple [class]="isActiveRoute(menuItem.routerLink)" >
         <i class="fad {{menuItem.icon}} {{ menuItem.reverseOpacity ? 'fa-swap-opacity' : '' }}"></i>
-        <span>{{menuItem.label}}</span>
-    </button>
-</div> 
+        <span></span>
+    </button> -->
+</nav>
