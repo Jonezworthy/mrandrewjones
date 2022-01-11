@@ -6,7 +6,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [TechnologiesComponent],
@@ -16,7 +18,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
         MatCardModule,
         MatButtonModule,
         MatIconModule,
-        MatGridListModule,
+        MatInputModule,
+        MatFormFieldModule, 
+        FormsModule,
+        ReactiveFormsModule,
         MatToolbarModule
     ],
     providers: []

@@ -1,4 +1,19 @@
+@import "../../../responsive.scss";
 
+@include respond-below(md) {
+    .mobile-menu-bar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        box-shadow: none;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        padding: 1rem;
+        background: #242932;
+    }
+}
 nav {
     display: flex;
     flex-direction: row;
@@ -7,12 +22,25 @@ nav {
     justify-content: space-between;
     background: #242932;
     align-items: center;
+    overflow: hidden;
+
+    @include respond-below(md) {
+        display: none;
+
+        &.visible {
+            display: block;
+        }
+    }
     h1 {
         font-size: 1.3rem;
         color: #fff;
         margin: 0 0 0 1rem;
         font-family: "Source Sans Pro";
         font-weight: 200;
+
+        @include respond-below(lg) {
+            display: none;
+        }
     }
     ul {
         list-style: none;
@@ -22,6 +50,7 @@ nav {
 
         li {
             padding: 1rem 1.8rem;
+
             a {
                 &:hover {
                     text-decoration: underline;
@@ -29,6 +58,27 @@ nav {
                 }
                 color: #fff;
                 text-decoration: none;
+            }
+        }
+
+        @include respond-below(md) {
+            // full mobile
+            flex-wrap: wrap;
+
+            li {
+                flex-grow: 1;
+                width: 100%;
+                border-bottom: 1px solid #ffff;
+                padding: 0;
+                z-index: 1;
+                a {
+                    padding: 1rem 1.8rem;
+                    display: block;
+                    background: rgb(36 41 50 / 88%);
+                    &.active {
+                        background: #243043;
+                    }
+                }
             }
         }
     }

@@ -1,0 +1,12 @@
+@import "../../../responsive.scss";
+.vertical-space {
+    height: 5rem;
+}
+.motorcycles {
+    ul {
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -7,7 +6,9 @@ import { Router } from '@angular/router';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-    constructor(private router: Router) { }
+    constructor() {
+
+    }
 
     yearsOfService: number = 0;
     startedAt: string = '2017-10-15';
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.yearsOfService = parseInt(((new Date().valueOf() - new Date(this.startedAt).valueOf()) / this.yearInMilliseconds).toFixed(0));
-        console.log(this.yearsOfService);
+
     }
 
     ngOnDestroy(): void {

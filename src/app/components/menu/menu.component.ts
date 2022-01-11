@@ -13,9 +13,10 @@ import { PLATFORM_ID } from '@angular/core';
 export class MenuComponent implements OnInit, OnDestroy {
     currentUrl: string = '';
     intervalUrlUpdater: any;
+    menuVisible: Boolean = false;
 
     menuItems: { label: string, icon: string, routerLink: string, reverseOpacity: boolean }[] = [
-        { label: 'Home', icon: 'fa-home-lg-alt', routerLink: '/', reverseOpacity: true, },
+        { label: 'Home', icon: 'fa-home-lg-alt', routerLink: '', reverseOpacity: true, },
         { label: 'About Me', icon: 'fa-user', routerLink: 'about', reverseOpacity: true, },
         { label: 'Technologies', icon: 'fa-code', routerLink: 'tech', reverseOpacity: true, },
         { label: 'Portfolio', icon: 'fa-bars', routerLink: 'portfolio', reverseOpacity: true, },
@@ -34,11 +35,21 @@ export class MenuComponent implements OnInit, OnDestroy {
         if (isPlatformBrowser(this.platformId)) {
             this.intervalUrlUpdater = setInterval(() => {
                 this.currentUrl = this.router.url;
-            }, 3000);
+
+                if (window.screen.availWidth > 992) { // if not mobile
+                    this.menuVisible = true;
+                } 
+            }, 250);
+            
         }
     }
 
+    toggleMenu(): void {
+        this.menuVisible = !this.menuVisible;
+    }
+
     isActiveRoute(path: string): string {
+
         if (this.currentUrl === path) {
             return 'menu-item active';
         } else {
