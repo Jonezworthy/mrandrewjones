@@ -1,8 +1,5 @@
 
 @import "../../../responsive.scss";
-.vertical-space {
-    height: 5rem;
-}
 
 mat-card[hidden]{
     display: none !important;
@@ -13,14 +10,14 @@ mat-card[hidden]{
     text-align: center;
     .mat-form-field {
         @include respond-above(xxxl) {
-            width: 25%;
+            width: 30%;
         }
         //
         @include respond-below(xxxl) {
-            width: 25%;
+            width: 30%;
         }
         @include respond-below(xxl) {
-            width: 30%;
+            width: 40%;
         }
         @include respond-below(xl) {
             width: 50%;

@@ -1,0 +1,88 @@
+@import "../../../responsive.scss";
+.portfolio {
+    text-align: center;
+    .portfolio-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 2rem 0;
+
+        h2 {
+            background: #647ba1;
+            width: 100%;
+            text-align: center;
+            font-family: "Source Sans Pro";
+            font-size: 1.6rem;
+            font-weight: 300;
+            padding: 1rem 0;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: space-around;
+                align-content: space-between;
+                text-align: center;
+                overflow: hidden;
+                padding: 0.5rem 1rem;
+
+                @include respond-above(xxxl) {
+                    width: 33%;
+                }
+                //
+                @include respond-below(xxxl) {
+                    width: 33%;
+                }
+                @include respond-below(xxl) {
+                    width: 33%;
+                }
+                @include respond-below(xl) {
+                    width: 33%;
+                }
+                @include respond-below(lg) {
+                    width: 50%;
+                }
+                @include respond-below(md) {
+                    // full mobile
+                    width: 100%;
+                }
+                a {
+                    color: #fff;
+                    font-weight: 300;
+                }
+                img {
+                    display: block;
+                    margin: auto;
+                    max-width: 100%;
+                }
+                p {
+                    margin: 0.1rem 0 0 0;
+                    font-weight: 200;
+                    font-family: "Source Sans Pro";
+                }
+                .mat-subheading-1 {
+                    margin: 0.5rem 0;
+                    font-family: "Source Sans Pro";
+                    font-weight: 400;
+                }
+                .mat-body-2 {
+                    text-align: left;
+                    margin: 0 0 0.5rem 0;
+                }
+            }
+        }
+    }
+}

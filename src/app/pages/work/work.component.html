@@ -1,7 +1,48 @@
-<mat-card>
-    <mat-card-content class="padding">
-        <div class="container">
-            Work
+<div class="vertical-space"></div>
+
+<mat-card class="hue-2 my-card portfolio">
+    <h2 class="card-header mat-display-2">Work History</h2>
+
+    <mat-card-content>
+        <p class="mat-body-2">I started my career in 2008, here is a brief overview my work history since then.</p>
+    </mat-card-content>
+</mat-card>
+
+<mat-card *ngFor="let history of histories; let idx = index; trackBy: trackByIndex" class="hue-{{getHueFromIndex(idx)}} my-card history">
+    <h2 class="card-header mat-display-2">{{history.from}}</h2>
+
+    <mat-card-content class="work-container padding">
+        <div class="logo-container">
+            <img [class]="history.logoClass" src="/assets/logos/{{history.logo}}" />
+        </div>
+        <div class="work-header left">
+
+            <h3>
+                {{history.from}} - {{history.to}}
+            </h3>
+            <h4>
+                {{history.title}}
+            </h4>
+        </div>
+        <div class="work-header right">
+            <h3>
+                {{history.companyName}}
+            </h3>
+            <h4>
+                {{history.companyDescription}}
+            </h4>
+        </div>
+
+
+        <div class="work-content">
+
+            <div *ngFor="let groupKey of keysOf(history.details)">
+                <h3>{{groupKey}}</h3>
+                <div [innerHTML]="history.details[groupKey]">
+                </div>
+                <p class="mat-body-2"></p>
+            </div>
         </div>
     </mat-card-content>
+
 </mat-card>

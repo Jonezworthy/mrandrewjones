@@ -1,18 +1,18 @@
 <div class="vertical-space"></div>
 
-<mat-card class="hue-1 my-card about">
-    <h2 class="card-header mat-display-2">Technologies</h2>
+<mat-card class="hue-2 my-card about">
+    <h2 class="card-header mat-display-2">Tech</h2>
 
-    <mat-card-content class="padding ">
+    <mat-card-content>
         <p class="mat-body-2">I've worked with a lot of tech over the years. </p>
         <p class="mat-body-2">I have been a professional programmer for {{yearsOfDev}} years.</p>
         <p class="mat-body-2">I've worked for large, medium, and small businesses.</p>
         <p class="mat-body-2">This is a short-list of techs I've worked with!</p>
     </mat-card-content>
 </mat-card>
-<mat-card class="hue-1 my-card search">
+<mat-card class="hue-0 my-card search">
     <h2 class="card-header mat-display-2">Search</h2>
-    <mat-card-content class="padding ">
+    <mat-card-content>
         <p class="mat-body-2">Use this search box to filter the results</p>
         <mat-form-field class="half-width" appearance="outline">
             <mat-label>Filter Results</mat-label>
@@ -26,10 +26,10 @@
 
 </mat-card>
 
-<mat-card *ngFor="let tech of keysOf(filteredTechs()); let idx = index;" class="hue-{{getHueFromIndex(idx)}} my-card about">
+<mat-card *ngFor="let tech of keysOf(filteredTechs()); let idx = index; trackBy: trackBySearchTerm" class="hue-{{getHueFromIndex(idx)}} my-card about">
     <h2 class="card-header mat-display-2">{{tech}}</h2>
 
-    <mat-card-content class="padding ">
+    <mat-card-content>
         <div class="tech-container" *ngFor="let list of keysOf(filteredTechs()[tech])" [hidden]="!filteredTechs()[tech][list].length">
             <h2>{{list}}</h2>
             <ul>
@@ -42,12 +42,6 @@
 
             </ul>
         </div>
-        <!-- <h2 class="mat-display-1">{{techs[tech]}}</h2> -->
-        <!-- <p class="mat-body-2">I've worked with a lot of tech over the years. </p>
-        <p class="mat-body-2">I have been a professional programmer for {{yearsOfDev}} years.</p>
-        <p class="mat-body-2">I've worked for large, medium, and small businesses.</p>
-        <p class="mat-body-2">This is a short-list of techs I've worked with!</p>
-        <button class="read-more" routerLink="/about">About Me <i class="fad fa-chevron-right"></i></button> -->
     </mat-card-content>
 
 </mat-card>

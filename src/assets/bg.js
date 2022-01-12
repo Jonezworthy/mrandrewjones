@@ -7,7 +7,7 @@ setTimeout(()=>{
                 setTimeout(()=>{
                     VANTA.NET({
                         el: "#featured-background",
-                        mouseControls: true,
+                        mouseControls: false,
                         touchControls: false,
                         gyroControls: true,
                         minHeight: 200.00,
@@ -33,17 +33,3 @@ setTimeout(()=>{
         
     }, 250);
 }, 1000);
-    
-    // // Set heights on side-by-side cards
-// setInterval(()=>{
-//     const cards = document.querySelectorAll('.my-card');
-//     for (const card of cards){
-        
-//         const cardContent = card.querySelector('.mat-card-content');
-//         const cardSize = cardContent.clientHeight;
-//         console.log(cardSize);
-//         card.querySelector('h2').style.height = cardSize + 'px';
-//         card.querySelector('h2').style.lineHeight = cardSize + 'px';
-        
-//     }
-// }, 3000);

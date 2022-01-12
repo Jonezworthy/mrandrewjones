@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [GameComponent],
@@ -17,7 +18,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
         MatButtonModule,
         MatIconModule,
         MatGridListModule,
-        MatToolbarModule
+        MatToolbarModule,
+        HttpClientModule,
+
     ],
     providers: []
 })

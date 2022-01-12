@@ -293,6 +293,11 @@ body {
 * {
     box-sizing: border-box;
 }
+@include respond-above(md) { // not mobile, add margin to offset nav
+    body {
+        margin: 3rem 0 0 0;
+    }
+}
 app-menu {
     min-width: 330px;
     position: fixed;
@@ -487,6 +492,13 @@ main {
             }
         }
 
+        &.my-card {
+            .mat-card-content {
+                position: relative;
+                left: -2px;
+            }
+        }
+
         .read-more {
             float: right;
             cursor: pointer;
@@ -500,7 +512,7 @@ main {
             padding: 0.8rem 1.3rem;
             box-shadow: none;
             border: 1px solid #333;
-
+            text-decoration: none;
             line-height: 1.5rem;
             border-radius: 0rem;
             &:hover {
@@ -535,6 +547,20 @@ input::placeholder {
                 font-size: 1.8rem;
             }
         }
+    }
+}
+.vertical-space {
+    height: 5rem;
+}
+.work-content {
+    ul {
+        margin: 0 0 0 1rem;
+        li {
+            list-style: disc;
+        }
+    }
+    a {
+        color: #fff;
     }
 }
 

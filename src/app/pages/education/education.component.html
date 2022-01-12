@@ -1,7 +1,37 @@
-<mat-card>
-    <mat-card-content class="padding">
-        <div class="container">
-            Education
-        </div>
+<div class="vertical-space"></div>
+
+<mat-card class="hue-2 my-card portfolio">
+    <h2 class="card-header mat-display-2">Education</h2>
+
+    <mat-card-content>
+        <p class="mat-body-2">This is my education/courses history, I wish I had more time to do more.</p>
+        <p class="mat-body-2">Some of these courses have online certificates available for viewing. </p>
     </mat-card-content>
+</mat-card>
+
+<mat-card *ngFor="let education of educations; let idx = index; trackBy: trackByIndex" class="hue-{{getHueFromIndex(idx)}} my-card history">
+    <h2 class="card-header mat-display-2">{{education.date}}</h2>
+    <mat-card-content class="education-container ">
+        <div class="logo-container">
+            <img src="/assets/logos/{{education.logo}}" class="{{education.invert ? 'invert': ''}}" />
+        </div>
+        <h3 class="left">
+            {{education.title}}
+        </h3>
+        <h3 class="right">
+            {{education.issuer}}
+        </h3>
+        <h4 class="left">
+            {{education.date}}
+        </h4>
+        <h4 class="right">
+            &nbsp;
+
+
+            <a class="read-more" *ngIf="education.certificateUrl" [href]="education.certificateUrl" target="_blank">View Certificate <i class="fad fa-chevron-right"></i> </a>
+            {{!education.certificateUrl ? 'Sorry, no certificate available': ''}}
+        </h4>
+
+    </mat-card-content>
+
 </mat-card>

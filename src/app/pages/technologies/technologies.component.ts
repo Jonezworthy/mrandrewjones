@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-technologies',
@@ -7,7 +6,7 @@ import { Router } from '@angular/router';
     styleUrls: ['./technologies.component.scss']
 })
 export class TechnologiesComponent implements OnInit, OnDestroy {
-    constructor(private router: Router) { }
+    constructor() { }
     searchTerm: string = '';
     cache: { [key: string]: object } = {};
     yearsOfDev: number = new Date().getFullYear() - 2008;
@@ -141,7 +140,7 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { value: 'Twittery', history: 'previous', icon: 'fab fa-twitter' },
                 { value: 'YouTube', history: 'previous', icon: 'fab fa-youtube' },
                 { value: 'Wikipedia', history: 'previous', icon: 'fab fa-wikipedia-w' },
-                { value: 'Text messaging (textlocal.com & fastsms.co.uk)', history: 'previous', icon: 'fas fa-sms' },
+                { value: 'Text messaging (textlocal.com & fastsms.co.uk)', history: 'previous', icon: 'fad fa-sms' },
                 { value: 'PayPal & PayPal APN', history: 'current', icon: 'fab fa-paypal' },
             ],
             'Analytical': [
@@ -171,14 +170,14 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                     subTech[subKey] = subTech[subKey].filter((item: any) => { return item.value.match(search) });
                 }
             }
-            for (const key in techs){
-                for (const subKey in techs[key]){
-                    if (!techs[key][subKey].length){
+            for (const key in techs) {
+                for (const subKey in techs[key]) {
+                    if (!techs[key][subKey].length) {
                         delete techs[key][subKey];
                     }
                     // console.log(subKey);
                 }
-                if (!Object.keys(techs[key]).length){
+                if (!Object.keys(techs[key]).length) {
                     delete techs[key];
                 }
             }
@@ -187,7 +186,7 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
         console.log(techs);
 
         this.cache[this.searchTerm] = techs;
-        
+
         return techs;
     }
 
@@ -201,6 +200,10 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
         }
         return '0';
     };
+
+    trackBySearchTerm(): string {
+        return this.searchTerm;
+    }
 
     ngOnInit(): void {
 

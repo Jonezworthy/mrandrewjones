@@ -102,13 +102,6 @@
             }
         }
     }
-
-    &.my-card {
-        .mat-card-content {
-            position: relative;
-            left: -2px;
-        }
-    }
 }
 
 @include respond-below(md) { // full mobile

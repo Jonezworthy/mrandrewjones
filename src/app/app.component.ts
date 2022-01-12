@@ -29,9 +29,12 @@ export class AppComponent {
                 const h2 = card.querySelector('h2');
                 const content = card.querySelector('.mat-card-content');
 
-                if (h2.clientHeight < content.clientHeight) {
-                    h2.style.height = (content.clientHeight + 80) + 'px';
+                // if (h2.clientHeight < content.clientHeight) {
+                const newHeight = (content.clientHeight + 80) + 'px';
+                if (h2.style.height !== newHeight) {
+                    h2.style.height = newHeight;
                 }
+                // }
             }
         }
 
