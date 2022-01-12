@@ -1,0 +1,15 @@
+<nav class="container {{menuVisible ? 'visible' : 'not-visible'}}" *ngIf="menuItems">
+    <h1>Mr Andrew Jones</h1>
+    <ul>
+        <li *ngFor="let menuItem of menuItems">
+            <a routerLink="/{{menuItem.routerLink}}" [class]="isActiveRoute('/' + menuItem.routerLink)" (click)="toggleMenu()">{{menuItem.label}}</a>
+        </li>
+    </ul>
+    <!-- <button matRipple [class]="isActiveRoute(menuItem.routerLink)" >
+        <i class="fad {{menuItem.icon}} {{ menuItem.reverseOpacity ? 'fa-swap-opacity' : '' }}"></i>
+        <span></span>
+    </button> -->
+</nav>
+<button class="mobile-menu-bar mobile mobile-only" (click)="toggleMenu()">
+    <i class="fad fa-bars"></i>
+</button>

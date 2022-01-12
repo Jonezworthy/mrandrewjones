@@ -1,0 +1,77 @@
+<div class="vertical-space"></div>
+
+<mat-card class="hue-2 my-card portfolio">
+    <h2 class="card-header mat-display-2">Personal Portfolio</h2>
+
+    <mat-card-content>
+        <p class="mat-body-2">I can't show the apps and web sites I've worked on as part of my job because of confidentiality agreements.</p>
+        <p class="mat-body-2">I've created many mobile apps and web sites as part of my jobs over the years. </p>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="hue-0 my-card portfolio">
+    <h2 class="card-header mat-display-2">Mobile Apps</h2>
+
+    <mat-card-content>
+        <p class="mat-body-2">I've created dozens of mobile apps in my professional duties, these are my <em>personal</em> projects. </p>
+
+        <div class="portfolio-container">
+            <ul>
+                <li *ngFor="let app of mobileApps">
+                    <h4 class="mat-subheading-1">{{app.name}} </h4>
+                    <p class="mat-body-2">{{app.description}} </p>
+
+                    <img src="/assets/portfolio/{{app.img}}">
+                    <p class="mat-subheading-1">{{app.tech}}</p>
+                </li>
+            </ul>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="hue-2 my-card portfolio">
+    <h2 class="card-header mat-display-2">Freelance Websites</h2>
+
+    <mat-card-content>
+        <p class="mat-body-2">These are websites made for clients when I was self employed. </p>
+
+        <div class="portfolio-container">
+            <ul>
+                <li *ngFor="let website of freelanceWebsites">
+                    <h4 class="mat-subheading-1">{{website.name}} </h4>
+                    <p class="mat-body-2">{{website.description}} </p>
+
+                    <img src="/assets/portfolio/{{website.img}}">
+
+                    <p class="mat-subheading-1">
+                        {{website.tech}}
+                    </p>
+                    <a *ngIf="website.url" [href]="website.url" target="_blank">{{website.urlLabel}}</a>
+                </li>
+            </ul>
+        </div>
+    </mat-card-content>
+</mat-card>
+<mat-card class="hue-0 my-card portfolio">
+    <h2 class="card-header mat-display-2">Personal Projects</h2>
+
+    <mat-card-content>
+        <p class="mat-body-2">These are websites I've made for my own purposes. </p>
+
+        <div class="portfolio-container">
+            <ul>
+                <li *ngFor="let website of personalWebsites">
+                    <h4 class="mat-subheading-1">{{website.name}} </h4>
+                    <p class="mat-body-2">{{website.description}} </p>
+
+                    <img src="/assets/portfolio/{{website.img}}">
+
+                    <p class="mat-subheading-1">
+                        {{website.tech}}
+                    </p>
+                    <a *ngIf="website.url" [href]="website.url" target="_blank">{{website.urlLabel}}</a>
+                </li>
+            </ul>
+        </div>
+    </mat-card-content>
+</mat-card>

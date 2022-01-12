@@ -1,0 +1,155 @@
+@import "../../../responsive.scss";
+
+.mat-card {
+    &.hero {
+        @include respond-below(md) { // full mobile
+            background: #242932;
+        }
+        .mat-card-content {
+            font-family: "Source Sans Pro", sans-serif !important;
+            background: none;
+            min-width: initial;
+            text-align: center;
+            width: auto;
+            border: none;
+            h1 {
+                font-family: inherit;
+                font-size: 6rem;
+                font-weight: 200;
+                margin: 0;
+            }
+            p {
+                font-family: inherit;
+                text-align: right;
+                font-weight: 300;
+            }
+        }
+    }
+    &.about {
+    }
+    &.tech {
+        .mat-card-content {
+            .tech-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: center;
+                    align-items: center;
+
+                    li {
+                        display: inline-block;
+                        width: 10rem;
+                        height: 7rem;
+                        text-align: center;
+                        overflow: hidden;
+
+                        i {
+                            font-size: 4.8rem;
+                        }
+                        img {
+                            display: block;
+                            height: 100%;
+                            margin: auto;
+                            max-height: 4.8rem;
+                            max-width: 100%;
+                            filter: grayscale(100%);
+                        }
+                        p {
+                            margin: 0.1rem 0 0 0;
+                            font-weight: 200;
+                            font-family: "Source Sans Pro";
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.portfolio {
+        .mat-card-content {
+            .portfolio-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+                overflow: hidden;
+
+                img {
+                    max-height: 18rem;
+                    margin: 1rem;
+                    border: 1px solid #242932;
+                }
+            }
+        }
+        > h2 {
+            padding: 5rem 2rem;
+        }
+    }
+    &.work {
+        .mat-card-content {
+            img {
+                width: 25%;
+                float: right;
+            }
+        }
+    }
+}
+
+@include respond-below(md) { // full mobile
+  
+    .no-mobile {
+        display: none;
+    }
+}
+
+/* Back up of old header */
+
+// .header-container {
+//     background: #e1e1e1;
+//     padding: 3rem 2rem;
+//     filter: invert(100%);
+//     header {
+//         display: flex;
+//         align-items: center;
+//         justify-content: flex-start;
+//         height: 5rem;
+//         margin: 0;
+//         filter: invert(100%);
+//         font-family: sans-serif;
+//         width: fit-content;
+//         overflow: hidden;
+//     }
+//     h1 {
+//         font-family: "Source Sans Pro", sans-serif;
+//         color: #fff;
+//         font-size: 2.5rem;
+//         font-weight: 300;
+//         padding: 0rem 2rem;
+//         margin: 0;
+//     }
+//     .box {
+//         background-color: #fff;
+//         height: 5rem;
+//         width: 100%;
+//         mix-blend-mode: difference;
+//         animation-delay: 1s;
+//         animation-duration: 2s;
+//         animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//         animation-name: slidein;
+//         animation-fill-mode: forwards;
+//         animation-play-state: running;
+//         animation-iteration-count: 1;
+//         position: absolute;
+//         top: 0;
+//         left: 100%;
+//     }
+// }

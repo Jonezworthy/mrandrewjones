@@ -1,0 +1,111 @@
+@import "../../../responsive.scss";
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include respond-below(xs) {
+        align-items: center;
+    }
+
+    img {
+        max-height: 6rem;
+        display: block;
+        max-width: 25%;
+
+        @include respond-above(xxxl) {
+            max-width: 33%;
+        }
+        //
+        @include respond-below(xxxl) {
+            max-width: 40%;
+        }
+        @include respond-below(xxl) {
+            max-width: 50%;
+        }
+        @include respond-below(xl) {
+            max-width: 60%;
+        }
+        @include respond-below(lg) {
+            max-width: 70%;
+        }
+        @include respond-below(md) {
+            max-width: 100%;
+        }
+
+        &.grayscale {
+            filter: grayscale(1);
+        }
+        &.grayscale-brightness {
+            filter: grayscale(1) brightness(10);
+        }
+    }
+}
+.work-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: stretch;
+    font-family: "Source Sans Pro";
+
+    .work-header {
+        @include respond-below(xs) {
+            text-align: center !important;
+            width: 100%;
+        }
+        > h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 0.5rem 0;
+        }
+        > h4 {
+            font-size: 1.1rem;
+        }
+        > h3,
+        > h4 {
+            font-family: "Source Sans Pro";
+            text-align: inherit;
+        }
+    }
+    .left {
+        text-align: left;
+    }
+    .right {
+        text-align: right;
+    }
+    .work-content {
+        p,
+        h3 {
+            text-align: left;
+        }
+        h3 {
+            background: #647ba1;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem -2rem 0.5rem -1rem;
+        }
+        ul {
+            list-style: disc;
+        }
+    }
+}
+.hue-0 {
+    .work-container {
+        .work-content {
+            h3 {
+                background: #243043;
+            }
+        }
+    }
+}
+.hue-2 {
+    .work-container {
+        .work-content {
+            h3 {
+                background: #242932;
+            }
+        }
+    }
+}

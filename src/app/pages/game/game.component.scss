@@ -1,0 +1,80 @@
+.game-container {
+    text-align: center;
+    .read-more {
+        float: none;
+        margin: 0.5rem;
+
+        &.reset {
+            display: inline-block;
+            background: #740d0d;
+            margin: 5rem 0 0 0;
+        }
+    }
+}
+.options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.controls,
+.results {
+    font-family: "Source Sans Pro";
+    text-align: center;
+    h2,
+    h3,
+    p {
+        font-family: inherit;
+    }
+    h2 {
+        margin: 3rem 0;
+        font-size: 3rem;
+        background: none;
+    }
+    h3 {
+        font-size: 2rem;
+        margin: 1rem 0 2rem 0;
+        height: 1.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    ul {
+        li {
+            padding: 0.25rem 0;
+            i {
+                margin: 0 0.5rem 0 0;
+                font-size: 1.5rem;
+                position: relative;
+                top: 0.3rem;
+            }
+        }
+    }
+    .read-more {
+        &.answer {
+            display: inline-block;
+            width: 40%;
+            background: #242932;
+            border: 2px solid #666;
+
+            &.disabled {
+                opacity: 0.2;
+            }
+        }
+    }
+}
+.correct {
+    color: lawngreen;
+    i {
+        color: lawngreen;
+    }
+}
+.incorrect {
+    color: #ff0000;
+    i {
+        color: #ff0000;
+    }
+}
