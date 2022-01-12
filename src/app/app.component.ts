@@ -1,5 +1,8 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Router, Event, NavigationEnd } from '@angular/router';
+
+declare var window: any;
 
 @Component({
     selector: 'app-root',
@@ -10,11 +13,17 @@ export class AppComponent {
     intervalVisualHack: any;
     document: Document;
 
-    constructor(@Inject(DOCUMENT) document: Document, @Inject(PLATFORM_ID) private platformId: Object) {
+    constructor(@Inject(DOCUMENT) document: Document, @Inject(PLATFORM_ID) private platformId: Object, private router: Router) {
         this.document = document;
     }
     ngOnInit(): void {
         if (isPlatformBrowser(this.platformId)) {
+
+            this.router.events.subscribe((event: Event) => {
+                if (event && event instanceof NavigationEnd) { // if navigated somewhere, scroll up
+                    window.document.querySelector('#featured-background').scrollTo(0, 0);
+                }
+            });
             this.visualHacks();
             this.intervalVisualHack = setInterval(() => {
                 this.visualHacks();

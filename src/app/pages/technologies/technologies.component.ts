@@ -183,8 +183,6 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
             }
         }
 
-        console.log(techs);
-
         this.cache[this.searchTerm] = techs;
 
         return techs;

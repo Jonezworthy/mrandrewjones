@@ -2,3 +2,6 @@
   command = "npm run prerender"
   functions = "./functions"
   publish = "dist/mr-andrew-jones/browser"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
