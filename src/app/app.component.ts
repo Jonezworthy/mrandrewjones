@@ -22,6 +22,7 @@ export class AppComponent {
             this.router.events.subscribe((event: Event) => {
                 if (event && event instanceof NavigationEnd) { // if navigated somewhere, scroll up
                     window.document.querySelector('#featured-background').scrollTo(0, 0);
+                    window.scrollTo(0, 0);
                 }
             });
             this.visualHacks();
