@@ -1,14 +1,6 @@
 <div class="vertical-space"></div>
 
-<mat-card class="hue-2 my-card portfolio">
-    <h2 class="card-header mat-display-2">Work History</h2>
-
-    <mat-card-content>
-        <p class="mat-body-2">I started my career in 2008, here is a brief overview my work history since then.</p>
-    </mat-card-content>
-</mat-card>
-
-<mat-card *ngFor="let history of histories; let idx = index; trackBy: trackByIndex" class="hue-{{getHueFromIndex(idx)}} my-card history">
+<mat-card *ngFor="let history of histories; let idx = index; trackBy: trackByIndex" class="hue-0 my-card history">
     <h2 class="card-header mat-display-2">{{history.from}}</h2>
 
     <mat-card-content class="work-container padding">

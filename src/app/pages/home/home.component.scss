@@ -110,6 +110,12 @@
         display: none;
     }
 }
+@include respond-below(xxl) { 
+  
+    .no-tablet {
+        display: none;
+    }
+}
 
 /* Back up of old header */
 

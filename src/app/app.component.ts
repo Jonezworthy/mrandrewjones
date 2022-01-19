@@ -12,6 +12,7 @@ declare var window: any;
 export class AppComponent {
     intervalVisualHack: any;
     document: Document;
+    backgroundClass: string = '';
 
     constructor(@Inject(DOCUMENT) document: Document, @Inject(PLATFORM_ID) private platformId: Object, private router: Router) {
         this.document = document;
@@ -21,6 +22,7 @@ export class AppComponent {
 
             this.router.events.subscribe((event: Event) => {
                 if (event && event instanceof NavigationEnd) { // if navigated somewhere, scroll up
+                    this.backgroundClass = event.url && event.url === '/' ? 'home-page' : '';
                     window.document.querySelector('#featured-background').scrollTo(0, 0);
                     window.scrollTo(0, 0);
                 }

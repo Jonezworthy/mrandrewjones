@@ -51,7 +51,7 @@
     justify-content: space-between;
     align-items: stretch;
     font-family: "Source Sans Pro";
-
+    overflow: hidden;
     .work-header {
         @include respond-below(xs) {
             text-align: center !important;
@@ -77,6 +77,7 @@
         text-align: right;
     }
     .work-content {
+        width: 100%;
         p,
         h3 {
             text-align: left;

@@ -10,25 +10,25 @@ mat-card[hidden]{
     text-align: center;
     .mat-form-field {
         @include respond-above(xxxl) {
-            width: 30%;
+            width: 50%;
         }
         //
         @include respond-below(xxxl) {
-            width: 30%;
+            width: 50%;
         }
         @include respond-below(xxl) {
-            width: 40%;
+            width: 50%;
         }
         @include respond-below(xl) {
-            width: 50%;
+            width: 60%;
         }
         @include respond-below(lg) {
             width: 75%;
         }
         @include respond-below(md) {
             // full mobile
-            width: 100%;
-        }
+            width: 100%; 
+        } 
     }
 }
 

@@ -293,7 +293,8 @@ body {
 * {
     box-sizing: border-box;
 }
-@include respond-above(md) { // not mobile, add margin to offset nav
+@include respond-above(md) {
+    // not mobile, add margin to offset nav
     body {
         margin: 3rem 0 0 0;
     }
@@ -561,6 +562,66 @@ input::placeholder {
     }
     a {
         color: #fff;
+    }
+}
+
+.tech {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        display: inline-block;
+        height: 8rem;
+        text-align: center;
+        overflow: hidden;
+
+        @include respond-above(xxxl) {
+            width: 20%;
+        }
+        //
+        @include respond-below(xxxl) {
+            width: 25%;
+        }
+        @include respond-below(xxl) {
+            width: 25%;
+        }
+        @include respond-below(xl) {
+            width: 32%;
+        }
+        @include respond-below(lg) {
+            width: 32%;
+        }
+        @include respond-below(md) {
+            // full mobile
+            width: 50%;
+        }
+
+        i {
+            font-size: 4.8rem;
+        }
+        img {
+            display: block;
+            height: 100%;
+            margin: auto;
+            max-height: 4.8rem;
+            max-width: 100%;
+            filter: grayscale(100%) brightness(1.5);
+
+            &.invert {
+                filter: invert(1);
+            }
+            &.brightness {
+                filter: brightness(100);
+            }
+            &.matched {
+                background: #ff0000 !important;
+            }
+        }
     }
 }
 

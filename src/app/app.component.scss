@@ -11,6 +11,12 @@ h1 {
     background: #242932;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
-}
+    overflow: hidden;
+    height: 100%;
+    position: fixed !important;
 
+    z-index: 0;
+    &.home-page {
+        top: 22%;
+    }
+}

@@ -17,8 +17,17 @@ export class WorkComponent implements OnInit, OnDestroy {
         logo: 'thenec.png',
         logoClass: 'grayscale-brightness',
         details: {
-            'Tech Stack': 'MEAN',
-            'Technologies': 'Development technologies used: <strong>TypeScript, JavaScript, NodeJS, Express, MongoDB, Mongoose, SASS, and HTML5. </strong> Utilising Microsoft Azure\'s cloud platform',
+            'Key Technologies': '<ul class="tech">\n\
+                                <li><img src="/assets/logos/typescript.svg" /><p>TypeScript</p></li>\n\
+                                <li><i class="fa-js fab "></i><p>JavaScript</p></li>\n\
+                                <li><i class="fa-node fab "></i><p>NodeJS</p></li>\n\
+                                <li><img src="/assets/logos/mongodb.svg" /><p>MongoDB</p></li>\n\
+                                <li><img src="/assets/logos/express.jpg" /><p>Express</p></li>\n\
+                                <li><img src="/assets/logos/azure.svg" /><p>Azure</p></li>\n\
+                                <li><img src="/assets/logos/ionic.svg" class="brightness" /><p>Ionic 3+</p></li>\n\
+                                <li><i class="fa-sass fab "></i><p>SASS</p></li>\n\
+                                <li><i class="fa-angular fab "></i><p>Angular 2->12</p></li>\n\
+                            </ul>',
             'Notable Achievements': '\
             <ul>\n\
                 <li>Introduced continuous integration</li>\n\
@@ -60,9 +69,17 @@ export class WorkComponent implements OnInit, OnDestroy {
         logo: 'cruisedotco.png',
         logoClass: 'grayscale-brightness',
         details: {
-            'Tech Stack': 'LASP',
-            'Technologies': 'Development technologies regularly used: <strong>JavaScript, NodeJS, Express, MongoDB, PHP, MSSQL, JQuery, CSS3 and HTML5. </strong> \n\
-            <br />Daily use of Ubuntu, running and creating shell scripts, apache configuration and virtual hosts, Akamai configuration, load balancing within an Agile development structure',
+            'Key Technologies': '<ul class="tech">\n\
+                                <li><i class="fa-php fab "></i><p>PHP 5.1 -> 7 (Procedural, OOP, MVC)</p></li>\n\
+                                <li><img src="/assets/logos/mssql.svg" class="invert" /><p>MSSQL</p></li>\n\
+                                <li><img src="/assets/logos/nginx.svg" class="invert" /><p>NginX</p></li>\n\
+                                <li><img src="/assets/logos/apache.svg" class="invert" /><p>Apache</p></li>\n\
+                                <li><img src="/assets/logos/ukfast.jpg" /><p>UK Fast CloudFlex</p></li>\n\
+                                <li><img src="/assets/logos/linux.svg" class="invert" /><p>Linux (Ubuntu + Gentoo + CentOS)</p></li>\n\
+                                <li><img src="/assets/logos/smarty.svg" /><p>Smarty</p></li>\n\
+                                <li><img src="/assets/logos/jquery.svg" class="invert" /><p>jQuery (1.1.12 -> 1.7.2 mostly)</p></li>\n\
+                                <li><img src="/assets/logos/jquery-ui.svg" class="brightness" /><p>jQuery UI</p></li>\n\
+                            </ul>',
             'Notable Achievements': '\
             <ul>\n\
                 <li>I am the sole author of the company\'s Android App</li>\n\
@@ -77,7 +94,8 @@ export class WorkComponent implements OnInit, OnDestroy {
                 <li>Making decisions on server infrastructure</li>\n\
                 <li>Code reviews</li>\n\
                 <li>Managing and scheduling projects</li>\n\
-                <li>I honestly don\'t believe anyone actually reads this stuff. Point this bullet point out to me for a free coffee or beer!</li>\n\
+                <li>I honestly don\'t believe anyone actually reads this stuff.</li>\n\
+                <li>Point this bullet point out to me for a free coffee or beer!</li>\n\
                 <li>Mentoring junior developers</li>\n\
             </ul>',
             'Senior duties': '\n\
@@ -89,7 +107,8 @@ export class WorkComponent implements OnInit, OnDestroy {
                 </ul>'
 
             ,
-            'General Info': 'I work as part of a team of 13 developers, developing the web site, our content management system and booking systems. '
+            'General Info': 'I work as part of a team of 13 developers, developing the web site, our content management system and booking systems. ',
+            'Reason for leaving': 'I wanted to work with the MEAN stack '
 
         }
     }, {
@@ -101,9 +120,14 @@ export class WorkComponent implements OnInit, OnDestroy {
         logo: 'arrowconsultancy.png',
         logoClass: 'grayscale-brightness',
         details: {
-            'Tech Stack': 'LAMP',
-            'Technologies': 'Development technologies regularly used: <strong>PHP, MySQL, JavaScript, JQuery, CSS and HTML</strong>. I created an intricate back end system which powered the website. ',
-            'Notable Achievements': 'The CRM which is still partially demo-able (on request – it takes some set up), was an impressively large task I had to undertake single handedly ',
+            'Key Technologies': '<ul class="tech">\n\
+                                <li><i class="fa-php fab "></i><p>PHP 5.1 -> 7 (Procedural, OOP, MVC)</p></li>\n\
+                                <li><img src="/assets/logos/mysql.svg" class="invert" /><p>MySQL</p></li>\n\
+                                <li><img src="/assets/logos/windows.svg" class="invert" /><p>Windows Server</p></li>\n\
+                                <li><img src="/assets/logos/jquery.svg" class="invert" /><p>jQuery (1.1.12 -> 1.7.2 mostly)</p></li>\n\
+                                <li><img src="/assets/logos/jquery-ui.svg" class="brightness" /><p>jQuery UI</p></li>\n\
+                            </ul>',
+            'Notable Achievements': 'The CRM which is still partially demo-able (on request - it takes some set up), was an impressively large task I had to undertake single handedly ',
             'Reason for leaving': 'Was made redundant when the company folded '
         }
     }, {
@@ -115,8 +139,15 @@ export class WorkComponent implements OnInit, OnDestroy {
         logoClass: 'grayscale',
         title: 'Lead Designer/Developer ',
         details: {
-            'Tech Stack': 'LAMP',
-            'Technologies': 'I was selling website design, hosting and support services. Skills used in development: <strong>HTML, PHP with MySQL, JavaScript and CSS. </strong>',
+            'Key Technologies': '<ul class="tech">\n\
+                                <li><i class="fa-php fab "></i><p>PHP 5.1 -> 7 (Procedural, OOP, MVC)</p></li>\n\
+                                <li><img src="/assets/logos/mysql.svg" class="invert" /><p>MySQL</p></li>\n\
+                                <li><img src="/assets/logos/apache.svg" class="invert" /><p>Apache</p></li>\n\
+                                <li><img src="/assets/logos/windows.svg" class="invert" /><p>Windows Server</p></li>\n\
+                                <li><img src="/assets/logos/jquery.svg" class="invert" /><p>jQuery (1.1.12 -> 1.7.2 mostly)</p></li>\n\
+                                <li><img src="/assets/logos/jquery-ui.svg" class="brightness" /><p>jQuery UI</p></li>\n\
+                                <li><img src="/assets/logos/linux.svg" class="invert" /><p>Linux (Ubuntu + Gentoo + CentOS)</p></li>\n\
+            </ul>',
             'Notable Achievements': 'Creating a custom a bespoke online shop for <a class="md-primary" href="http://www.jordan-saws.co.uk/" target="_blank">http://www.jordan-saws.co.uk </a>\n\
             <br /> Due to their products being so unique in requirements, it was best to create a sequential, step by step process for choosing your specific product.',
             'Reason for leaving': 'I closed the company after I found permanent, stable employment '
