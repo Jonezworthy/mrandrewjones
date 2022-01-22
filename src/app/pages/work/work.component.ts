@@ -30,9 +30,11 @@ export class WorkComponent implements OnInit, OnDestroy {
                             </ul>',
             'Notable Achievements': '\
             <ul>\n\
+                <li>Sole author of the scanning software across The Ticket Factory &amp; NEC Group</li>\n\
                 <li>Introduced continuous integration</li>\n\
                 <li>Introduced automated testing</li>\n\
                 <li>Managing product life cycles in software, app, and web development</li>\n\
+                <li>Created a scanning platform designed for intense rapid scaling</li>\n\
             </ul>',
             'Notable Skills': '\
             <ul>\n\

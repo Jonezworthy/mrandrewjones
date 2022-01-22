@@ -13,7 +13,8 @@
     "dev:ssr": "ng run mr-andrew-jones:serve-ssr",
     "serve:ssr": "node dist/mr-andrew-jones/server/main.js",
     "build:ssr": "ng build && ng run mr-andrew-jones:server",
-    "prerender": "ng run mr-andrew-jones:prerender"
+    "prerender": "ng run mr-andrew-jones:prerender",
+    "deploy": "ng run mr-andrew-jones:prerender && netlify deploy --prod"
   },
   "private": true,
   "dependencies": {
