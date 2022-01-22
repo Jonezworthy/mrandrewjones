@@ -1,3 +1,6 @@
+@media print {
 #featured-background {
     display: none !important;
+}
+
 }
