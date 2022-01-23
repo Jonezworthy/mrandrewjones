@@ -67,3 +67,17 @@
         }
     }
 }
+
+@media print {
+    .logo-container {
+        filter: invert(100%);
+        img {
+            max-width: 25%;
+        }
+    }
+    .education-container {
+        > h4 {
+            display: none !important;
+        }
+    }
+}

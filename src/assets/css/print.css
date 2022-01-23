@@ -5,6 +5,7 @@
     .mat-card {
         color: #000 !important;
         background-color: #fff !important;
+        filter: grayscale(100%);
     }
 
     .about p {
@@ -66,30 +67,4 @@
     .tech-container li img {
         height: 3rem !important;
     }
-
-    /* .hue-0 {
-        .mat-card-content {
-            
-        }
-        h2 {
-            background: #242932;
-        }
-    }
-    .hue-1 {
-        .mat-card-content {
-            background: #242932;
-        }
-        h2 {
-            background: #242932;
-  
-        }
-    }
-    .hue-2 {
-        .mat-card-content {
-            background: #243043;
-        }
-        h2 {
-            background: #243043;
-        }
-    } */
 }
