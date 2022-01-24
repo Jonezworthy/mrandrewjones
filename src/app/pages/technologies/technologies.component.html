@@ -34,9 +34,11 @@
             <h2>{{list}}</h2>
             <ul>
                 <li *ngFor="let item of filteredTechs()[tech][list]" class="{{item.matched ? 'matched': ''}}">
-                    <i *ngIf="item.icon.indexOf('.') === -1" [class]="item.icon"></i>
+                    <app-logo [icon]="item.icon"></app-logo>
+
+                    <!-- <i *ngIf="item.icon.indexOf('.') === -1" [class]="item.icon"></i>
                     <img *ngIf="item.icon.indexOf('.') !== -1" src="/assets/logos/{{item.icon}}" class="{{item.iconInvert ? 'invert' : ''}}{{item.iconBrightness ? 'brightness' : ''}}">
-                    <p>{{item.value}}</p>
+                    <p>{{item.value}}</p> -->
 
                 </li>
 

@@ -414,7 +414,7 @@ main {
             border-color: #647ba1;
 
             @include respond-above(xxxl) {
-                width: 12%;
+                width: 14%;
             }
             //
             @include respond-below(xxxl) {
@@ -576,7 +576,7 @@ input::placeholder {
 
     li {
         display: inline-block;
-        height: 8rem;
+        
         text-align: center;
         overflow: hidden;
 
@@ -601,23 +601,9 @@ input::placeholder {
             width: 50%;
         }
 
-        i {
-            font-size: 4.8rem;
-        }
+       
         img {
-            display: block;
-            height: 100%;
-            margin: auto;
-            max-height: 4.8rem;
-            max-width: 100%;
-            filter: grayscale(100%) brightness(1.5);
-
-            &.invert {
-                filter: invert(1);
-            }
-            &.brightness {
-                filter: brightness(100);
-            }
+            
             &.matched {
                 background: #ff0000 !important;
             }

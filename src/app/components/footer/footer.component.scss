@@ -1,4 +1,7 @@
+@import "../../../responsive.scss";
+
 footer {
+    font-family: "Source Sans Pro";
     background: #243043;
     z-index: 1;
     position: relative;
@@ -6,10 +9,67 @@ footer {
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    margin: 4rem 0 0 0;
 
-    a, p {
+    a,
+    p {
+        display: block;
         color: #fff;
+        margin: 1rem;
+    }
+    .first {
+        text-align: left;
+        width: 25%;
+
+        @include respond-below(md) {
+            display: none;
+        }
+    }
+    
+    .middle {
+        width: 50%;
+        align-self: center;
+        text-align: center;
+        color: #fff;
+        .logo-container {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            width: 65%;
+            margin: auto;
+            @include respond-below(sm) {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            
+            .logo {
+                margin: 0 0.5rem;
+                width: 33%;
+                @include respond-below(xs) {
+                    width: 100%;
+                }
+                h4 {
+                    font-family: inherit;
+                    font-weight: 300;
+                    margin: 0;
+                }
+            }
+        }
+        @include respond-below(md) {
+            width: 100%;
+        }
+    }
+    .last {
+        text-align: right;
+        width: 25%;
+        @include respond-below(md) {
+            display: none;
+        }
     }
 }

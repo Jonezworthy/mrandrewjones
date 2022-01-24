@@ -1,16 +1,36 @@
 <footer>
     <div class="first">
         <a routerLink="/home">Home</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/tech">Technologies</a>
+        <a routerLink="/portfolio">Portfolio</a>
     </div>
     <div class="middle">
+        <p>This website is</p>
 
-        <p>&copy; MrAndrewJones.co.uk </p>
+        <div class="logo-container">
+            <div class="logo">
+                <h4>Powered by </h4>
+                <app-logo icon="angular2" label="Angular 13"></app-logo>
+            </div>
+            <div class="logo">
+                <h4>Hosted on</h4>
+                <app-logo icon="netlify"></app-logo>
+            </div>
+            <div class="logo">
+                <h4>Written in</h4>
+                <app-logo icon="typescript"></app-logo>
+            </div>
+        </div>
+        <hr />
+        <!-- <h2>&copy; MrAndrewJones.co.uk </h2> -->
+        <p>All logos, names, and everything on this web site are owned by the intended copyright holders</p>
     </div>
     <div class="last">
-
-        <p>Powered by Angular.io </p>
-        <p>Hosted by Netlify</p>
-        <p>Written in TypeScript</p>
+        <a routerLink="/work">Work</a>
+        <a routerLink="/education">Education</a>
+        <a routerLink="/contact">Contact Me</a>
+        <a routerLink="/game">Pokemon or Tech Game</a>
 
     </div>
 </footer>

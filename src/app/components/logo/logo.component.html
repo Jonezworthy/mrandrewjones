@@ -1,0 +1,6 @@
+<div class="logo" *ngIf="selected">
+    <i *ngIf="selected.iconSrc" class="fab {{selected.iconSrc}}"></i>
+    <img *ngIf="selected.imgSrc" src="/assets/logos/{{selected.imgSrc}}"  class=" {{selected.doInvert ? 'invert': ''}}  {{selected.doBrightness ? 'brightness': ''}}"/>
+
+    <p>{{label || selected.label}}</p>
+</div>

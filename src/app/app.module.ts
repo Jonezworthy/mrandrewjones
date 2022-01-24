@@ -10,22 +10,25 @@ import { MatCardModule } from '@angular/material/card';
 //
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
+//
+import { SharedModule } from './shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    FooterComponent
-  ],
-  imports: [
-    AppRoutingModule,
-    MatSidenavModule,
-    MatCardModule,
-    MatMenuModule,
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MenuComponent,
+        FooterComponent,
+    ],
+    imports: [
+        AppRoutingModule,
+        MatSidenavModule,
+        MatCardModule,
+        MatMenuModule,
+        BrowserModule.withServerTransition({ appId: 'serverApp' }),
+        BrowserAnimationsModule,
+        SharedModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

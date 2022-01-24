@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../../shared.module';
 
 @NgModule({
     declarations: [TechnologiesComponent],
@@ -19,10 +20,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         MatButtonModule,
         MatIconModule,
         MatInputModule,
-        MatFormFieldModule, 
+        MatFormFieldModule,
         FormsModule,
         ReactiveFormsModule,
-        MatToolbarModule
+        MatToolbarModule,
+        SharedModule
     ],
     providers: []
 })

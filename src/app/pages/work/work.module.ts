@@ -8,6 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 
+import { SharedModule } from '../../shared.module';
+
 @NgModule({
     declarations: [WorkComponent],
     imports: [
@@ -17,7 +19,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
         MatButtonModule,
         MatIconModule,
         MatGridListModule,
-        MatToolbarModule
+        MatToolbarModule,
+        SharedModule
     ],
     providers: []
 })

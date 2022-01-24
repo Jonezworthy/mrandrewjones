@@ -30,7 +30,14 @@
 
             <div *ngFor="let groupKey of keysOf(history.details)">
                 <h3>{{groupKey}}</h3>
-                <div [innerHTML]="history.details[groupKey]">
+                <div *ngIf="groupKey === 'Key Technologies'">
+                    <ul class="tech">
+                        <li *ngFor="let icon of history.details[groupKey]">
+                            <app-logo [icon]="icon"></app-logo>
+                        </li>
+                    </ul>
+                </div>
+                <div *ngIf="groupKey !== 'Key Technologies'" [innerHTML]="history.details[groupKey]">
                 </div>
                 <p class="mat-body-2"></p>
             </div>
