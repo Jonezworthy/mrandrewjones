@@ -1,86 +1,91 @@
+<mat-card class="hue-0 hero no-side-heading">
+    <mat-card-content class="padding">
 
+        <h1 class="mat-display-4">
+            Andrew Jones
+        </h1>
+        <p class="mat-headline">Full stack developer</p>
 
+    </mat-card-content>
+</mat-card>
 
-    <mat-card class="hue-0 hero no-side-heading">
-        <mat-card-content class="padding">
+<!-- <div class="clr"></div> -->
+<mat-card class="hue-1 my-card about">
+    <h2 class="card-header mat-display-2">About Me</h2>
 
-            <h1 class="mat-display-4">
-                Andrew Jones
-            </h1>
-            <p class="mat-headline">Full stack developer</p>
+    <mat-card-content>
+        <p class="mat-body-2">Programming is a life style for me, it is what I excel at and it's what I enjoy.</p>
+        <p class="mat-body-2">I am full stack, I am highly experienced, I am capable. </p>
+        <p class="mat-body-2">I've worked for large, medium, and small businesses, each size has their positives and negatives</p>
+        <p class="mat-body-2">I'm big into 3D design and 3D printing, video games, and motorcycling!</p>
+        <button class="read-more" routerLink="/about">About Me <i class="fad fa-chevron-right"></i></button>
+    </mat-card-content>
 
-        </mat-card-content>
-    </mat-card>
+</mat-card>
+<mat-card class="hue-2 my-card tech">
+    <h2 class="card-header mat-display-2">Tech</h2>
 
-    <!-- <div class="clr"></div> -->
+    <mat-card-content>
+        <h3 class="mat-body-2">I've worked with <em>a lot </em> of tech, here's what I'm working with most at the moment</h3>
+        <div class="tech-container">
 
-    <mat-card class="hue-1 my-card about">
-        <h2 class="card-header mat-display-2">About Me</h2>
+            <ul>
+                <li>
+                    <app-logo icon="nodejs"></app-logo>
+                </li>
+                <li>
+                    <app-logo icon="typescript"></app-logo>
+                </li>
+                <li>
+                    <app-logo icon="mongodb"></app-logo>
+                </li>
+                <li>
+                    <app-logo icon="angular2"></app-logo>
+                </li>
+            </ul>
+        </div>
 
-        <mat-card-content>
-            <p class="mat-body-2">Programming is a life style for me, it is what I excel at and it's what I enjoy.</p>
-            <p class="mat-body-2">I am full stack, I am highly experienced, I am capable. </p>
-            <p class="mat-body-2">I've worked for large, medium, and small businesses, each size has their positives and negatives</p>
-            <p class="mat-body-2">I'm big into 3D design and 3D printing, video games, and motorcycling!</p>
-            <button class="read-more" routerLink="/about">About Me <i class="fad fa-chevron-right"></i></button>
-        </mat-card-content>
+        <button class="read-more" routerLink="/tech">Tech Experience<i class="fad fa-chevron-right"></i></button>
+    </mat-card-content>
 
-    </mat-card>
-    <mat-card class="hue-2 my-card tech">
-        <h2 class="card-header mat-display-2">Tech</h2>
+</mat-card>
+<mat-card class="hue-0 my-card portfolio">
 
-        <mat-card-content>
-            <h3 class="mat-body-2">I've worked with <em>a lot </em> of tech, here's what I'm working with most at the moment</h3>
-            <div class="tech-container">
+    <h2 class="card-header mat-display-2">Portfolio</h2>
+    <mat-card-content>
+        <h3 class="mat-body-2">I've worked on software, mobile apps, web sites</h3>
+        <div class="portfolio-container">
+            <img src="/assets/portfolio/redditchweb.jpg" />
+            <img class="no-tablet" src="/assets/portfolio/uttabliss.png" />
+            <img class="no-mobile" src="/assets/portfolio/cruise.png" />
+        </div>
 
-                <ul>
-                    <li>
-                        <app-logo icon="nodejs"></app-logo>
-                    </li>
-                    <li>
-                        <app-logo icon="typescript"></app-logo>
-                    </li>
-                    <li>
-                        <app-logo icon="mongodb"></app-logo>
-                    </li>
-                    <li>
-                        <app-logo icon="angular2"></app-logo>
-                    </li>
-                </ul>
-            </div>
+        <button class="read-more" routerLink="/portfolio">My Portfolio<i class="fad fa-chevron-right"></i></button>
+    </mat-card-content>
 
-            <button class="read-more" routerLink="/tech">Tech Experience<i class="fad fa-chevron-right"></i></button>
-        </mat-card-content>
+</mat-card>
+<mat-card class="hue-2 my-card work">
 
-    </mat-card>
-    <mat-card class="hue-0 my-card portfolio">
+    <h2 class="card-header mat-display-2">Work</h2>
+    <mat-card-content>
+        <h3 class="mat-body-2">My current role</h3>
+        <img src="/assets/logos/thenec.png" />
+        <p>Employer: <strong>The NEC Group</strong></p>
+        <p>Position: <strong>Lead Software Developer</strong></p>
+        <p>Years of service: <strong>{{yearsOfService}}</strong></p>
 
-        <h2 class="card-header mat-display-2">Portfolio</h2>
-        <mat-card-content>
-            <h3 class="mat-body-2">I've worked on software, mobile apps, web sites</h3>
-            <div class="portfolio-container">
-                <img src="/assets/portfolio/redditchweb.jpg" />
-                <img class="no-tablet" src="/assets/portfolio/uttabliss.png" />
-                <img class="no-mobile" src="/assets/portfolio/cruise.png" />
-            </div>
+        <div class="clr"></div>
+        <button class="read-more" routerLink="/work">Work History<i class="fad fa-chevron-right"></i></button>
+    </mat-card-content>
 
-            <button class="read-more" routerLink="/portfolio">My Portfolio<i class="fad fa-chevron-right"></i></button>
-        </mat-card-content>
+</mat-card>
+<mat-card class="hue-1 my-card about">
+    <h2 class="card-header mat-display-2">Contact</h2>
 
-    </mat-card>
-    <mat-card class="hue-2 my-card work">
+    <mat-card-content>
+        <p class="mat-body-2">If you like what you see and you wish to contact me, you can find out how on my contact me page.</p>
+        <button class="read-more" routerLink="/contact">Contact Me <i class="fad fa-chevron-right"></i></button>
+    </mat-card-content>
 
-        <h2 class="card-header mat-display-2">Work</h2>
-        <mat-card-content>
-            <h3 class="mat-body-2">My current role</h3>
-            <img src="/assets/logos/thenec.png" />
-            <p>Employer: <strong>The NEC Group</strong></p>
-            <p>Position: <strong>Lead Software Developer</strong></p>
-            <p>Years of service: <strong>{{yearsOfService}}</strong></p>
-
-            <div class="clr"></div>
-            <button class="read-more" routerLink="/work">Work History<i class="fad fa-chevron-right"></i></button>
-        </mat-card-content>
-
-    </mat-card>
-    <div class="clr"></div>
+</mat-card>
+<div class="clr"></div>

@@ -8,7 +8,7 @@ setTimeout(() => {
                     let isDesktop = false;
                     try {
                         const battery = await navigator.getBattery();
-                        if (battery.dischargingTime === Infinity) {
+                        if (battery.charging === true) {
                             isDesktop = true;
                         }
                     } catch (err) {

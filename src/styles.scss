@@ -576,7 +576,7 @@ input::placeholder {
 
     li {
         display: inline-block;
-        
+
         text-align: center;
         overflow: hidden;
 
@@ -601,14 +601,20 @@ input::placeholder {
             width: 50%;
         }
 
-       
         img {
-            
             &.matched {
                 background: #ff0000 !important;
             }
         }
     }
+}
+app-footer {
+    display: block;
+    background: #243043;
+    position: relative;
+}
+app-root {
+    max-width: 2160px;
 }
 
 // #E2C044 - yellow

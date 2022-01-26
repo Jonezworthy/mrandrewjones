@@ -2,7 +2,6 @@
 
 footer {
     font-family: "Source Sans Pro";
-    background: #243043;
     z-index: 1;
     position: relative;
     display: flex;
@@ -12,8 +11,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    margin: 4rem 0 0 0;
-
+    margin: 4rem auto 0 auto;
+    max-width: 2160px;
     a,
     p {
         display: block;
@@ -28,7 +27,7 @@ footer {
             display: none;
         }
     }
-    
+
     .middle {
         width: 50%;
         align-self: center;
@@ -47,7 +46,7 @@ footer {
                 width: 100%;
                 flex-wrap: wrap;
             }
-            
+
             .logo {
                 margin: 0 0.5rem;
                 width: 33%;
