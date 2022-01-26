@@ -18,6 +18,11 @@ export class ContactComponent implements OnInit, OnDestroy {
     encodedLinked: string = 'YW5kcmV3LWolQzMlQjNuZXMtNDA4Njc0YjM=';
     encodedGit: string = 'Sm9uZXp3b3J0aHk=';
 
+    myNumberVisible: Boolean = false;
+    myNumberPartOne: string = 'MDc1MTc1';
+    myNumberPartTwo: string = 'NTM4NTM=';
+    myNumber: string = '';
+
     ngOnInit(): void {
 
         if (isPlatformBrowser(this.platformId)) {
@@ -27,6 +32,13 @@ export class ContactComponent implements OnInit, OnDestroy {
                 this.gitHub = 'https://github.com/' + atob(this.encodedGit);
             }, 0);
         }
+    }
+
+    showMyNumber(): void {
+        setTimeout(() => {
+            this.myNumber = atob((this.myNumberPartOne + this.myNumberPartTwo));
+            this.myNumberVisible = true;
+        }, 250);
     }
 
     ngOnDestroy(): void {

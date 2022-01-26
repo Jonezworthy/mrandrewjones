@@ -40,3 +40,14 @@
     </mat-card-content>
 
 </mat-card>
+<mat-card class="hue-2 my-card contact">
+    <h2 class="card-header mat-display-2">Phone Number</h2>
+
+    <mat-card-content class="cv-container">
+        <p class="mat-body-2">By default my phone number is not visible on this page, this is to stop bots from scraping it.</p>
+        <p class="mat-body-2">Please click the button to see it.</p>
+        <a class="read-more" (click)="showMyNumber()" >See my phone number<i class="fad fa-chevron-right"></i></a>
+        <p *ngIf="myNumberVisible" class="mat-body-2">This is my phone number: <strong>{{myNumber}}</strong></p>
+    </mat-card-content>
+
+</mat-card>
