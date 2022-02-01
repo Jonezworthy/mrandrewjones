@@ -550,6 +550,11 @@ input::placeholder {
         }
     }
 }
+
+.clickable {
+    cursor: pointer;
+}
+
 .vertical-space {
     height: 5rem;
 }
@@ -614,7 +619,7 @@ app-footer {
     position: relative;
 }
 app-root {
-    max-width: 2160px;
+    max-width: 2600px;
 }
 
 // #E2C044 - yellow

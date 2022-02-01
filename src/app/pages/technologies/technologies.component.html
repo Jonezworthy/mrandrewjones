@@ -5,7 +5,7 @@
 
     <mat-card-content>
         <p class="mat-body-2">I've worked with a lot of tech over the years. </p>
-        <p class="mat-body-2">I have been a professional programmer for {{yearsOfDev}} years.</p>
+        <p class="mat-body-2">I have been a professional programmer for {{yearsOfDev}} years, but I had already made web sites before then.</p>
         <p class="mat-body-2">I've worked for large, medium, and small businesses.</p>
         <p class="mat-body-2">This is a short-list of techs I've worked with!</p>
     </mat-card-content>
@@ -22,28 +22,45 @@
                 <i class="fad fa-times"></i>
             </button>
         </mat-form-field>
-    </mat-card-content>
 
-</mat-card>
-
-<mat-card *ngFor="let tech of keysOf(filteredTechs()); let idx = index; trackBy: trackBySearchTerm" class="hue-{{getHueFromIndex(idx)}} my-card about">
-    <h2 class="card-header mat-display-2">{{tech}}</h2>
-
-    <mat-card-content>
-        <div class="tech-container" *ngFor="let list of keysOf(filteredTechs()[tech])" [hidden]="!filteredTechs()[tech][list].length">
-            <h2>{{list}}</h2>
+        <p class="mat-body-2">Click these icons to filter by origin</p>
+        <div class="tech-container">
             <ul>
-                <li *ngFor="let item of filteredTechs()[tech][list]" class="{{item.matched ? 'matched': ''}}">
-                    <app-logo [icon]="item.icon"></app-logo>
-
-                    <!-- <i *ngIf="item.icon.indexOf('.') === -1" [class]="item.icon"></i>
-                    <img *ngIf="item.icon.indexOf('.') !== -1" src="/assets/logos/{{item.icon}}" class="{{item.iconInvert ? 'invert' : ''}}{{item.iconBrightness ? 'brightness' : ''}}">
-                    <p>{{item.value}}</p> -->
-
+                <li class="clickable {{ filterExperience === 'current' ? 'selected' : '' }}" (click)="filterByExperience('current')">
+                    <app-logo [extra]="true" icon="current"></app-logo>
                 </li>
-
+                <li class="clickable {{ filterExperience === 'previous' ? 'selected' : '' }}" (click)="filterByExperience('previous')">
+                    <app-logo [extra]="true" icon="previous"></app-logo>
+                </li>
+                <li class="clickable {{ filterExperience === 'hobby' ? 'selected' : '' }}" (click)="filterByExperience('hobby')">
+                    <app-logo [extra]="true" icon="hobby"></app-logo>
+                </li>
             </ul>
         </div>
     </mat-card-content>
 
 </mat-card>
+
+<div #techList>
+    <mat-card *ngFor="let tech of keysOf(filteredTechs()); let idx = index; trackBy: trackBySearchTerm" class="hue-{{getHueFromIndex(idx)}} my-card about">
+        <h2 class="card-header mat-display-2">{{tech}}</h2>
+
+        <mat-card-content>
+            <div class="tech-container" *ngFor="let list of keysOf(filteredTechs()[tech])" [hidden]="!filteredTechs()[tech][list].length">
+                <h2>{{list}}</h2>
+                <ul>
+                    <li *ngFor="let item of filteredTechs()[tech][list]" class="{{item.matched ? 'matched': ''}}">
+                        <app-logo [extra]="true" [icon]="item.icon" [origin]="true"></app-logo>
+
+                        <!-- <i *ngIf="item.icon.indexOf('.') === -1" [class]="item.icon"></i>
+                    <img *ngIf="item.icon.indexOf('.') !== -1" src="/assets/logos/{{item.icon}}" class="{{item.iconInvert ? 'invert' : ''}}{{item.iconBrightness ? 'brightness' : ''}}">
+                    <p>{{item.value}}</p> -->
+
+                    </li>
+
+                </ul>
+            </div>
+        </mat-card-content>
+
+    </mat-card>
+</div>
