@@ -380,10 +380,13 @@ main {
             h3 {
                 text-align: center;
             }
-            @include respond-above(xxxl) {
+            @include respond-above(xxxxl) {
                 width: 40%;
             }
             //
+            @include respond-below(xxxxl) {
+                width: 42%;
+            }
             @include respond-below(xxxl) {
                 width: 42%;
             }
@@ -413,8 +416,11 @@ main {
             border: 1px solid;
             border-color: #647ba1;
 
-            @include respond-above(xxxl) {
+            @include respond-above(xxxxl) {
                 width: 14%;
+            }
+            @include respond-below(xxxxl) {
+                width: 15%;
             }
             //
             @include respond-below(xxxl) {
@@ -500,30 +506,31 @@ main {
             }
         }
 
-        .read-more {
-            float: right;
-            cursor: pointer;
-            margin: 1.5rem 0;
-            background: #647ba1;
-            border-radius: 0.5rem;
-            color: #fff;
-            font-family: "Source Sans Pro";
-            font-weight: 300;
-            font-size: 1.2rem;
-            padding: 0.8rem 1.3rem;
-            box-shadow: none;
-            border: 1px solid #333;
-            text-decoration: none;
-            line-height: 1.5rem;
-            border-radius: 0rem;
-            &:hover {
-                border-bottom: 1px solid #fff;
-            }
-            i {
-                margin: 0rem 0 0rem 0.5rem;
-                font-size: 1.5rem;
-            }
-        }
+
+    }
+}
+.read-more {
+    float: right;
+    cursor: pointer;
+    margin: 1.5rem 0;
+    background: #647ba1;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.3rem;
+    box-shadow: none;
+    border: 1px solid #333;
+    text-decoration: none;
+    line-height: 1.5rem;
+    border-radius: 0rem;
+    &:hover {
+        border-bottom: 1px solid #fff;
+    }
+    i {
+        margin: 0rem 0 0rem 0.5rem;
+        font-size: 1.5rem;
     }
 }
 .clr {
@@ -627,3 +634,26 @@ app-root {
 // #9FB1BC - light
 // #6E8898 - med
 // #2E5266 - dark
+
+.guru {
+    color: #00ff00;
+}
+.advanced {
+    color: #9effa1;
+}
+.intermediate {
+    color: #ffff00;
+}
+.beginner {
+    color: #bbdf29;
+}
+.exposure {
+    color: #ffffff;
+}
+
+.mat-dialog-container {
+    box-shadow: 0px 11px 15px -7px rgb(255 255 255 / 20%), 0px 24px 38px 3px rgb(255 255 255 / 14%), 0px 9px 46px 8px rgb(255 255 255 / 12%);
+    background: #181c22;
+    color: #fff;
+    border: 2px solid #fff;
+}

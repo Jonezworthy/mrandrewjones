@@ -77,24 +77,24 @@ mat-card[hidden] {
             // overflow: hidden;
 
             @include respond-above(xxxl) {
-                width: 20%;
+                width: calc(25% - 1rem);
             }
             //
             @include respond-below(xxxl) {
-                width: 25%;
+                width: calc(33% - 1rem);
             }
             @include respond-below(xxl) {
-                width: 32%;
+                width: calc(33% - 1rem);
             }
             @include respond-below(xl) {
-                width: 32%;
+                width: calc(50% - 1rem);
             }
             @include respond-below(lg) {
-                width: 32%;
+                width: calc(50% - 1rem);
             }
             @include respond-below(md) {
                 // full mobile
-                width: 50%;
+                width: calc(100% - 1rem);
             }
         }
     }

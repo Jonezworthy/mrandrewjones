@@ -70,7 +70,8 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { icon: 'angular2', search: 'Angular' },
                 { icon: 'ionic', search: 'Ionic' },
                 { icon: 'jquery', search: 'jQuery' },
-                { icon: 'jqueryui', search: 'jQuery' },
+                { icon: 'fontawesome', search: 'Font Awesome' },
+                
             ],
             'Caching': [
                 { icon: 'redis', search: 'Redis' },
@@ -135,13 +136,11 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { icon: 'slack', search: 'Slack' },
                 { icon: 'discord', search: 'Discord' },
                 { icon: 'trello', search: 'Trello' },
-                { icon: 'exchangewebservices', search: 'Exchange Web Services' },
                 { icon: 'googlemaps', search: 'Google Maps' },
                 { icon: 'googlegraphs', search: 'Google Graphs' },
                 { icon: 'facebook', search: 'Facebook' },
                 { icon: 'twitter', search: 'Twitter' },
                 { icon: 'youtube', search: 'YouTube' },
-                { icon: 'wikipedia', search: 'Wikipedia' },
                 { icon: 'sms', search: 'sms' },
                 { icon: 'paypal', search: 'PayPal' },
             ],

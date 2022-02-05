@@ -1,11 +1,14 @@
-<div class="logo {{extra ? 'extra' : ''}} {{experienceClass(selected.experience)}} {{origin ? 'has-icon-bar' : ''}}" *ngIf="selected">
+<div (click)="openBlurb(selected)" class="logo {{extra ? 'extra' : ''}} {{experienceClass(selected.experience)}} {{origin ? 'has-icon-bar' : ''}}" *ngIf="selected">
     <div *ngIf="origin" class="icon-bar">
-        <i *ngFor="let exp of selected.experience" class="{{experienceIconIndex[exp]}}" matTooltip="{{experienceWordingIndex[exp]}}"></i>
+        <i *ngFor="let exp of selected.experience" class="experience {{experienceIconIndex[exp]}}" matTooltip="{{experienceWordingIndex[exp]}}"></i>
+        <!-- <i class="skill {{selected.skill}}">{{selected.skill}}</i> -->
         <i class="spacer"></i>
-        <i class="years {{selected.years >= 10 ? 'high' : selected.years >= 5 ? 'medium' : 'low'}}" matTooltip="I've been using this for {{selected.years}} years">{{selected.years}} yrs</i>
+        <i class="skill {{selected.skill}}" matTooltip="This means I consider my skill level ({{selected.skill}}) in/with this, and I have been using it for around {{selected.years}} years">{{selected.skill}} ({{selected.years}} yrs)</i>
+        <!-- <i class="years {{selected.years >= 10 ? 'high' : selected.years >= 5 ? 'medium' : 'low'}}" matTooltip="I've been using this for {{selected.years}} years">{{selected.years}} yrs</i> -->
     </div>
+
     <i *ngIf="selected.iconSrc" class="fab {{selected.iconSrc}}"></i>
-    <img *ngIf="selected.imgSrc" src="/assets/logos/{{selected.imgSrc}}" class=" {{selected.doInvert ? 'invert': ''}}  {{selected.doBrightness ? 'brightness': ''}}" />
+    <div *ngIf="selected.imgSrc" class="img-container"><img src="/assets/logos/{{selected.imgSrc}}" class=" {{selected.doInvert ? 'invert': ''}}  {{selected.doBrightness ? 'brightness': ''}}" /></div>
 
     <p>{{label || selected.label}}</p>
 </div>

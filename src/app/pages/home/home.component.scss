@@ -2,7 +2,8 @@
 
 .mat-card {
     &.hero {
-        @include respond-below(md) { // full mobile
+        @include respond-below(md) {
+            // full mobile
             background: #242932;
         }
         .mat-card-content {
@@ -46,7 +47,29 @@
 
                     li {
                         display: inline-block;
-                        width: 25%;                    }
+                        width: 25%;
+
+                        @include respond-above(xxxl) {
+                            width: 25%;
+                        }
+                        //
+                        @include respond-below(xxxl) {
+                            width: 33%;
+                        }
+                        @include respond-below(xxl) {
+                            width: 50%;
+                        }
+                        @include respond-below(xl) {
+                            width: 50%;
+                        }
+                        @include respond-below(lg) {
+                            width: 50%;
+                        }
+                        @include respond-below(md) {
+                            // full mobile
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
@@ -84,14 +107,14 @@
     }
 }
 
-@include respond-below(md) { // full mobile
-  
+@include respond-below(md) {
+    // full mobile
+
     .no-mobile {
         display: none;
     }
 }
-@include respond-below(xxl) { 
-  
+@include respond-below(xxl) {
     .no-tablet {
         display: none;
     }
