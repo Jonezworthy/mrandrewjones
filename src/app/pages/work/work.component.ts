@@ -61,7 +61,7 @@ export class WorkComponent implements OnInit, OnDestroy {
         logo: 'cruisedotco.png',
         logoClass: 'grayscale-brightness',
         details: {
-            'Key Technologies': ['php', 'mssql', 'nginx', 'apache', 'ukfast', 'linux', 'smarty', 'jquery', 'jqueryui'],
+            'Key Technologies': ['php', 'mssql', 'nginx', 'apache', 'ukfast', 'linux', 'smarty', 'jquery'],
             'Notable Achievements': '\
             <ul>\n\
                 <li>I am the sole author of the company\'s Android App</li>\n\
@@ -102,7 +102,7 @@ export class WorkComponent implements OnInit, OnDestroy {
         logo: 'arrowconsultancy.png',
         logoClass: 'grayscale-brightness',
         details: {
-            'Key Technologies': ['php', 'mysql', 'windowserver', 'jquery', 'jqueryui'],
+            'Key Technologies': ['php', 'mysql', 'windowserver', 'jquery'],
             'Notable Achievements': 'The CRM which is still partially demo-able (on request - it takes some set up), was an impressively large task I had to undertake single handedly ',
             'Reason for leaving': 'Was made redundant when the company folded '
         }
@@ -115,7 +115,7 @@ export class WorkComponent implements OnInit, OnDestroy {
         logoClass: 'grayscale',
         title: 'Lead Designer/Developer ',
         details: {
-            'Key Technologies': ['php', 'mysql', 'apache', 'windowserver', 'jquery', 'jqueryui', 'linux', 'wordpress'],
+            'Key Technologies': ['php', 'mysql', 'apache', 'windowserver', 'jquery', 'linux', 'wordpress'],
             'Notable Achievements': 'Creating a custom a bespoke online shop for <a class="md-primary" href="http://www.jordan-saws.co.uk/" target="_blank">http://www.jordan-saws.co.uk </a>\n\
             <br /> Due to their products being so unique in requirements, it was best to create a sequential, step by step process for choosing your specific product.',
             'Reason for leaving': 'I closed the company after I found permanent, stable employment '
