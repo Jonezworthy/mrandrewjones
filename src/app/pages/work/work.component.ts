@@ -11,7 +11,7 @@ export class WorkComponent implements OnInit, OnDestroy {
     histories: { from: string, to: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
         from: 'October 2017',
         to: 'Current',
-        companyName: 'The NEC Group/The Ticket Factory',
+        companyName: 'The NEC Group',
         companyDescription: 'Huge exhibition company',
         title: 'Lead Software/Web Developer',
         logo: 'thenec.png',
@@ -20,9 +20,9 @@ export class WorkComponent implements OnInit, OnDestroy {
             'Key Technologies': ['typescript', 'javascript', 'nodejs', 'mongodb', 'express', 'azure', 'ionic', 'sass', 'angular2'],
             'Notable Achievements': '\
             <ul>\n\
-                <li>Sole author of the scanning software across The Ticket Factory &amp; NEC Group</li>\n\
-                <li>Introduced continuous integration</li>\n\
-                <li>Introduced automated testing</li>\n\
+                <li>Sole author of the scanning software across  NEC Group</li>\n\
+                <li>Introduced continuous integration with Azure and Docker</li>\n\
+                <li>Introduced automated testing using Mocha and ShouldJS</li>\n\
                 <li>Managing product life cycles in software, app, and web development</li>\n\
                 <li>Created a scanning platform designed for intense rapid scaling</li>\n\
             </ul>',

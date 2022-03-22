@@ -18,9 +18,9 @@ export class MenuComponent implements OnInit, OnDestroy {
     menuItems: { label: string, icon: string, routerLink: string, reverseOpacity: boolean }[] = [
         { label: 'Home', icon: 'fa-home-lg-alt', routerLink: '', reverseOpacity: true, },
         { label: 'About Me', icon: 'fa-user', routerLink: 'about', reverseOpacity: true, },
+        { label: 'Work', icon: 'fa-briefcase', routerLink: 'work', reverseOpacity: false, },
         { label: 'Technologies', icon: 'fa-code', routerLink: 'tech', reverseOpacity: true, },
         { label: 'Portfolio', icon: 'fa-bars', routerLink: 'portfolio', reverseOpacity: true, },
-        { label: 'Work', icon: 'fa-briefcase', routerLink: 'work', reverseOpacity: false, },
         { label: 'Education', icon: 'fa-school', routerLink: 'education', reverseOpacity: true, },
         { label: 'Contact Me', icon: 'fa-phone', routerLink: 'contact', reverseOpacity: true, },
         { label: 'Pokémon Or Tech? Game', icon: 'fa-gamepad', routerLink: 'game', reverseOpacity: true, },
