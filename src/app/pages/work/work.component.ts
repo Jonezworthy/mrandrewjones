@@ -8,9 +8,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class WorkComponent implements OnInit, OnDestroy {
     constructor() { }
 
-    histories: { from: string, to: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
+    histories: { from: string, to: string, years: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
         from: 'October 2017',
         to: 'Current',
+        years: ((new Date().valueOf() - new Date('2017-10-15').valueOf()) / 31622400000).toFixed(0) + ' years',
         companyName: 'The NEC Group',
         companyDescription: 'Huge exhibition company',
         title: 'Lead Software/Web Developer',
@@ -55,6 +56,7 @@ export class WorkComponent implements OnInit, OnDestroy {
     {
         from: 'July 2013',
         to: 'October 2017',
+        years: '4 years',
         companyName: 'Cruise.co/Cruise.co.uk',
         companyDescription: 'International travel agent for Cruises/holidays',
         title: 'Senior Software Engineer',
@@ -96,6 +98,7 @@ export class WorkComponent implements OnInit, OnDestroy {
     }, {
         to: 'May 2013',
         from: 'January 2013',
+        years: '< 1 year',
         companyName: 'Arrow Consultancy(Redditch) LTD.',
         companyDescription: 'A recruitment agency',
         title: 'IT Consultant/Developer',
@@ -109,6 +112,7 @@ export class WorkComponent implements OnInit, OnDestroy {
     }, {
         to: 'May 2013',
         from: 'January 2008',
+        years: '5 years',
         companyName: 'Redditch Web Solutions/RedditchWeb.co.uk',
         companyDescription: 'My web design/development company',
         logo: 'redditchweb.png',
