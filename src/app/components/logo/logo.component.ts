@@ -25,7 +25,7 @@ export class LogoComponent implements OnInit {
         hobby: { label: 'Hobby/freelance skill', iconSrc: 'fad fa-futbol', blurb: '', experience: ['hobby'], years: 0, skill: 'intermediate' },
         //
         typescript: { label: 'TypeScript', imgSrc: 'typescript.svg', blurb: 'I\'ve worked with TypeScript for many years. I\'ve worked with TypeScript in the Angular framework and as a standalone backend transpiler for NodeJS', experience: ['current', 'hobby'], years: this.currentYear - 2018, skill: 'advanced' },
-        javascript: { label: 'JavaScript', iconSrc: 'fa-js', blurb: 'I\'ve worked with JavaScript my entire career! From ECMAScript 3 to ES2016+ ', experience: ['current', 'previous', 'hobby'], years: this.currentYear - 2006, skill: 'guru' },
+        javascript: { label: 'JavaScript', iconSrc: 'fa-js', blurb: 'I\'ve worked with JavaScript my entire career! From ECMAScript 3 to ES2016+ ', experience: ['current', 'previous', 'hobby'], years: this.currentYear - 2008, skill: 'guru' },
         nodejsexpress: { label: 'NodeJS with Express', iconSrc: 'fa-node', blurb: 'My current role uses this as it\'s primary back end language and it is my primary backend technology', experience: ['current', 'hobby'], years: this.currentYear - 2014, skill: 'guru' },
         nodejs: { label: 'NodeJS', iconSrc: 'fa-node', blurb: 'My current role uses this as it\'s primary back end language and it is my primary backend technology', experience: ['current', 'hobby'], years: this.currentYear - 2014, skill: 'guru' },
         php: { label: 'PHP 5.1 -> 7', iconSrc: 'fa-php', blurb: 'My previous role at Cruise.co used PHP 5.1->5.6, I also use it for a few freelance projects', experience: ['current', 'hobby'], years: this.currentYear - 2008, skill: 'advanced' },

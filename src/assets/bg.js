@@ -14,8 +14,6 @@ setInterval(() => {
 
                 }
 
-                console.log('isDesktop?:' + isDesktop);
-
                 VANTA.NET({
                     el: "#featured-background",
                     mouseControls: false,
@@ -34,7 +32,6 @@ setInterval(() => {
                 });
             },100)
             window.hasBackgroundRan = true;
-            console.log('ran');
         } catch (err) {
             window.hasBackgroundRan = false;
         }

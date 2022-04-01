@@ -21,7 +21,8 @@ export class WorkComponent implements OnInit, OnDestroy {
             'Key Technologies': ['typescript', 'javascript', 'nodejs', 'mongodb', 'express', 'azure', 'ionic', 'sass', 'angular2'],
             'Notable Achievements': '\
             <ul>\n\
-                <li>Sole author of the scanning software across  NEC Group</li>\n\
+                <li>Sole author of the scanning software across NEC Group</li>\n\
+                <li>Facilitated the sale and scanning of more than 10 million tickets</li>\n\
                 <li>Introduced continuous integration with Azure and Docker</li>\n\
                 <li>Introduced automated testing using Mocha and ShouldJS</li>\n\
                 <li>Managing product life cycles in software, app, and web development</li>\n\

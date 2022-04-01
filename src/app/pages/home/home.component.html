@@ -9,25 +9,11 @@
     </mat-card-content>
 </mat-card>
 
-<!-- <div class="clr"></div> -->
-<mat-card class="hue-1 my-card about">
-    <h2 class="card-header mat-display-2">About Me</h2>
-
-    <mat-card-content>
-        <p class="mat-body-2">Programming is a life style for me, it is what I excel at and it's what I enjoy.</p>
-        <p class="mat-body-2">I am full stack, I am highly experienced, I am capable. </p>
-        <p class="mat-body-2">I've worked for large, medium, and small businesses, each size has their positives and negatives</p>
-        <p class="mat-body-2">I'm big into 3D design and 3D printing, video games, and motorcycling!</p>
-        <button class="read-more" routerLink="/about">About Me <i class="fad fa-chevron-right"></i></button>
-    </mat-card-content>
-
-</mat-card>
 <mat-card class="hue-2 my-card work">
-
     <h2 class="card-header mat-display-2">Work</h2>
     <mat-card-content>
         <h3 class="mat-body-2">My current role</h3>
-        <img src="/assets/logos/thenec.png" />
+        <img class="nec-logo" src="/assets/logos/thenec.png" />
         <p>Employer: <strong>The NEC Group</strong></p>
         <p>Position: <strong>Lead Software Developer</strong></p>
         <p>Years of service: <strong>{{yearsOfService}}</strong></p>
@@ -35,9 +21,36 @@
         <div class="clr"></div>
         <button class="read-more" routerLink="/work">Work History<i class="fad fa-chevron-right"></i></button>
     </mat-card-content>
-
 </mat-card>
-<mat-card class="hue-0 my-card tech">
+
+<mat-card class="hue-0 my-card work">
+    <h2 class="card-header mat-display-2">Clients</h2>
+    <mat-card-content>
+        
+        <div class="clients-container img-container">
+            <img class="extra-brightness" src="/assets/clients/crufts.png" />
+            <img class="extra-brightness" src="/assets/clients/rhs.svg" />
+            <img class="invert" src="/assets/clients/bbc-good-food.svg" />
+
+            <img class="greyscale-with-invert" src="/assets/clients/grand-designs.png" />
+            <img class="greyscale-with-invert extra-brightness" src="/assets/clients/lta.png" />
+            <img class="" src="/assets/clients/comic-con.png" />
+
+            <img class="extra-brightness" src="/assets/clients/motorcycle-live.png" />
+            <img class="extra-brightness" src="/assets/clients/autsport.png" />
+            <img class="normal-brightness" src="/assets/clients/pdc.png" />
+
+            <img class="normal-brightness" src="/assets/clients/rwhs.png" />
+            <img class="invert" src="/assets/clients/gardenersworld.png" />
+            <img class="invert" src="/assets/clients/insomnia.png" />
+        </div>
+        <div class="clr"></div>
+        <h3 class="mat-body-2">Millions and millions of tickets sold and scanned</h3>
+    </mat-card-content>
+</mat-card>
+
+
+<mat-card class="hue-2 my-card tech">
     <h2 class="card-header mat-display-2">Tech</h2>
 
     <mat-card-content>
@@ -46,25 +59,40 @@
 
             <ul>
                 <li>
-                    <app-logo [extra]="true"  [origin]="true" icon="nodejs"></app-logo>
+                    <app-logo [extra]="true" [origin]="true" icon="javascript"></app-logo>
                 </li>
                 <li>
-                    <app-logo [extra]="true"  [origin]="true" icon="typescript"></app-logo>
+                    <app-logo [extra]="true" [origin]="true" icon="nodejs"></app-logo>
                 </li>
                 <li>
-                    <app-logo [extra]="true"  [origin]="true" icon="mongodb"></app-logo>
+                    <app-logo [extra]="true" [origin]="true" icon="typescript"></app-logo>
                 </li>
                 <li>
-                    <app-logo [extra]="true"  [origin]="true" icon="angular2"></app-logo>
+                    <app-logo [extra]="true" [origin]="true" icon="angular2"></app-logo>
+                </li>
+                <li>
+                    <app-logo [extra]="true" [origin]="true" icon="mongodb"></app-logo>
+                </li>
+                <li>
+                    <app-logo [extra]="true" [origin]="true" icon="azure"></app-logo>
+                </li>
+                <li>
+                    <app-logo [extra]="true" [origin]="true" icon="sass"></app-logo>
+                </li>
+                <li>
+                    <app-logo [extra]="true" [origin]="true" icon="express"></app-logo>
                 </li>
             </ul>
         </div>
+
+
+
 
         <button class="read-more" routerLink="/tech">Tech Experience<i class="fad fa-chevron-right"></i></button>
     </mat-card-content>
 
 </mat-card>
-<mat-card class="hue-2 my-card portfolio">
+<mat-card class="hue-0 my-card portfolio">
 
     <h2 class="card-header mat-display-2">Portfolio</h2>
     <mat-card-content>
@@ -80,7 +108,20 @@
 
 </mat-card>
 
-<mat-card class="hue-1 my-card about">
+<mat-card class="hue-2 my-card about">
+    <h2 class="card-header mat-display-2">About Me</h2>
+
+    <mat-card-content>
+        <p class="mat-body-2">Programming is a life style for me, it is what I excel at and it's what I enjoy.</p>
+        <p class="mat-body-2">I am full stack, I am highly experienced, I am capable. </p>
+        <p class="mat-body-2">I've worked for large, medium, and small businesses, each size has their positives and negatives</p>
+        <p class="mat-body-2">I'm big into 3D design and 3D printing, video games, and motorcycling!</p>
+        <button class="read-more" routerLink="/about">About Me <i class="fad fa-chevron-right"></i></button>
+    </mat-card-content>
+
+</mat-card>
+
+<mat-card class="hue-0 my-card about">
     <h2 class="card-header mat-display-2">Contact</h2>
 
     <mat-card-content>

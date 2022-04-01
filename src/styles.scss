@@ -671,3 +671,35 @@ app-root {
     color: #fff;
     border: 2px solid #fff;
 }
+
+.img-container {
+    max-height: 5.5rem;
+    img {
+        display: block;
+        padding: 0.1rem 0;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        filter: grayscale(100%) brightness(1.4);
+        
+        &.invert {
+            filter: invert(1) brightness(1.5);
+        }
+        
+        &.brightness {
+            filter: brightness(100);
+        }
+        &.greyscale-with-invert {
+            filter: grayscale(100%) invert(1) brightness(1.5);
+            &.extra-brightness {
+                filter: grayscale(100%) invert(1) brightness(100);
+            }
+        }
+        &.extra-brightness {
+            filter: grayscale(100%) brightness(100);
+        }
+        &.normal-brightness {
+            filter: grayscale(100%) brightness(1);
+        }
+    }
+}
