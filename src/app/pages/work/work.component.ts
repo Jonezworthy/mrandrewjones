@@ -11,7 +11,7 @@ export class WorkComponent implements OnInit, OnDestroy {
     histories: { from: string, to: string, years: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
         from: 'October 2017',
         to: 'Current',
-        years: ((new Date().valueOf() - new Date('2017-10-15').valueOf()) / 31622400000).toFixed(0) + ' years',
+        years: ((new Date().valueOf() - new Date('2017-10-15').valueOf()) / 31622400000).toFixed(0) + '+ years',
         companyName: 'The NEC Group',
         companyDescription: 'Huge exhibition company',
         title: 'Lead Software/Web Developer',
@@ -19,13 +19,24 @@ export class WorkComponent implements OnInit, OnDestroy {
         logoClass: 'grayscale-brightness',
         details: {
             'Key Technologies': ['typescript', 'javascript', 'nodejs', 'mongodb', 'express', 'azure', 'ionic', 'sass', 'angular2'],
+            'Duties': '\
+            <ul>\n\
+                <li>Leading stand ups and weekly progress meetings</li>\n\
+                <li>Project management</li>\n\
+                <li>DevOps, automated testing and server infrastructure</li>\n\
+                <li>Interviewing potential talent</li>\n\
+                <li>Conducting performance reviews</li>\n\
+                <li>Mentoring junior developers/career plans</li>\n\
+                <li>Code reviews</li>\n\
+                <li>Liaising with internal and external product owners</li>\n\
+                <li>Managing product life cycles in software, app, and web development</li>\n\
+            </ul>',
             'Notable Achievements': '\
             <ul>\n\
                 <li>Sole author of the scanning software across NEC Group</li>\n\
                 <li>Facilitated the sale and scanning of more than 10 million tickets</li>\n\
                 <li>Introduced continuous integration with Azure and Docker</li>\n\
                 <li>Introduced automated testing using Mocha and ShouldJS</li>\n\
-                <li>Managing product life cycles in software, app, and web development</li>\n\
                 <li>Created a scanning platform designed for intense rapid scaling</li>\n\
             </ul>',
             'Notable Skills': '\
@@ -35,23 +46,6 @@ export class WorkComponent implements OnInit, OnDestroy {
                 <li>Effective communication with external clients</li>\n\
                 <li>Providing documentation and demonstrations</li>\n\
             </ul>',
-            'Lead Developer Duties': '\
-            <ul>\n\
-                <li>Making decisions on server infrastructure</li>\n\
-                <li>Code reviews</li>\n\
-                <li>Managing and scheduling projects</li>\n\
-                <li>Liaising with product owners</li>\n\
-                <li>Heading up stand ups and weekly progress meetings</li>\n\
-            </ul>',
-            'Line Manager Duties': '\
-            <ul>\n\
-                <li>Managing and leading my own team</li>\n\
-                <li>Approving and managing annual leave</li>\n\
-                <li>Conducting performance reviews</li>\n\
-                <li>Mentoring junior developers</li>\n\
-            </ul>',
-            'General Info': 'I have 2 other developers in my team, we look after the ExpoWare services. '
-
         }
     },
     {
