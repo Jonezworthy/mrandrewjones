@@ -26,8 +26,6 @@
             }
         }
     }
-    &.about {
-    }
     &.tech {
         .mat-card-content {
             .tech-container {
@@ -50,7 +48,7 @@
                         width: 25%;
 
                         @include respond-above(xxxl) {
-                            width: 25%;
+                            width: 33%;
                         }
                         //
                         @include respond-below(xxxl) {

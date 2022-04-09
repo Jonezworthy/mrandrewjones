@@ -14,6 +14,26 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
     filterExperience: string = '';
     techsOriginal: any;
     techs: { [key: string]: { [key: string]: Array<{ icon: string, search: string }> } } = {
+        'Admin': {
+            'Work Management': [
+                { icon: 'scrum', search: 'Scrum' },
+                { icon: 'lean', search: 'Lean' },
+                { icon: 'agile', search: 'Agile' },
+                { icon: 'visualstudioonline', search: 'Visual Studio Online' },
+                { icon: 'trello', search: 'Trello' },
+            ],
+            'Version Control': [
+                { icon: 'git', search: 'Git' },
+                { icon: 'visualstudioteamservices', search: 'Visual Studio Team Services' },
+                { icon: 'svn', search: 'svn' },
+                { icon: 'github', search: 'Github' },
+            ],
+            'Scripting': [
+                { icon: 'powershell', search: 'Powershell' },
+                { icon: 'bash', search: 'bash' },
+                { icon: 'batch', search: 'batch' },
+            ],
+        },
         'Server Side': {
             'Languages': [
                 { icon: 'typescript', search: 'TypeScript' },
@@ -111,26 +131,7 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { icon: 'akamai', search: 'Akamai' },
             ]
         },
-        'Admin': {
-            'Work Management': [
-                { icon: 'scrum', search: 'Scrum' },
-                { icon: 'lean', search: 'Lean' },
-                { icon: 'agile', search: 'Agile' },
-                { icon: 'visualstudioonline', search: 'Visual Studio Online' },
-                { icon: 'trello', search: 'Trello' },
-            ],
-            'Version Control': [
-                { icon: 'git', search: 'Git' },
-                { icon: 'visualstudioteamservices', search: 'Visual Studio Team Services' },
-                { icon: 'svn', search: 'svn' },
-                { icon: 'github', search: 'Github' },
-            ],
-            'Scripting': [
-                { icon: 'powershell', search: 'Powershell' },
-                { icon: 'bash', search: 'bash' },
-                { icon: 'batch', search: 'batch' },
-            ],
-        },
+    
         'Third Party': {
             'APIs': [
                 { icon: 'slack', search: 'Slack' },
