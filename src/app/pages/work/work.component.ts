@@ -19,6 +19,7 @@ export class WorkComponent implements OnInit, OnDestroy {
         logoClass: 'grayscale-brightness',
         details: {
             'Key Technologies': ['typescript', 'javascript', 'nodejs', 'mongodb', 'express', 'azure', 'ionic', 'sass', 'angular2'],
+            'Keywords': ['Scrum', 'Agile', 'SaaS', 'eCommerce', 'Microservices', 'Automated Testing', 'CI/CD', 'App Development'],
             'Duties': '\
             <ul>\n\
                 <li>Leading stand ups and weekly progress meetings</li>\n\
@@ -59,6 +60,7 @@ export class WorkComponent implements OnInit, OnDestroy {
         logoClass: 'grayscale-brightness',
         details: {
             'Key Technologies': ['php', 'mssql', 'nginx', 'apache', 'ukfast', 'linux', 'smarty', 'jquery'],
+            'Keywords': ['Scrum', 'eCommerce', 'Automated Testing', 'CI/CD', 'App Development'],
             'Notable Achievements': '\
             <ul>\n\
                 <li>I am the sole author of the company\'s Android App</li>\n\

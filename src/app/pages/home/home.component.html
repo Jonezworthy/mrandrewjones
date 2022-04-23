@@ -17,8 +17,24 @@
         <p>Employer: <strong>The NEC Group</strong></p>
         <p>Position: <strong>Lead Software Developer</strong></p>
         <p>Years of service: <strong>{{yearsOfService}}+</strong></p>
+        <ul class="list">
+            <li>Millions of tickets sold and scanned</li>
+            <li>Working with the strictest deadlines</li>
+            <li>Worked with high profile clients</li>
+        </ul>
         <br />
         <p>I'm a team leader and lead developer</p>
+        <br />
+        <mat-chip-list aria-label="Key Tech">
+            <mat-chip color="primary" selected>Scrum</mat-chip>
+            <mat-chip color="primary" selected>Agile</mat-chip>
+
+            <mat-chip color="primary" selected>SaaS</mat-chip>
+            <mat-chip color="primary" selected>Microservices</mat-chip>
+            <mat-chip color="primary" selected>Automated Testing</mat-chip>
+            <mat-chip color="primary" selected>CI/CD</mat-chip>
+        </mat-chip-list>
+
 
         <div class="clr"></div>
         <button class="read-more" routerLink="/work">Work History<i class="fad fa-chevron-right"></i></button>
@@ -28,7 +44,7 @@
 <mat-card class="hue-0 my-card work">
     <h2 class="card-header mat-display-2">Clients</h2>
     <mat-card-content>
-        
+
         <div class="clients-container img-container">
             <img class="extra-brightness" src="/assets/clients/crufts.png" />
             <img class="extra-brightness" src="/assets/clients/rhs.svg" />
@@ -60,15 +76,6 @@
         <div class="tech-container">
 
             <ul>
-                <li>
-                    <app-logo [extra]="true" [origin]="true" icon="scrum"></app-logo>
-                </li>
-                <li>
-                    <app-logo [extra]="true" [origin]="true" icon="lean"></app-logo>
-                </li>
-                <li>
-                    <app-logo [extra]="true" [origin]="true" icon="agile"></app-logo>
-                </li>
                 <li>
                     <app-logo [extra]="true" [origin]="true" icon="javascript"></app-logo>
                 </li>
