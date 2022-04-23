@@ -14,6 +14,7 @@
         background: #242932;
     }
 }
+
 nav {
     display: flex;
     flex-direction: row;
@@ -25,6 +26,7 @@ nav {
     overflow: hidden;
     max-width: 2600px;
     margin: auto;
+
     @include respond-below(md) {
         display: none;
 
@@ -32,8 +34,9 @@ nav {
             display: block;
         }
     }
+
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         color: #fff;
         margin: 0 0 0 1rem;
         font-family: "Source Sans Pro";
@@ -43,6 +46,7 @@ nav {
             display: none;
         }
     }
+
     ul {
         list-style: none;
         margin: 0;
@@ -53,11 +57,13 @@ nav {
             padding: 1rem 1.8rem;
 
             a {
+
                 &:hover,
                 &.active {
                     text-decoration: underline;
                     text-underline-offset: 0.2rem;
                 }
+
                 color: #fff;
                 text-decoration: none;
             }
@@ -73,10 +79,12 @@ nav {
                 border-bottom: 1px solid #ffff;
                 padding: 0;
                 z-index: 1;
+
                 a {
                     padding: 1rem 1.8rem;
                     display: block;
                     background: rgb(36 41 50 / 88%);
+
                     &.active {
                         background: #243043;
                     }

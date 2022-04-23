@@ -2,6 +2,7 @@ import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
 
 // declare var window: { location: { pathname: string } };
 
@@ -14,8 +15,6 @@ export class MenuComponent implements OnInit, OnDestroy {
     currentUrl: string = '';
     intervalUrlUpdater: any;
     menuVisible: Boolean = false;
-
-    testDate: Date = new Date('2022-01-01');
 
     menuItems: { label: string, icon: string, routerLink: string, reverseOpacity: boolean }[] = [
         { label: 'Home', icon: 'fa-home-lg-alt', routerLink: '', reverseOpacity: true, },
@@ -40,10 +39,10 @@ export class MenuComponent implements OnInit, OnDestroy {
 
                 if (window.screen.availWidth > 992) { // if not mobile
                     this.menuVisible = true;
-                } 
+                }
             }, 250);
-            
         }
+
     }
 
     toggleMenu(): void {

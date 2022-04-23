@@ -13,12 +13,14 @@ footer {
     padding: 1rem;
     margin: 4rem auto 0 auto;
     max-width: 2600px;
+
     a,
     p {
         display: block;
         color: #fff;
         margin: 1rem;
     }
+
     .first {
         text-align: left;
         width: 25%;
@@ -28,11 +30,26 @@ footer {
         }
     }
 
+    .updated {
+        display: block;
+        color: #fff;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+        padding: 1rem 0 0 0;
+        line-height: 0.5rem;
+
+        @include respond-below(lg) {
+            display: none;
+        }
+    }
+
     .middle {
         width: 50%;
         align-self: center;
         text-align: center;
         color: #fff;
+
         .logo-container {
             display: flex;
             flex-direction: row;
@@ -40,8 +57,9 @@ footer {
             align-content: center;
             justify-content: center;
             align-items: center;
-            width: 65%;
+            width: 75%;
             margin: auto;
+
             @include respond-below(sm) {
                 width: 100%;
                 flex-wrap: wrap;
@@ -49,10 +67,17 @@ footer {
 
             .logo {
                 margin: 0 0.5rem;
-                width: 33%;
+                width: 23%;
+
+                a {
+                    margin: 0;
+                    text-decoration: none;
+                }
+
                 @include respond-below(xs) {
                     width: 100%;
                 }
+
                 h4 {
                     font-family: inherit;
                     font-weight: 300;
@@ -60,13 +85,16 @@ footer {
                 }
             }
         }
+
         @include respond-below(md) {
             width: 100%;
         }
     }
+
     .last {
         text-align: right;
         width: 25%;
+
         @include respond-below(md) {
             display: none;
         }
