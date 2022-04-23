@@ -14,7 +14,7 @@
     "serve:ssr": "node dist/mr-andrew-jones/server/main.js",
     "build:ssr": "ng build && ng run mr-andrew-jones:server",
     "prerender": "ng run mr-andrew-jones:prerender",
-    "deploy": "ng run mr-andrew-jones:prerender && netlify deploy --prod"
+    "deploy": "git add . && git commit -m 'Deploying' && git push && ng run mr-andrew-jones:prerender && netlify deploy --prod"
   },
   "private": true,
   "dependencies": {

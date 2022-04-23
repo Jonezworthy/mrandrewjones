@@ -11,7 +11,7 @@ export class WorkComponent implements OnInit, OnDestroy {
     histories: { from: string, to: string, years: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
         from: 'October 2017',
         to: 'Current',
-        years: ((new Date().valueOf() - new Date('2017-10-15').valueOf()) / 31622400000).toFixed(0) + '+ years',
+        years: Math.floor(((new Date().valueOf() - new Date('2017-10-15').valueOf()) / 31622400000)).toFixed(0) + '+ years',
         companyName: 'The NEC Group',
         companyDescription: 'Huge exhibition company',
         title: 'Lead Software/Web Developer',
