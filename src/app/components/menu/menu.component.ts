@@ -15,6 +15,8 @@ export class MenuComponent implements OnInit, OnDestroy {
     intervalUrlUpdater: any;
     menuVisible: Boolean = false;
 
+    testDate: Date = new Date('2022-01-01');
+
     menuItems: { label: string, icon: string, routerLink: string, reverseOpacity: boolean }[] = [
         { label: 'Home', icon: 'fa-home-lg-alt', routerLink: '', reverseOpacity: true, },
         { label: 'About Me', icon: 'fa-user', routerLink: 'about', reverseOpacity: true, },

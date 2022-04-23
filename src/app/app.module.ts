@@ -12,12 +12,16 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 //
 import { SharedModule } from './shared.module';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { MaxLengthPipe } from './pipes/max-length.pipe';
 
 @NgModule({
     declarations: [
         AppComponent,
         MenuComponent,
         FooterComponent,
+        DateAgoPipe,
+        MaxLengthPipe,
     ],
     imports: [
         AppRoutingModule,
