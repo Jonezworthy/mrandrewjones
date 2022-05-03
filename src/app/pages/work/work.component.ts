@@ -93,28 +93,14 @@ export class WorkComponent implements OnInit, OnDestroy {
 
         }
     }, {
-        to: 'May 2013',
-        from: 'January 2013',
-        years: '< 1 year',
-        companyName: 'Arrow Consultancy(Redditch) LTD.',
-        companyDescription: 'A recruitment agency',
-        title: 'IT Consultant/Developer',
-        logo: 'arrowconsultancy.png',
-        logoClass: 'grayscale-brightness',
-        details: {
-            'Key Technologies': ['php', 'mysql', 'windowserver', 'jquery'],
-            'Notable Achievements': 'The CRM which is still partially demo-able (on request - it takes some set up), was an impressively large task I had to undertake single handedly ',
-            'Reason for leaving': 'Was made redundant when the company folded '
-        }
-    }, {
-        to: 'May 2013',
+        to: 'July 2013',
         from: 'January 2008',
         years: '5 years',
         companyName: 'Redditch Web Solutions/RedditchWeb.co.uk',
         companyDescription: 'My web design/development company',
         logo: 'redditchweb.png',
         logoClass: 'grayscale',
-        title: 'Lead Designer/Developer ',
+        title: 'Founder and Lead Designer/Developer',
         details: {
             'Key Technologies': ['php', 'mysql', 'apache', 'windowserver', 'jquery', 'linux', 'wordpress'],
             'Notable Achievements': 'Creating a custom a bespoke online shop for <a class="md-primary" href="http://www.jordan-saws.co.uk/" target="_blank">http://www.jordan-saws.co.uk </a>\n\
