@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     yearInMilliseconds: number = (1000 * 60 * 60 * 24 * 365);
 
     ngOnInit(): void {
-        this.yearsOfService = parseInt(((new Date().valueOf() - new Date(this.startedAt).valueOf()) / this.yearInMilliseconds).toFixed(0));
+        this.yearsOfService = Math.floor(((new Date().valueOf() - new Date(this.startedAt).valueOf()) / this.yearInMilliseconds));
 
     }
 

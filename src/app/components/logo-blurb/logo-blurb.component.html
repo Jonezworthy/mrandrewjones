@@ -1,0 +1,29 @@
+<div class="logo blurb">
+
+    <header>
+        <i *ngIf="selected.iconSrc" class="fab {{selected.iconSrc}}"></i>
+        <div *ngIf="selected.imgSrc" class="img-container"><img src="/assets/logos/{{selected.imgSrc}}" class=" {{selected.doInvert ? 'invert': ''}}  {{selected.doBrightness ? 'brightness': ''}}" /></div>
+
+
+    </header>
+
+    <section>
+        <div class="summary-bar icon-bar">
+            <p>{{selected.label}}</p>
+            <!-- <i *ngFor="let exp of selected.experience" class="experience {{experienceIconIndex[exp]}}" matTooltip="{{experienceWordingIndex[exp]}}"></i>
+            <i class="spacer"></i>
+            <i class="skill {{selected.skill}}" matTooltip="This means I consider my skill level ({{selected.skill}}) in/with this, and I have been using it for around {{selected.years}} years">{{selected.skill}} ({{selected.years}} yrs)</i> -->
+        </div>
+        <br />
+        <p>{{selected.blurb}} </p>
+        <hr />
+        <br />
+        <h3 class="{{selected.skill}}">Skill level : <strong>{{selected.skill}}</strong></h3>
+        <h3 class="{{selected.skill}}">Years of active use: <strong>{{selected.years}}</strong></h3>
+
+
+        <br />
+
+    </section>
+    <button class="read-more" (click)="close()">Close<i class="fad fa-chevron-right"></i></button>
+</div>

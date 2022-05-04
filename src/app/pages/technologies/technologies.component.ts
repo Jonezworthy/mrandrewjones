@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-technologies',
@@ -6,11 +6,14 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
     styleUrls: ['./technologies.component.scss']
 })
 export class TechnologiesComponent implements OnInit, OnDestroy {
-    constructor() { }
+    @ViewChild('techList') techList: Element | any;
+
     searchTerm: string = '';
     cache: { [key: string]: object } = {};
     yearsOfDev: number = new Date().getFullYear() - 2008;
-    techs: { [key: string]: { [key: string]: Array<{ icon: string , search: string}> } } = {
+    filterExperience: string = '';
+    techsOriginal: any;
+    techs: { [key: string]: { [key: string]: Array<{ icon: string, search: string }> } } = {
         'Server Side': {
             'Languages': [
                 { icon: 'typescript', search: 'TypeScript' },
@@ -67,7 +70,8 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { icon: 'angular2', search: 'Angular' },
                 { icon: 'ionic', search: 'Ionic' },
                 { icon: 'jquery', search: 'jQuery' },
-                { icon: 'jqueryui', search: 'jQuery' },
+                { icon: 'fontawesome', search: 'Font Awesome' },
+                
             ],
             'Caching': [
                 { icon: 'redis', search: 'Redis' },
@@ -78,7 +82,26 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { icon: 'threedprinting', search: '3D' },
             ]
         },
-
+        'Admin': {
+            'Work Management': [
+                { icon: 'scrum', search: 'Scrum' },
+                { icon: 'lean', search: 'Lean' },
+                { icon: 'agile', search: 'Agile' },
+                { icon: 'visualstudioonline', search: 'Visual Studio Online' },
+                { icon: 'trello', search: 'Trello' },
+            ],
+            'Version Control': [
+                { icon: 'git', search: 'Git' },
+                { icon: 'visualstudioteamservices', search: 'Visual Studio Team Services' },
+                { icon: 'svn', search: 'svn' },
+                { icon: 'github', search: 'Github' },
+            ],
+            'Scripting': [
+                { icon: 'powershell', search: 'Powershell' },
+                { icon: 'bash', search: 'bash' },
+                { icon: 'batch', search: 'batch' },
+            ],
+        },
         'Principles': {
             'Payments': [
                 { icon: 'barclaycard', search: 'Barclays payment' },
@@ -95,7 +118,7 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { icon: 'jenkins', search: 'Jenkins' },
                 { icon: 'gulp', search: 'Gulp' },
             ],
-       },
+        },
         'Networking': {
             'Email Providers': [
                 { icon: 'sendgrid', search: 'SendGrid' },
@@ -106,54 +129,29 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { icon: 'azureblob', search: 'Azure Blob' },
                 { icon: 'akamai', search: 'Akamai' },
             ]
-       },
-        'Admin': {
-            'Work Management': [
-                { icon: 'scrum', search: 'Scrum' },
-                { icon: 'lean', search: 'Lean' },
-                { icon: 'agile', search: 'Agile' },
-                { icon: 'visualstudioonline', search: 'Visual Studio Online' },
-                { icon: 'jira', search: 'Jira' },
-                { icon: 'trello', search: 'Trello' },
-            ],
-            'Version Control': [
-                { icon: 'git', search: 'Git' },
-                { icon: 'visualstudioteamservices', search: 'Visual Studio Team Services' },
-                { icon: 'svn', search: 'svn' },
-                { icon: 'github', search: 'Github' },
-            ],
-            'Scripting': [
-                { icon: 'powershell', search: 'Powershell' },
-                { icon: 'bash', search: 'bash' },
-                { icon: 'batch', search: 'batch' },
-            ],
         },
+    
         'Third Party': {
             'APIs': [
                 { icon: 'slack', search: 'Slack' },
                 { icon: 'discord', search: 'Discord' },
                 { icon: 'trello', search: 'Trello' },
-                { icon: 'exchangewebservices', search: 'Exchange Web Services' },
                 { icon: 'googlemaps', search: 'Google Maps' },
                 { icon: 'googlegraphs', search: 'Google Graphs' },
                 { icon: 'facebook', search: 'Facebook' },
                 { icon: 'twitter', search: 'Twitter' },
                 { icon: 'youtube', search: 'YouTube' },
-                { icon: 'wikipedia', search: 'Wikipedia' },
                 { icon: 'sms', search: 'sms' },
                 { icon: 'paypal', search: 'PayPal' },
-            ],
-            'Analytical': [
-                { icon: 'googleanalytics', search: 'Google Analytics' },
-                { icon: 'googlewebmasters', search: 'Google Webmasters' },
             ],
             'Other': [
                 { icon: 'alexa', search: 'Alexa' },
                 { icon: 'wordpress', search: 'WordPress' },
-                { icon: 'voice', search: 'Voice' },
             ]
         }
     }
+
+    constructor() { }
 
     filteredTechs(): any {
         if (this.searchTerm in this.cache) {
@@ -204,6 +202,32 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
+        this.techsOriginal = JSON.parse(JSON.stringify(this.techs));
+    }
+
+    filterByExperience(experience: string): void {
+        this.techs = JSON.parse(JSON.stringify(this.techsOriginal));
+        delete this.cache[this.searchTerm];
+        if (this.filterExperience === experience) {
+            this.filterExperience = '';
+            return;
+        }
+        this.filterExperience = experience;
+
+        setTimeout(() => {
+            const logos = this.techList.nativeElement.querySelectorAll('.logo:not(.' + experience + ')');
+            for (const logo of logos) {
+                logo.parentElement.parentElement.remove();
+            }
+
+            this.techList.nativeElement.querySelectorAll('ul').forEach((ele: Element) => {
+                const amount = ele.querySelectorAll('li').length;
+                if (amount === 0) {
+                    ele.parentElement?.remove();
+                    ele.remove();
+                }
+            });
+        }, 50);
 
     }
 

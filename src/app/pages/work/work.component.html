@@ -10,7 +10,7 @@
         <div class="work-header left">
 
             <h3>
-                {{history.from}} - {{history.to}}
+                {{history.from}} - {{history.to}} <small>({{history.years}})</small>
             </h3>
             <h4>
                 {{history.title}}
@@ -37,7 +37,12 @@
                         </li>
                     </ul>
                 </div>
-                <div *ngIf="groupKey !== 'Key Technologies'" [innerHTML]="history.details[groupKey]">
+                <div *ngIf="groupKey === 'Keywords' && history.details[groupKey] && history.details[groupKey].length">
+                    <mat-chip-list aria-label="Key Tech">
+                        <mat-chip *ngFor="let keyword of history.details[groupKey]" color="primary" selected>{{keyword}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+                <div *ngIf="groupKey !== 'Key Technologies' && groupKey !== 'Keywords'" [innerHTML]="history.details[groupKey]">
                 </div>
                 <p class="mat-body-2"></p>
             </div>

@@ -6,6 +6,8 @@
         <a routerLink="/portfolio">Portfolio</a>
     </div>
     <div class="middle">
+        <p class="updated" *ngIf="lastUpdated">Last Updated {{lastUpdated | dateAgo}}</p>
+        <br />
         <p>This website is</p>
 
         <div class="logo-container">
@@ -21,6 +23,12 @@
                 <h4>Written in</h4>
                 <app-logo icon="typescript"></app-logo>
             </div>
+            <div class="logo">
+                <h4>Versioned on</h4>
+                <a href="https://github.com/Jonezworthy/mrandrewjones" target="_blank">
+                    <app-logo icon="github"></app-logo>
+                </a>
+            </div>
         </div>
         <hr />
         <!-- <h2>&copy; MrAndrewJones.co.uk </h2> -->
@@ -34,3 +42,4 @@
 
     </div>
 </footer>
+<div class="clear"></div>

@@ -8,6 +8,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class EducationComponent implements OnInit, OnDestroy {
     constructor() { }
 
+
     educations: { title: string, issuer: string, date: string, grade: string, logo: string, certificateUrl?: string, invert?: boolean }[] = [
         {
             title: 'New Leadership Programme (6 day course)',
@@ -91,9 +92,9 @@ export class EducationComponent implements OnInit, OnDestroy {
     }
     getHueFromIndex(index: number): string {
         if (index % 2 === 0) {
-            return '0';
+            return '2';
         }
-        return '2';
+        return '0';
     };
 
     keysOf(object: Object): string[] {

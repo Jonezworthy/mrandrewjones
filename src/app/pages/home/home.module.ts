@@ -5,8 +5,8 @@ import { HomeComponent } from './home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { SharedModule } from '../../shared.module';
 
@@ -19,7 +19,7 @@ import { SharedModule } from '../../shared.module';
         MatButtonModule,
         MatIconModule,
         MatGridListModule,
-        MatToolbarModule,
+        MatChipsModule,
         SharedModule
     ],
     providers: []

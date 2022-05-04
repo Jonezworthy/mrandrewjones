@@ -8,6 +8,20 @@
         <p class="mat-body-2">Some of these courses have online certificates available for viewing. </p>
     </mat-card-content>
 </mat-card>
+<mat-card class="hue-0 my-card portfolio">
+    <h2 class="card-header mat-display-2">Compliance Training</h2>
+
+    <mat-card-content>
+        <p class="mat-body-2">This is a list of compliance training I do every year to maintain legal or contractual compliance</p>
+
+        <ul>
+            <li>The General Data Protection Regulation (GDPR)</li>
+            <li>Payment Card Industry Data Security Standards (PCI-DSS)</li>
+            <li>The Open Web Application Security Project (OWASP)</li>
+            
+        </ul>
+    </mat-card-content>
+</mat-card>
 
 <mat-card *ngFor="let education of educations; let idx = index; trackBy: trackByIndex" class="hue-{{getHueFromIndex(idx)}} my-card history">
     <h2 class="card-header mat-display-2">{{education.date}}</h2>

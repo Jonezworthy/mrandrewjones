@@ -23,8 +23,8 @@
         <p class="mat-body-2">This website is my CV, a word/PDF version of this site goes out of date very quickly.</p>
         <p class="mat-body-2">Nevertheless, you can download a PDF version here: </p>
 
-        <a class="read-more" href="/assets/cv/Andrew-Jones-v13.pdf" download="Andrew-Jones.pdf">Download as .PDF<i class="fad fa-chevron-right"></i></a>
-        <a class="read-more" href="/assets/cv/Andrew-Jones-v13.docx" download="Andrew-Jones.docx">Download as .DOCX<i class="fad fa-chevron-right"></i></a>
+        <a class="read-more" href="/assets/cv/Andrew-Jones-web.pdf" download="Andrew-Jones.pdf">Download as .PDF<i class="fad fa-chevron-right"></i></a>
+        <a class="read-more" href="/assets/cv/Andrew-Jones-v14.docx" download="Andrew-Jones.docx">Download as .DOCX<i class="fad fa-chevron-right"></i></a>
 
     </mat-card-content>
 
@@ -37,6 +37,17 @@
         <p class="mat-body-2"><strong>LinkedIn: </strong> <a href="{{linkedIn}}" target="_blank">{{linkedIn}}</a></p>
         <p class="mat-body-2"><strong>GitHub: </strong> <a href="{{gitHub}}" target="_blank">{{gitHub}}</a></p>
 
+    </mat-card-content>
+
+</mat-card>
+<mat-card class="hue-2 my-card contact">
+    <h2 class="card-header mat-display-2">Phone Number</h2>
+
+    <mat-card-content class="cv-container">
+        <p class="mat-body-2">By default my phone number is not visible on this page, this is to stop bots from scraping it.</p>
+        <p class="mat-body-2">Please click the button to see it.</p>
+        <a class="read-more" (click)="showMyNumber()" >See my phone number<i class="fad fa-chevron-right"></i></a>
+        <p *ngIf="myNumberVisible" class="mat-body-2">This is my phone number: <strong>{{myNumber}}</strong></p>
     </mat-card-content>
 
 </mat-card>

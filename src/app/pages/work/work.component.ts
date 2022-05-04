@@ -8,22 +8,36 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class WorkComponent implements OnInit, OnDestroy {
     constructor() { }
 
-    histories: { from: string, to: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
+    histories: { from: string, to: string, years: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
         from: 'October 2017',
         to: 'Current',
-        companyName: 'The NEC Group/The Ticket Factory',
+        years: Math.floor(((new Date().valueOf() - new Date('2017-10-15').valueOf()) / 31622400000)).toFixed(0) + '+ years',
+        companyName: 'The NEC Group',
         companyDescription: 'Huge exhibition company',
         title: 'Lead Software/Web Developer',
         logo: 'thenec.png',
         logoClass: 'grayscale-brightness',
         details: {
             'Key Technologies': ['typescript', 'javascript', 'nodejs', 'mongodb', 'express', 'azure', 'ionic', 'sass', 'angular2'],
+            'Keywords': ['Scrum', 'Agile', 'SaaS', 'eCommerce', 'Microservices', 'Automated Testing', 'CI/CD', 'App Development'],
+            'Duties': '\
+            <ul>\n\
+                <li>Leading stand ups and weekly progress meetings</li>\n\
+                <li>Project management</li>\n\
+                <li>DevOps, automated testing and server infrastructure</li>\n\
+                <li>Interviewing potential talent</li>\n\
+                <li>Conducting performance reviews</li>\n\
+                <li>Mentoring junior developers/career plans</li>\n\
+                <li>Code reviews</li>\n\
+                <li>Liaising with internal and external product owners</li>\n\
+                <li>Managing product life cycles in software, app, and web development</li>\n\
+            </ul>',
             'Notable Achievements': '\
             <ul>\n\
-                <li>Sole author of the scanning software across The Ticket Factory &amp; NEC Group</li>\n\
-                <li>Introduced continuous integration</li>\n\
-                <li>Introduced automated testing</li>\n\
-                <li>Managing product life cycles in software, app, and web development</li>\n\
+                <li>Sole author of the scanning software across NEC Group</li>\n\
+                <li>Facilitated the sale and scanning of more than 10 million tickets</li>\n\
+                <li>Introduced continuous integration with Azure and Docker</li>\n\
+                <li>Introduced automated testing using Mocha and ShouldJS</li>\n\
                 <li>Created a scanning platform designed for intense rapid scaling</li>\n\
             </ul>',
             'Notable Skills': '\
@@ -33,35 +47,20 @@ export class WorkComponent implements OnInit, OnDestroy {
                 <li>Effective communication with external clients</li>\n\
                 <li>Providing documentation and demonstrations</li>\n\
             </ul>',
-            'Lead Developer Duties': '\
-            <ul>\n\
-                <li>Making decisions on server infrastructure</li>\n\
-                <li>Code reviews</li>\n\
-                <li>Managing and scheduling projects</li>\n\
-                <li>Liaising with product owners</li>\n\
-                <li>Heading up stand ups and weekly progress meetings</li>\n\
-            </ul>',
-            'Line Manager Duties': '\
-            <ul>\n\
-                <li>Managing and leading my own team</li>\n\
-                <li>Approving and managing annual leave</li>\n\
-                <li>Conducting performance reviews</li>\n\
-                <li>Mentoring junior developers</li>\n\
-            </ul>',
-            'General Info': 'I have 2 other developers in my team, we look after the ExpoWare services. '
-
         }
     },
     {
         from: 'July 2013',
         to: 'October 2017',
+        years: '4 years',
         companyName: 'Cruise.co/Cruise.co.uk',
         companyDescription: 'International travel agent for Cruises/holidays',
         title: 'Senior Software Engineer',
         logo: 'cruisedotco.png',
         logoClass: 'grayscale-brightness',
         details: {
-            'Key Technologies': ['php', 'mssql', 'nginx', 'apache', 'ukfast', 'linux', 'smarty', 'jquery', 'jqueryui'],
+            'Key Technologies': ['php', 'mssql', 'nginx', 'apache', 'ukfast', 'linux', 'smarty', 'jquery'],
+            'Keywords': ['Scrum', 'eCommerce', 'Automated Testing', 'CI/CD', 'App Development'],
             'Notable Achievements': '\
             <ul>\n\
                 <li>I am the sole author of the company\'s Android App</li>\n\
@@ -96,26 +95,28 @@ export class WorkComponent implements OnInit, OnDestroy {
     }, {
         to: 'May 2013',
         from: 'January 2013',
+        years: '< 1 year',
         companyName: 'Arrow Consultancy(Redditch) LTD.',
         companyDescription: 'A recruitment agency',
         title: 'IT Consultant/Developer',
         logo: 'arrowconsultancy.png',
         logoClass: 'grayscale-brightness',
         details: {
-            'Key Technologies': ['php', 'mysql', 'windowserver', 'jquery', 'jqueryui'],
+            'Key Technologies': ['php', 'mysql', 'windowserver', 'jquery'],
             'Notable Achievements': 'The CRM which is still partially demo-able (on request - it takes some set up), was an impressively large task I had to undertake single handedly ',
             'Reason for leaving': 'Was made redundant when the company folded '
         }
     }, {
         to: 'May 2013',
         from: 'January 2008',
+        years: '5 years',
         companyName: 'Redditch Web Solutions/RedditchWeb.co.uk',
         companyDescription: 'My web design/development company',
         logo: 'redditchweb.png',
         logoClass: 'grayscale',
         title: 'Lead Designer/Developer ',
         details: {
-            'Key Technologies': ['php', 'mysql', 'apache', 'windowserver', 'jquery', 'jqueryui', 'linux', 'wordpress'],
+            'Key Technologies': ['php', 'mysql', 'apache', 'windowserver', 'jquery', 'linux', 'wordpress'],
             'Notable Achievements': 'Creating a custom a bespoke online shop for <a class="md-primary" href="http://www.jordan-saws.co.uk/" target="_blank">http://www.jordan-saws.co.uk </a>\n\
             <br /> Due to their products being so unique in requirements, it was best to create a sequential, step by step process for choosing your specific product.',
             'Reason for leaving': 'I closed the company after I found permanent, stable employment '

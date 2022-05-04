@@ -43,7 +43,8 @@ export class AppComponent {
 
                 // if (h2.clientHeight < content.clientHeight) {
                 const newHeight = (content.clientHeight + 80) + 'px';
-                if (h2.style.height !== newHeight) {
+
+                if (h2 && h2.style.height !== newHeight && h2.className.indexOf('image') === -1) {
                     h2.style.height = newHeight;
                 }
                 // }

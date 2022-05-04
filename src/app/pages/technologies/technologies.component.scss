@@ -1,7 +1,6 @@
-
 @import "../../../responsive.scss";
 
-mat-card[hidden]{
+mat-card[hidden] {
     display: none !important;
 }
 
@@ -27,8 +26,8 @@ mat-card[hidden]{
         }
         @include respond-below(md) {
             // full mobile
-            width: 100%; 
-        } 
+            width: 100%;
+        }
     }
 }
 
@@ -61,30 +60,41 @@ mat-card[hidden]{
         align-items: center;
 
         li {
+            &.clickable {
+                border: 2px solid #243043;
+                background: #243043;
+                border-radius: 100%;
+                margin: 0.5rem;
+            }
+            &.selected {
+                border: 2px solid #647ba1;
+                background: #647ba1;
+                border-radius: 100%;
+            }
             display: inline-block;
             // height: 8rem;
             text-align: center;
             // overflow: hidden;
 
             @include respond-above(xxxl) {
-                width: 20%;
+                width: calc(33% - 1rem);
             }
             //
             @include respond-below(xxxl) {
-                width: 25%;
+                width: calc(33% - 1rem);
             }
             @include respond-below(xxl) {
-                width: 25%;
+                width: calc(33% - 1rem);
             }
             @include respond-below(xl) {
-                width: 32%;
+                width: calc(50% - 1rem);
             }
             @include respond-below(lg) {
-                width: 32%;
+                width: calc(50% - 1rem);
             }
             @include respond-below(md) {
                 // full mobile
-                width: 50%;
+                width: calc(100% - 1rem);
             }
         }
     }

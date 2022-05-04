@@ -1,5 +1,6 @@
 <nav class="container {{menuVisible ? 'visible' : 'not-visible'}}" *ngIf="menuItems">
-    <h1>Mr Andrew Jones</h1>
+    <h1> Mr Andrew Jones </h1>
+
     <ul>
         <li *ngFor="let menuItem of menuItems">
             <a routerLink="/{{menuItem.routerLink}}" [class]="isActiveRoute('/' + menuItem.routerLink)" (click)="toggleMenu()">{{menuItem.label}}</a>

@@ -33,7 +33,7 @@ export class PortfolioComponent implements OnInit, OnDestroy {
     ];
     personalWebsites: PortfolioItem[] = [
         { name: 'RedditchWeb', active: true, tech: 'LAMP', img: 'redditchweb.jpg', url: 'https://redditchweb.co.uk/', urlLabel: 'redditchweb.co.uk', description: 'RedditchWeb.co.uk is the web site I had for my web design/development company.' },
-        { name: 'Anisos', active: true, tech: 'LAMP', img: 'anisos.jpg', url: 'https://anisos.com/', urlLabel: 'anisos.com', description: 'Anisos is a social media API which gathers posts/videos/images from social networks.' },
+        { name: 'BrokeBitchGames', active: true, tech: 'MEAN', img: 'brokebitchgames.png', url: 'https://brokebitchgames.com/', urlLabel: 'brokebitchgames.com', description: 'Provides listings for free games available from Steam/Epic Games/Origin and offers integration.' },
         { name: 'Inter Webz', active: false, tech: 'LAMP', img: 'interwebz.jpg', url: 'https://inter-webz.com/', urlLabel: 'inter-webz.com', description: 'Inter-Webz is a compilation of the most brilliant content from best social feeds around.' },
     ];
 
