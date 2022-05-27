@@ -30,7 +30,8 @@ setInterval(() => {
                     spacing: (isDesktop ? 20 : 15),
                     THREE: window.THREE
                 });
-            },100)
+            },100);
+
             window.hasBackgroundRan = true;
         } catch (err) {
             window.hasBackgroundRan = false;
@@ -38,8 +39,8 @@ setInterval(() => {
     }
 
 
-    if (!(document.getElementById('featured-background'))) {
+    if (!(document.querySelector('#featured-background > canvas'))) {
         window.hasBackgroundRan = false;
     }
 
-}, 250);
+}, 500);
