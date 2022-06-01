@@ -66,6 +66,7 @@ export class LogoComponent implements OnInit {
         // 
         angular1: { label: 'AngularJS 1.5', iconSrc: 'fa-angular', blurb: 'I\'ve used this in a freelance project and my current role used to use it as a primary front end technology', experience: ['current', 'hobby'], years: this.currentYear - 2016, skill: 'advanced' },
         angular2: { label: 'Angular2 (6+)', iconSrc: 'fa-angular', blurb: 'My current role uses this as a primary front end technology and this web site is powered by it!', experience: ['current', 'hobby'], years: this.currentYear - 2017, skill: 'advanced' },
+        react: { label: 'ReactJS', iconSrc: 'fa-react', blurb: 'I\'ve recently started learning ReactJS', experience: ['hobby'], years: this.currentYear - 2022, skill: 'beginner' },
         ionic: { label: 'Ionic 3+', imgSrc: 'ionic.svg', doBrightness: true, blurb: 'I\'ve created a bunch of apps with this for my current employer and personal projects', experience: ['current', 'hobby'], years: this.currentYear - 2017, skill: 'intermediate' },
         jquery: { label: 'jQuery (1.1.12 -> 1.7.2 mostly)', imgSrc: 'jquery.svg', doInvert: true, blurb: 'I use it in my current role, used in previous roles and personal projects too', experience: ['current', 'previous', 'hobby'], years: this.currentYear - 2009, skill: 'guru' },
         fontawesome: { label: 'Font Awesome', iconSrc: 'fa-font-awesome', blurb: 'This website uses Font Awesome for it\'s icons, and I have used it in my current role', experience: ['current', 'hobby'], years: 5, skill: 'advanced' },

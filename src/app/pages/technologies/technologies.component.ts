@@ -68,6 +68,7 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
             'Libraries or Frameworks': [
                 { icon: 'angular1', search: 'Angular' },
                 { icon: 'angular2', search: 'Angular' },
+                { icon: 'react', search: 'React' },
                 { icon: 'ionic', search: 'Ionic' },
                 { icon: 'jquery', search: 'jQuery' },
                 { icon: 'fontawesome', search: 'Font Awesome' },

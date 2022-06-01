@@ -4,7 +4,7 @@
         <h1 class="mat-display-4">
             Andrew Jones
         </h1>
-        <p class="mat-headline">Development Leader/Developer</p>
+        <p class="mat-headline">Full Stack Developer and Leader</p>
 
     </mat-card-content>
 </mat-card>
@@ -25,17 +25,26 @@
         <br />
         <p>I'm a team leader and lead developer</p>
         <br />
-        <mat-chip-list aria-label="Key Tech">
-            <mat-chip color="primary" selected>Scrum</mat-chip>
-            <mat-chip color="primary" selected>Agile</mat-chip>
 
-            <mat-chip color="primary" selected>SaaS</mat-chip>
-            <mat-chip color="primary" selected>Microservices</mat-chip>
-            <mat-chip color="primary" selected>Automated Testing</mat-chip>
-            <mat-chip color="primary" selected>CI/CD</mat-chip>
-        </mat-chip-list>
-
-
+        <div class="tech">
+            <ul>
+                <li>
+                    <app-logo icon="typescript"></app-logo>
+                </li>
+                <li>
+                    <app-logo icon="javascript"></app-logo>
+                </li>
+                <li>
+                    <app-logo icon="angular2"></app-logo>
+                </li>
+                <li>
+                    <app-logo icon="nodejs"></app-logo>
+                </li>
+                <li>
+                    <app-logo icon="mongodb"></app-logo>
+                </li>
+            </ul>
+        </div>
         <div class="clr"></div>
         <button class="read-more" routerLink="/work">Work History<i class="fad fa-chevron-right"></i></button>
     </mat-card-content>

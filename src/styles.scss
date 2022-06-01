@@ -651,7 +651,9 @@ input::placeholder {
     align-content: center;
     justify-content: center;
     align-items: center;
-
+    ul {
+        width: 100%;
+    }
     li {
         display: inline-block;
 
