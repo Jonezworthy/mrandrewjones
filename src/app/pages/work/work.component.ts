@@ -9,9 +9,39 @@ export class WorkComponent implements OnInit, OnDestroy {
     constructor() { }
 
     histories: { from: string, to: string, years: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
-        from: 'October 2017',
+        from: 'July 2022',
         to: 'Current',
-        years: Math.floor(((new Date().valueOf() - new Date('2017-10-15').valueOf()) / 31622400000)).toFixed(0) + '+ years',
+        years: Math.floor(((new Date().valueOf() - new Date('2022-08-01').valueOf()) / 2635200000)).toFixed(0) + '+ months',
+        companyName: 'Promotions Interactive',
+        companyDescription: 'Digital Agency & Promotional Marketing',
+        title: 'Tech Lead',
+        logo: 'promotions-interactive.svg',
+        logoClass: 'grayscale-brightness',
+        details: {
+            'Key Technologies': ['typescript', 'javascript', 'nodejs', 'mongodb', 'express', 'azure', 'ionic', 'sass', 'angular2'],
+            'Keywords': ['SaaS', 'eCommerce', 'Microservices', 'Automated Testing', 'CI/CD'],
+            'Duties': '\
+            <ul>\n\
+                <li>Project management</li>\n\
+                <li>DevOps, automated testing and server infrastructure</li>\n\
+            </ul>',
+            'Notable Achievements': '\
+            <ul>\n\
+                <li>Created a platform as a service from scratch</li>\n\
+            </ul>',
+            'Notable Skills': '\
+            <ul>\n\
+                <li>Working to strict deadlines</li>\n\
+                <li>Working with multiple clients simultaneously</li>\n\
+                <li>Effective communication with external clients</li>\n\
+                <li>Providing documentation and demonstrations</li>\n\
+            </ul>',
+        }
+    },
+    {
+        from: 'October 2017',
+        to: 'July 2022',
+        years: '4+ years',
         companyName: 'The NEC Group',
         companyDescription: 'Huge exhibition company',
         title: 'Lead Software/Web Developer',
