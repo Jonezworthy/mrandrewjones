@@ -18,7 +18,8 @@
         "releaseAdd": "git add .",
         "releaseCommit" : "git commit -m 'Deploying'",
         "releasePush": "git push",
-        "deploy": "npm run releaseTrack && npm run releaseAdd && npm run releaseCommit && npm run releasePush && ng run mr-andrew-jones:prerender && netlify deploy --prod"
+        "deploy": "npm run releaseTrack && npm run releaseAdd && npm run releaseCommit && npm run releasePush && ng run mr-andrew-jones:prerender && netlify deploy --prod",
+        "deployCloudflare": "npm run releaseTrack && npm run releaseAdd && npm run releaseCommit && npm run releasePush && ng run mr-andrew-jones:prerender"
     },
     "private": true,
     "dependencies": {
