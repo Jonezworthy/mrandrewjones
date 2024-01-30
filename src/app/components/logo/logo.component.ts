@@ -125,7 +125,7 @@ export class LogoComponent implements OnInit {
         googlewebmasters: { label: 'Google Webmasters', imgSrc: 'google-developers.svg', blurb: 'I\'ve used Webmasters/Developers for most of my hobby and freelance projects', experience: ['current', 'previous', 'hobby'], years: this.currentYear - 2015, skill: 'intermediate' },
         // 
         alexa: { label: 'Amazon Alexa', imgSrc: 'alexa.svg', doInvert: true, blurb: 'I\'ve integrated Amazon Alexa commands in my current role', experience: ['current', 'hobby'], years: 1, skill: 'beginner' },
-        wordpress: { label: 'WordPress', iconSrc: 'fa-wordpress', blurb: 'I\'ve created Wordpress based websites for freelance clients many times', experience: ['previous', 'hobby'], years: 3, skill: 'beginner' },
+        wordpress: { label: 'WordPress', iconSrc: 'fa-wordpress', blurb: 'I\'ve created Wordpress based websites for freelance clients many times', experience: ['previous', 'hobby'], years: this.currentYear - 2018, skill: 'advanced' },
 
     }
 
