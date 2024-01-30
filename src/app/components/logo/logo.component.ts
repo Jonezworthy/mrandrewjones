@@ -44,7 +44,7 @@ export class LogoComponent implements OnInit {
         // 
         azure: { label: 'Microsoft Azure', imgSrc: 'azure.svg', doInvert: true, blurb: 'My current role uses the Azure cloud platform to host services.', experience: ['current'], years: this.currentYear - 2017, skill: 'intermediate' },
         mongodbatlas: { label: 'MongoDB Atlas', imgSrc: 'mongodb.svg', blurb: 'My current role and my personal projects are hosted in MongoDB Atlas', experience: ['current', 'hobby'], years: this.currentYear - 2019, skill: 'advanced' },
-        aws: { label: 'AWS', iconSrc: 'fa-aws', blurb: 'I\'ve used AWS for hosting a side project for a short period of time', experience: ['hobby'], years: 1, skill: 'exposure' },
+        aws: { label: 'AWS', iconSrc: 'fa-aws', blurb: 'I\'ve used AWS for hosting a side project for a short period of time', experience: ['current'], years: 1, skill: 'advanced' },
         ukfast: { label: 'UK Fast Cloudflex', imgSrc: 'ukfast.jpg', blurb: 'My previous role used UK Fast as a primary web host', experience: ['previous'], years: 3, skill: 'beginner' },
         netlify: { label: 'Netlify', imgSrc: 'netlify.svg', doInvert: true, blurb: 'This website and a few hobby projects are hosted in Netlify', experience: ['hobby'], years: this.currentYear - 2020, skill: 'beginner' },
         //

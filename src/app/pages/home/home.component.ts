@@ -10,15 +10,15 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     }
 
-    // yearsOfService: number = 0;
-    monthsOfService: number = 0;
+    yearsOfService: number = 0;
+    // monthsOfService: number = 0;
     startedAt: string = '2022-08-01';
-    // yearInMilliseconds: number = (1000 * 60 * 60 * 24 * 365);
-    monthInMilliseconds: number = ((1000 * 60 * 60 * 24 * 365) / 12)
+    yearInMilliseconds: number = (1000 * 60 * 60 * 24 * 365);
+    // monthInMilliseconds: number = ((1000 * 60 * 60 * 24 * 365) / 12)
 
     ngOnInit(): void {
-        // this.yearsOfService = Math.floor(((new Date().valueOf() - new Date(this.startedAt).valueOf()) / this.yearInMilliseconds));
-        this.monthsOfService = Math.floor(((new Date().valueOf() - new Date(this.startedAt).valueOf()) / this.monthInMilliseconds));
+        this.yearsOfService = Math.floor(((new Date().valueOf() - new Date(this.startedAt).valueOf()) / this.yearInMilliseconds));
+        // this.monthsOfService = Math.floor(((new Date().valueOf() - new Date(this.startedAt).valueOf()) / this.monthInMilliseconds));
 
     }
 

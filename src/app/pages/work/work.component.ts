@@ -11,14 +11,14 @@ export class WorkComponent implements OnInit, OnDestroy {
     histories: { from: string, to: string, years: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
         from: 'July 2022',
         to: 'Current',
-        years: Math.floor(((new Date().valueOf() - new Date('2022-08-01').valueOf()) / 2635200000)).toFixed(0) + '+ months',
+        years: (((new Date().valueOf() - new Date('2022-08-01').valueOf()) / 2635200000) / 12).toFixed(1) + '+ years',
         companyName: 'Promotions Interactive',
         companyDescription: 'Digital Agency & Promotional Marketing',
         title: 'Tech Lead',
         logo: 'promotions-interactive.svg',
         logoClass: 'grayscale-brightness',
         details: {
-            'Key Technologies': ['typescript', 'javascript', 'nodejs', 'mongodb', 'express', 'azure', 'ionic', 'sass', 'angular2'],
+            'Key Technologies': ['typescript', 'javascript', 'nodejs', 'mongodb', 'express', 'azure', 'sass', 'angular2'],
             'Keywords': ['SaaS', 'eCommerce', 'Microservices', 'Automated Testing', 'CI/CD'],
             'Duties': '\
             <ul>\n\
