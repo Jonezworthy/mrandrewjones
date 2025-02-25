@@ -19,8 +19,8 @@ export class ContactComponent implements OnInit, OnDestroy {
     encodedGit: string = 'Sm9uZXp3b3J0aHk=';
 
     myNumberVisible: Boolean = false;
-    myNumberPartOne: string = 'MDc1MTc1';
-    myNumberPartTwo: string = 'NTM4NTM=';
+    myNumberPartOne: string = 'MDc3NDMy';
+    myNumberPartTwo: string = 'MjE1NTU=';
     myNumber: string = '';
 
     ngOnInit(): void {
