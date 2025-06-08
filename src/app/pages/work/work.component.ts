@@ -20,22 +20,27 @@ export class WorkComponent implements OnInit, OnDestroy {
         details: {
             'Key Technologies': ['typescript', 'javascript', 'nodejs', 'mongodb', 'express', 'azure', 'sass', 'angular2'],
             'Keywords': ['SaaS', 'eCommerce', 'Microservices', 'Automated Testing', 'CI/CD'],
-            'Duties': '\
-            <ul>\n\
-                <li>Project management</li>\n\
-                <li>DevOps, automated testing and server infrastructure</li>\n\
-            </ul>',
-            'Notable Achievements': '\
-            <ul>\n\
-                <li>Created a platform as a service from scratch</li>\n\
-            </ul>',
-            'Notable Skills': '\
-            <ul>\n\
-                <li>Working to strict deadlines</li>\n\
-                <li>Working with multiple clients simultaneously</li>\n\
-                <li>Effective communication with external clients</li>\n\
-                <li>Providing documentation and demonstrations</li>\n\
-            </ul>',
+            'Duties': `
+            <ul>
+                <li>Project management</li>
+                <li>DevOps, automated testing and server infrastructure</li>
+                <li>Creating bespoke technological solutions at high scale</li>
+            </ul>`,
+            'Notable Achievements': `
+            <ul>
+                <li>Created a platform as a service from scratch</li>
+                <li>Served billions of requests </li>
+            </ul>`,
+            'Notable Skills': `
+            <ul>
+                <li>Working to strict deadlines</li>
+                <li>Working with multiple clients simultaneously</li>
+                <li>Effective communication with external clients</li>
+                <li>Providing documentation and demonstrations</li>
+            </ul>
+            <a class="read-more" href="https://www.promo-now.com" target="_blank">Visit Promo-Now&trade; <i class="fad fa-external-link-alt"></i></a>
+            `
+
         }
     },
     {
