@@ -65,7 +65,7 @@ export class LogoComponent implements OnInit {
         java: { label: 'Java', iconSrc: 'fa-java', blurb: 'I\'ve written an android app in Java.', experience: ['current', 'hobby'], years: 1, skill: 'beginner' },
         // 
         angular1: { label: 'AngularJS 1.5', iconSrc: 'fa-angular', blurb: 'I\'ve used this in a freelance project and my current role used to use it as a primary front end technology', experience: ['current', 'hobby'], years: this.currentYear - 2016, skill: 'advanced' },
-        angular2: { label: 'Angular2 (6+)', iconSrc: 'fa-angular', blurb: 'My current role uses this as a primary front end technology and this web site is powered by it!', experience: ['current', 'hobby'], years: this.currentYear - 2017, skill: 'advanced' },
+        angular2: { label: 'Angular2 (16+)', iconSrc: 'fa-angular', blurb: 'My current role uses this as a primary front end technology and this web site is powered by it!', experience: ['current', 'hobby'], years: this.currentYear - 2017, skill: 'advanced' },
         react: { label: 'ReactJS', iconSrc: 'fa-react', blurb: 'I\'ve recently started learning ReactJS', experience: ['hobby'], years: this.currentYear - 2022, skill: 'beginner' },
         ionic: { label: 'Ionic 3+', imgSrc: 'ionic.svg', doBrightness: true, blurb: 'I\'ve created a bunch of apps with this for my current employer and personal projects', experience: ['current', 'hobby'], years: this.currentYear - 2017, skill: 'intermediate' },
         jquery: { label: 'jQuery (1.1.12 -> 1.7.2 mostly)', imgSrc: 'jquery.svg', doInvert: true, blurb: 'I use it in my current role, used in previous roles and personal projects too', experience: ['current', 'previous', 'hobby'], years: this.currentYear - 2009, skill: 'guru' },
@@ -80,6 +80,7 @@ export class LogoComponent implements OnInit {
         // 
         barclaycard: { label: 'BarclayCard', imgSrc: 'barclays.svg', doInvert: true, blurb: 'In my current role I\'ve implement Barclaycard payments and its gateway payment systems ', experience: ['current'], years: this.currentYear - 2021, skill: 'intermediate' },
         paypal: { label: 'PayPal', iconSrc: 'fa-paypal', blurb: 'I\'ve implement PayPal IPN based payments numerous times in freelance websites and my current employer', experience: ['current', 'hobby'], years: this.currentYear - 2016, skill: 'advanced' },
+        stripe: { label: 'Stripe', iconSrc: 'fa-stripe', blurb: 'I use Stripe for personal projects and some client work', experience: ['current', 'hobby'], years: this.currentYear - 2023, skill: 'intermediate' },
         // 
         jasmine: { label: 'JasmineJS', imgSrc: 'jasmine.svg', doInvert: true, blurb: 'My current role uses Jasmine for automated unit testing', experience: ['current'], years: this.currentYear - 2017, skill: 'advanced' },
         karma: { label: 'KarmaJS', imgSrc: 'karma.svg', blurb: 'My current role uses Karma as part of the automated testing', experience: ['current'], years: this.currentYear - 2017, skill: 'advanced' },
@@ -102,6 +103,7 @@ export class LogoComponent implements OnInit {
         visualstudioonline: { label: 'Visual Studio Online ', imgSrc: 'visual-studio.svg', doInvert: true, blurb: 'My current employer uses Visual Studio for work management', experience: ['previous'], years: this.currentYear - 2017, skill: 'advanced' },
         jira: { label: 'JIRA', iconSrc: 'fa-jira', blurb: 'My previous employer used JIRA for work management', experience: ['previous'], years: 2, skill: 'exposure' },
         trello: { label: 'Trello', iconSrc: 'fa-trello', blurb: 'My previous and current employer used Trello for work management', experience: ['current', 'previous'], years: 3, skill: 'beginner' },
+        figma: { label: 'Figma', iconSrc: 'fa-figma', blurb: 'My current employer and many clients use Figma for wireframing', experience: ['current', 'previous'], years: this.currentYear - 2020, skill: 'advanced' },
         // 
         git: { label: 'Git', iconSrc: 'fa-git', blurb: 'My current role uses Git as a primary version control system', experience: ['current', 'previous', 'hobby'], years: this.currentYear - 2014, skill: 'advanced' },
         visualstudioteamservices: { label: 'Visual Studio Team Services ', imgSrc: 'visual-studio.svg', doInvert: true, blurb: 'My current role uses Visual Studio Online as a hosting service for code and for CI/CD', experience: ['current'], years: this.currentYear - 2017, skill: 'intermediate' },
@@ -123,10 +125,13 @@ export class LogoComponent implements OnInit {
         // 
         googleanalytics: { label: 'Google Analytics', imgSrc: 'google-analytics.svg', blurb: 'I\'ve used Analytics for most of my hobby and freelance projects', experience: ['current', 'previous', 'hobby'], years: this.currentYear - 2015, skill: 'beginner' },
         googlewebmasters: { label: 'Google Webmasters', imgSrc: 'google-developers.svg', blurb: 'I\'ve used Webmasters/Developers for most of my hobby and freelance projects', experience: ['current', 'previous', 'hobby'], years: this.currentYear - 2015, skill: 'intermediate' },
+        googlecloud: { label: 'Google Cloud', imgSrc: 'google-cloud.svg', blurb: 'I use Google Cloud for my employer', experience: ['current'], years: this.currentYear - 2023, skill: 'intermediate' },
         // 
         alexa: { label: 'Amazon Alexa', imgSrc: 'alexa.svg', doInvert: true, blurb: 'I\'ve integrated Amazon Alexa commands in my current role', experience: ['current', 'hobby'], years: 1, skill: 'beginner' },
         wordpress: { label: 'WordPress', iconSrc: 'fa-wordpress', blurb: 'I\'ve created Wordpress based websites for freelance clients many times', experience: ['previous', 'hobby'], years: this.currentYear - 2018, skill: 'advanced' },
 
+        openai: { label: 'OpenAI', imgSrc: 'openai.png', doInvert: true, blurb: 'I\'ve used OpenAI for some major integrations in my current role + some hobby projects', experience: ['current', 'hobby'], years: this.currentYear - 2023, skill: 'advanced' },
+        windsurf: { label: 'Windsurf', imgSrc: 'windsurf.svg', blurb: 'I use Windsurf/Codeium as a code completion tool for my current role and hobby projects', experience: ['current', 'hobby'], years: this.currentYear - 2024, skill: 'advanced' },
     }
 
     constructor(public dialog: MatDialog) { }

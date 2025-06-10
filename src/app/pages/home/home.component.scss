@@ -104,6 +104,10 @@
         h5 {
             text-align: center;
         }
+        .header-break {
+            background: #647ba1;
+            padding: 1rem;
+        }
         .mat-card-content {
             img {
                 width: 25%;
@@ -119,7 +123,7 @@
                 max-height: initial;
             }
             .many-more {
-                margin: -1rem 0 4rem 0;
+                margin: 2rem 0 4rem 0;
                 text-align: center;
             }
             ul {
@@ -139,6 +143,36 @@
                         margin: 1rem 0;
                     }
                 }
+            }
+        }
+    }
+    &.iam {
+        .iam-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+
+            li {
+                background: #242932;
+                padding: 0.75rem 1rem;
+                border-radius: 20px;
+            }
+        }
+        .iam-time {
+            height: 1px;
+            text-align: right;
+            span {
+                padding: 1rem 0.5rem 0.1rem 0.5rem;
+                margin: -1rem -2rem 0 0;
+                background: #647ba1;
+                border-radius: 10px 0 0 0;
+                display: inline-block;
+                height: 2rem;
+                width: 2rem;
+                line-height: 1.4rem;
+                text-align: center;
+                box-sizing: content-box;
             }
         }
     }

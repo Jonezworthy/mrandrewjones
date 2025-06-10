@@ -9,6 +9,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatChipsModule } from '@angular/material/chips';
 
 import { SharedModule } from '../../shared.module';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
     declarations: [HomeComponent],
@@ -20,6 +21,7 @@ import { SharedModule } from '../../shared.module';
         MatIconModule,
         MatGridListModule,
         MatChipsModule,
+        MatRippleModule,
         SharedModule
     ],
     providers: []

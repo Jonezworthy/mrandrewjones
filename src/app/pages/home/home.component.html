@@ -9,7 +9,18 @@
     </mat-card-content>
 </mat-card>
 
-<mat-card class="hue-2 my-card work">
+<mat-card class="hue-2 my-card iam">
+    <h2 class="card-header mat-display-2">I am</h2>
+
+    <mat-card-content>
+        <ul class="iam-list">
+            <li *ngFor="let iama of iam" matRipple>{{iama}}</li>
+        </ul>
+        <p class="iam-time"><span>{{secondsUntilIamChange}}</span></p>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="hue-0 my-card work">
     <h2 class="card-header mat-display-2">Work</h2>
     <mat-card-content>
         <h3 class="mat-body-2">My current role</h3>
@@ -39,15 +50,21 @@
         <div class="clr"></div>
         <br />
         <br />
-        <h3 class="mat-body-2">I'm Trusted By</h3>
+        <h3 class="mat-body-2 header-break">I'm Trusted By</h3>
         <div class="clients img-container">
             <ul>
                 <li><img class="greyscale-with-invert" src="/assets/clients/amazon.png"></li>
                 <li><img class="" src="/assets/clients/cadbury.png"></li>
-                <li><img class="" src="/assets/clients/pepsi.png"></li>
+                <li><img class="" src="/assets/clients/lego.png"></li>
                 <li><img class="greyscale-with-invert" src="/assets/clients/coca-cola.png"></li>
+                <!--  -->
+                <li><img class="greyscale-with-invert" src="/assets/clients/budweiser.png"></li>
+                <li><img class="greyscale-with-invert" src="/assets/clients/american-express.png"></li>
+
+                <li><img class="" src="/assets/clients/pepsi.png"></li>
+                <li><img class="greyscale-with-invert" src="/assets/clients/heineken.png"></li>
             </ul>
-            <p class="many-more mat-body-2"><small>...and many more</small></p>
+            <p class="many-more mat-body-2"><small>...and so many more</small></p>
         </div>
         <div class="clr"></div>
         <h4>Industry-leading scalability trusted by dozens of global, multi-billion dollar companies</h4>
@@ -57,7 +74,7 @@
 </mat-card>
 
 
-<mat-card class="hue-0 my-card tech">
+<mat-card class="hue-2 my-card tech">
     <h2 class="card-header mat-display-2">Tech</h2>
 
     <mat-card-content>
@@ -90,7 +107,7 @@
     </mat-card-content>
 
 </mat-card>
-<mat-card class="hue-2 my-card portfolio">
+<!-- <mat-card class="hue-2 my-card portfolio">
 
     <h2 class="card-header mat-display-2">Portfolio</h2>
     <mat-card-content>
@@ -104,10 +121,10 @@
         <button class="read-more" routerLink="/portfolio">My Portfolio<i class="fad fa-chevron-right"></i></button>
     </mat-card-content>
 
-</mat-card>
+</mat-card> -->
 
 <mat-card class="hue-0 my-card about">
-    <h2 class="card-header mat-display-2">About Me</h2>
+    <h2 class="card-header mat-display-2">Bit More</h2>
 
     <mat-card-content>
         <p class="mat-body-2">Programming is a life style for me, it is what I excel at and it's what I enjoy.</p>
