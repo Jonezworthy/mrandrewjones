@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, OnDestroy, PLATFORM_ID, Inject } from '@angular/core';
 
 @Component({
     selector: 'app-home',
@@ -6,7 +7,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-    constructor() {
+    constructor(@Inject(PLATFORM_ID) private platformId: Object) {
 
     }
 
@@ -47,29 +48,32 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         this.generateIam();
 
-        this.iamChangeInterval = setInterval(() => {
-            this.secondsUntilIamChange = this.secondsUntilIamChange - 1;
-            if (this.secondsUntilIamChange <= 0) {
-                this.generateIam();
-                this.secondsUntilIamChange = 15;
-            }
-        }, 1000);
+        if (isPlatformBrowser(this.platformId)) {
+            this.iamChangeInterval = setInterval(() => {
+                this.secondsUntilIamChange = this.secondsUntilIamChange - 1;
+                if (this.secondsUntilIamChange <= 0) {
+                    this.generateIam();
+                    this.secondsUntilIamChange = 15;
+                }
+            }, 1000);
+        }
     }
 
     generateIam(): void {
         this.iam = this.iamOriginal.sort(() => Math.random() - 0.5);
-
-        if (window.screen.availWidth <= 600) {
-            this.iam = this.iam.slice(0, 3);
-            if (window.screen.availWidth <= 500)
-                this.iam = this.iam.slice(0, 2);
-            if (window.screen.availWidth <= 400)
-                this.iam = this.iam.slice(0, 1);
-        } else {
-            let amount = parseInt((window.screen.availWidth / 120).toFixed(0));
-            if (amount > 10)
-                amount = 10;
-            this.iam = this.iam.slice(0, amount);
+        if (isPlatformBrowser(this.platformId)) {
+            if (window.screen.availWidth <= 600) {
+                this.iam = this.iam.slice(0, 3);
+                if (window.screen.availWidth <= 500)
+                    this.iam = this.iam.slice(0, 2);
+                if (window.screen.availWidth <= 400)
+                    this.iam = this.iam.slice(0, 1);
+            } else {
+                let amount = parseInt((window.screen.availWidth / 120).toFixed(0));
+                if (amount > 10)
+                    amount = 10;
+                this.iam = this.iam.slice(0, amount);
+            }
         }
 
     }
