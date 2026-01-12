@@ -11,7 +11,7 @@ export class WorkComponent implements OnInit, OnDestroy {
     histories: { from: string, to: string, years: string, companyName: string, companyDescription: string, title: string, details: any, logo: string, logoClass?: string }[] = [{
         from: 'July 2022',
         to: 'Current',
-        years: Math.floor(((new Date().valueOf() - new Date('2022-08-01').valueOf()) / 2635200000)).toFixed(0) + '+ months',
+        years: Math.floor(((new Date().valueOf() - new Date('2022-08-08').valueOf()) / 2635200000)).toFixed(0) + '+ months',
         companyName: 'Promotions Interactive',
         companyDescription: 'Digital Agency & Promotional Marketing',
         title: 'Tech Lead',
@@ -39,8 +39,8 @@ export class WorkComponent implements OnInit, OnDestroy {
         }
     },
     {
-        from: 'October 2017',
-        to: 'July 2022',
+        from: 'October 2017', // 17th October 2017
+        to: 'July 2022', // 22nd July 2022
         years: '4+ years',
         companyName: 'The NEC Group',
         companyDescription: 'Huge exhibition company',
@@ -80,8 +80,8 @@ export class WorkComponent implements OnInit, OnDestroy {
         }
     },
     {
-        from: 'July 2013',
-        to: 'October 2017',
+        from: 'July 2013', // 1th July 2013
+        to: 'October 2017', // 13th October 2017
         years: '4 years',
         companyName: 'Cruise.co/Cruise.co.uk',
         companyDescription: 'International travel agent for Cruises/holidays',
