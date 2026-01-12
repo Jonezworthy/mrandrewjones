@@ -26,6 +26,7 @@
             }
         }
     }
+
     &.tech {
         .mat-card-content {
             .tech-container {
@@ -99,6 +100,14 @@
         }
     }
     &.work {
+        h4,
+        h5 {
+            text-align: center;
+        }
+        .header-break {
+            background: #647ba1;
+            padding: 1rem;
+        }
         .mat-card-content {
             img {
                 width: 25%;
@@ -109,42 +118,61 @@
                 }
             }
         }
-        .clients-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-            max-height: initial;
-            img {
-                @include respond-above(xxxl) {
+        .clients {
+            &.img-container {
+                max-height: initial;
+            }
+            .many-more {
+                margin: 2rem 0 4rem 0;
+                text-align: center;
+            }
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                li {
                     width: 25%;
-                    padding: 1.5rem;
                 }
-                //
-                @include respond-below(xxxl) {
-                    width: 25%;
-                    padding: 1.5rem;
-                }
-                @include respond-below(xxl) {
-                    width: 25%;
-                    padding: 1.5rem;
-                }
-                @include respond-below(xl) {
-                    width: 33%;
-                    padding: 1.5rem;
-                }
-                @include respond-below(lg) {
-                    width: 33%;
+                img {
+                    width: 70%;
+                    float: none;
                 }
                 @include respond-below(md) {
-                    width: 33%;
+                    li {
+                        width: 50%;
+                        margin: 1rem 0;
+                    }
                 }
-                @include respond-below(xs) {
-                    // full mobile
-                    width: 100%;
-                }
+            }
+        }
+    }
+    &.iam {
+        .iam-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+
+            li {
+                background: #242932;
+                padding: 0.75rem 1rem;
+                border-radius: 20px;
+            }
+        }
+        .iam-time {
+            height: 1px;
+            text-align: right;
+            span {
+                padding: 1rem 0.5rem 0.1rem 0.5rem;
+                margin: -1rem -2rem 0 0;
+                background: #647ba1;
+                border-radius: 10px 0 0 0;
+                display: inline-block;
+                height: 2rem;
+                width: 2rem;
+                line-height: 1.4rem;
+                text-align: center;
+                box-sizing: content-box;
             }
         }
     }

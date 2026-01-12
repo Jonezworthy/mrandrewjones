@@ -39,6 +39,7 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { icon: 'azure', search: 'Microsoft Azure' },
                 { icon: 'mongodbatlas', search: 'MongoDB Atlas' },
                 { icon: 'aws', search: 'AWS' },
+                { icon: 'googlecloud', search: 'Google Cloud' },
                 { icon: 'ukfast', search: 'UK Fast Cloudflex' },
                 { icon: 'netlify', search: 'Netlify' },
             ],
@@ -90,6 +91,7 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
                 { icon: 'agile', search: 'Agile' },
                 { icon: 'visualstudioonline', search: 'Visual Studio Online' },
                 { icon: 'trello', search: 'Trello' },
+                { icon: 'figma', search: 'Figma' },
             ],
             'Version Control': [
                 { icon: 'git', search: 'Git' },
@@ -107,6 +109,7 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
             'Payments': [
                 { icon: 'barclaycard', search: 'Barclays payment' },
                 { icon: 'paypal', search: 'PayPal' },
+                { icon: 'stripe', search: 'Stripe' },
             ],
             'Testing': [
                 { icon: 'jasmine', search: 'Jasmine' },
@@ -133,6 +136,10 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
         },
     
         'Third Party': {
+            'AI': [
+                { icon: 'openai', search: 'OpenAI' },
+                { icon: 'windsurf', search: 'Windsurf' },
+            ],
             'APIs': [
                 { icon: 'slack', search: 'Slack' },
                 { icon: 'discord', search: 'Discord' },

@@ -15,12 +15,12 @@ export class ContactComponent implements OnInit, OnDestroy {
     gitHub: string = 'github';
 
     encodedE: string = 'am9uZXp5MjAwNEBnbWFpbC5jb20=';
-    encodedLinked: string = 'YW5kcmV3LWolQzMlQjNuZXMtNDA4Njc0YjM=';
+    encodedLinked: string = 'YW5kcmV3LWpvbmVzLTQwODY3NGIz';
     encodedGit: string = 'Sm9uZXp3b3J0aHk=';
 
     myNumberVisible: Boolean = false;
-    myNumberPartOne: string = 'MDc1MTc1';
-    myNumberPartTwo: string = 'NTM4NTM=';
+    myNumberPartOne: string = 'MDc3NDMy';
+    myNumberPartTwo: string = 'MjE1NTU=';
     myNumber: string = '';
 
     ngOnInit(): void {

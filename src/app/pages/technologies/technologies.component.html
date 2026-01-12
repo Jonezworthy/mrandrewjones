@@ -16,14 +16,14 @@
         <p class="mat-body-2">Use this search box to filter the results</p>
         <mat-form-field class="half-width" appearance="outline">
             <mat-label>Filter Results</mat-label>
-            <input type="text" matInput name="search" autocomplete="off" placeholder="Filter Results" [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}">
+            <input type="text" matInput name="dfw45s" autocomplete="off" placeholder="Filter Results" [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}">
 
             <button mat-button *ngIf="searchTerm" matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm=''">
                 <i class="fad fa-times"></i>
             </button>
         </mat-form-field>
 
-        <p class="mat-body-2">Click these icons to filter by origin</p>
+        <!-- <p class="mat-body-2">Click these icons to filter by origin</p>
         <div class="tech-container">
             <ul>
                 <li class="clickable {{ filterExperience === 'current' ? 'selected' : '' }}" (click)="filterByExperience('current')">
@@ -36,7 +36,7 @@
                     <app-logo [extra]="true" icon="hobby"></app-logo>
                 </li>
             </ul>
-        </div>
+        </div> -->
 
         <p class="mat-body-2">Skill levels and the years where this was a regular tool/skill</p>
         <p>
