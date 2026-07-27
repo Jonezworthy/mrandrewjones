@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         'a web developer',
         'full stack',
         'a graphic designer',
-        'on a six figure salary',
         'a security consultant',
         'a dev ops expert',
         'an infrastructure architect',
