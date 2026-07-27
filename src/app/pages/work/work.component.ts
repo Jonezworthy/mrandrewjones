@@ -44,7 +44,7 @@ export class WorkComponent implements OnInit, OnDestroy {
         }
     },
     {
-        from: 'October 2017', // 17th October 2017
+        from: 'October 2017', // 9th October 2017
         to: 'July 2022', // 22nd July 2022
         years: '4+ years',
         companyName: 'The NEC Group',
