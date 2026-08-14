@@ -14,7 +14,7 @@ export class WorkComponent implements OnInit, OnDestroy {
         years: (((new Date().valueOf() - new Date('2022-08-08').valueOf()) / 2635200000) / 12).toFixed(1) + '+ years',
         companyName: 'Promotions Interactive',
         companyDescription: 'Digital Agency & Promotional Marketing',
-        title: 'Tech Lead',
+        title: 'Head of Technology',
         logo: 'promotions-interactive.svg',
         logoClass: 'grayscale-brightness',
         details: {

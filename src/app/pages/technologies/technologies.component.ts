@@ -137,6 +137,7 @@ export class TechnologiesComponent implements OnInit, OnDestroy {
     
         'Third Party': {
             'AI': [
+                { icon: 'claude', search: 'Claude' },
                 { icon: 'openai', search: 'OpenAI' },
                 { icon: 'windsurf', search: 'Windsurf' },
             ],

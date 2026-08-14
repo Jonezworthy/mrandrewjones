@@ -1,6 +1,7 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 declare var window: any;
 
@@ -31,6 +32,11 @@ export class AppComponent {
             this.intervalVisualHack = setInterval(() => {
                 this.visualHacks();
             }, 250);
+
+            if (environment.production === false)
+                throw new Error('Real' + new Date().valueOf())
+
+            // fetch('/something.json').then((res: any) => console.log(res));
         }
     }
     visualHacks(): void {

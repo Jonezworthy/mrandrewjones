@@ -130,8 +130,11 @@ export class LogoComponent implements OnInit {
         alexa: { label: 'Amazon Alexa', imgSrc: 'alexa.svg', doInvert: true, blurb: 'I\'ve integrated Amazon Alexa commands in my current role', experience: ['current', 'hobby'], years: 1, skill: 'beginner' },
         wordpress: { label: 'WordPress', iconSrc: 'fa-wordpress', blurb: 'I\'ve created Wordpress based websites for freelance clients many times', experience: ['previous', 'hobby'], years: this.currentYear - 2018, skill: 'advanced' },
 
+        claude: { label: 'Claude', imgSrc: 'claude.png', doInvert: true, blurb: 'I\'ve used Claude major integrations in my current role + some hobby projects', experience: ['current', 'hobby'], years: this.currentYear - 2025, skill: 'guru' },
         openai: { label: 'OpenAI', imgSrc: 'openai.png', doInvert: true, blurb: 'I\'ve used OpenAI for some major integrations in my current role + some hobby projects', experience: ['current', 'hobby'], years: this.currentYear - 2023, skill: 'advanced' },
         windsurf: { label: 'Windsurf', imgSrc: 'windsurf.svg', blurb: 'I use Windsurf/Codeium as a code completion tool for my current role and hobby projects', experience: ['current', 'hobby'], years: this.currentYear - 2024, skill: 'advanced' },
+        //
+        kawze: { label: 'Kawze', imgSrc: 'kawze.png', blurb: '', experience: ['current', 'hobby'], years: this.currentYear - 2026, skill: 'advanced' },
     }
 
     constructor(public dialog: MatDialog) { }
